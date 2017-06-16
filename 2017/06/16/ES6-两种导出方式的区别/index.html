@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>数组常见函数 | 王二爷</title>
+  <title>ES6:两种导出方式的区别 | 王二爷</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="(1) shift 删除数组第一个元素，并返回该元素，跟pop差不多  var arr=[1,2,1,3,2,3,5,6,5]; arr.shift(); console.log(arr);    //[2, 1, 3, 2, 3, 5, 6, 5] (2) unshift 跟shift相反，往数组最前面添加元素，并返回数组新长度  var arr=[1,2,1,3,2,3,5,6,5]; arr">
-<meta name="keywords" content="js">
+  <meta name="description" content="ES6：export default 和 export 区别1.export与export default均可用于导出常量、函数、文件、模块等2.你可以在其它文件或模块中通过import+(常量 | 函数 | 文件 | 模块)名的方式，将其导入，以便能够对其进行使用3.在一个文件或模块中，export、import可以有多个，export default仅有一个4.通过export方式导出，在导入">
+<meta name="keywords" content="ES6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数组常见函数">
-<meta property="og:url" content="http://yoursite.com/2016/08/07/数组常见函数/index.html">
+<meta property="og:title" content="ES6:两种导出方式的区别">
+<meta property="og:url" content="http://yoursite.com/2017/06/16/ES6-两种导出方式的区别/index.html">
 <meta property="og:site_name" content="王二爷">
-<meta property="og:description" content="(1) shift 删除数组第一个元素，并返回该元素，跟pop差不多  var arr=[1,2,1,3,2,3,5,6,5]; arr.shift(); console.log(arr);    //[2, 1, 3, 2, 3, 5, 6, 5] (2) unshift 跟shift相反，往数组最前面添加元素，并返回数组新长度  var arr=[1,2,1,3,2,3,5,6,5]; arr">
-<meta property="og:updated_time" content="2016-12-07T07:13:58.000Z">
+<meta property="og:description" content="ES6：export default 和 export 区别1.export与export default均可用于导出常量、函数、文件、模块等2.你可以在其它文件或模块中通过import+(常量 | 函数 | 文件 | 模块)名的方式，将其导入，以便能够对其进行使用3.在一个文件或模块中，export、import可以有多个，export default仅有一个4.通过export方式导出，在导入">
+<meta property="og:updated_time" content="2017-06-16T05:35:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数组常见函数">
-<meta name="twitter:description" content="(1) shift 删除数组第一个元素，并返回该元素，跟pop差不多  var arr=[1,2,1,3,2,3,5,6,5]; arr.shift(); console.log(arr);    //[2, 1, 3, 2, 3, 5, 6, 5] (2) unshift 跟shift相反，往数组最前面添加元素，并返回数组新长度  var arr=[1,2,1,3,2,3,5,6,5]; arr">
+<meta name="twitter:title" content="ES6:两种导出方式的区别">
+<meta name="twitter:description" content="ES6：export default 和 export 区别1.export与export default均可用于导出常量、函数、文件、模块等2.你可以在其它文件或模块中通过import+(常量 | 函数 | 文件 | 模块)名的方式，将其导入，以便能够对其进行使用3.在一个文件或模块中，export、import可以有多个，export default仅有一个4.通过export方式导出，在导入">
   
     <link rel="alternative" href="/atom.xml" title="王二爷" type="application/atom+xml">
   
@@ -158,105 +158,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-数组常见函数" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ES6-两种导出方式的区别" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      数组常见函数
+      ES6:两种导出方式的区别
     </h1>
   
 
         
-        <a href="/2016/08/07/数组常见函数/" class="archive-article-date">
-  	<time datetime="2016-08-07T11:24:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-07</time>
+        <a href="/2017/06/16/ES6-两种导出方式的区别/" class="archive-article-date">
+  	<time datetime="2017-06-16T05:32:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-shift"><a href="#1-shift" class="headerlink" title="(1) shift"></a>(1) shift</h1><blockquote>
-<p>删除数组第一个元素，并返回该元素，跟pop差不多</p>
-</blockquote>
-<pre><code>var arr=[1,2,1,3,2,3,5,6,5];
-arr.shift();
-console.log(arr);    //[2, 1, 3, 2, 3, 5, 6, 5]
-</code></pre><h1 id="2-unshift"><a href="#2-unshift" class="headerlink" title="(2) unshift"></a>(2) unshift</h1><blockquote>
-<p>跟shift相反，往数组最前面添加元素，并返回数组新长度</p>
-</blockquote>
-<pre><code>var arr=[1,2,1,3,2,3,5,6,5];
-arr.unshift(&apos;haha&apos;);
-console.log(arr);    //[&quot;haha&quot;, 1, 2, 1, 3, 2, 3, 5, 6, 5]
-</code></pre><h1 id="3-concat"><a href="#3-concat" class="headerlink" title="(3) concat"></a>(3) concat</h1><blockquote>
-<p>在现有数组后面追加数组，并返回新数组，不影响现有数组</p>
-</blockquote>
-<pre><code>var arr=[1,2,1,3,2,3,5,6,5];
-var arr1=[&apos;hahha&apos;];
-console.log(arr.concat(arr1));//[1, 2, 1, 3, 2, 3, 5, 6, 5, &quot;hahha&quot;]
-</code></pre><h1 id="4-join"><a href="#4-join" class="headerlink" title="(4) join"></a>(4) join</h1><blockquote>
-<p>用指定间隔符连起来，把数组转为字符串</p>
-</blockquote>
-<pre><code>var arr=[1,2,1,3,2,3,5,6,5];
+        <h1 id="ES6：export-default-和-export-区别"><a href="#ES6：export-default-和-export-区别" class="headerlink" title="ES6：export default 和 export 区别"></a>ES6：export default 和 export 区别</h1><h4 id="1-export与export-default均可用于导出常量、函数、文件、模块等"><a href="#1-export与export-default均可用于导出常量、函数、文件、模块等" class="headerlink" title="1.export与export default均可用于导出常量、函数、文件、模块等"></a>1.export与export default均可用于导出常量、函数、文件、模块等</h4><h4 id="2-你可以在其它文件或模块中通过import-常量-函数-文件-模块-名的方式，将其导入，以便能够对其进行使用"><a href="#2-你可以在其它文件或模块中通过import-常量-函数-文件-模块-名的方式，将其导入，以便能够对其进行使用" class="headerlink" title="2.你可以在其它文件或模块中通过import+(常量 | 函数 | 文件 | 模块)名的方式，将其导入，以便能够对其进行使用"></a>2.你可以在其它文件或模块中通过import+(常量 | 函数 | 文件 | 模块)名的方式，将其导入，以便能够对其进行使用</h4><h4 id="3-在一个文件或模块中，export、import可以有多个，export-default仅有一个"><a href="#3-在一个文件或模块中，export、import可以有多个，export-default仅有一个" class="headerlink" title="3.在一个文件或模块中，export、import可以有多个，export default仅有一个"></a>3.在一个文件或模块中，export、import可以有多个，export default仅有一个</h4><h4 id="4-通过export方式导出，在导入时要加-，export-default则不需要"><a href="#4-通过export方式导出，在导入时要加-，export-default则不需要" class="headerlink" title="4.通过export方式导出，在导入时要加{ }，export default则不需要"></a>4.通过export方式导出，在导入时要加{ }，export default则不需要</h4><p><code>1.export</code></p>
+<pre><code>//demo1.js
+export const str = &apos;hello world&apos;
+export function f(a){ return a+1}
 
-console.log(arr.join());   //1,2,1,3,2,3,5,6,5
-console.log(arr.toString())//1,2,1,3,2,3,5,6,5toString()也可以
+对应的导入方式：
+//demo2.js
+import { str, f } from &apos;demo1&apos; //也可以分开写两次，导入的时候带花括号
+</code></pre><p><code>2.export default</code></p>
+<pre><code>//demo1.js
+export default const str = &apos;hello world&apos;
 
-console.log(arr.join(&apos;*&apos;))//1*2*1*3*2*3*5*6*5
-</code></pre><h1 id="5-pop"><a href="#5-pop" class="headerlink" title="(5) pop"></a>(5) pop</h1><blockquote>
-<p>删除数组最后一个元素，并返回该元素</p>
-</blockquote>
-<pre><code>var a =    [&quot;aa&quot;,&quot;bb&quot;,&quot;cc&quot;];
-console.log(a.pop())    //cc
-console.log(a)            //[&quot;aa&quot;, &quot;bb&quot;]
-</code></pre><h1 id="6-reverse"><a href="#6-reverse" class="headerlink" title="(6) reverse"></a>(6) reverse</h1><blockquote>
-<p>对数组进行反排序跟，sort()一样，取第一字符ASCII值进行比较</p>
-</blockquote>
-<pre><code>var a =    [&quot;aa&quot;,&quot;bb&quot;,&quot;cc&quot;];
-console.log(a.reverse());    //[&quot;cc&quot;, &quot;bb&quot;, &quot;aa&quot;]
-console.log(a)                    //[&quot;cc&quot;, &quot;bb&quot;, &quot;aa&quot;]
-</code></pre><h1 id="7-slice"><a href="#7-slice" class="headerlink" title="(7) slice"></a>(7) slice</h1><blockquote>
-<p>返回数组片段</p>
-</blockquote>
-<pre><code>var a =    [&quot;aa&quot;,&quot;bb&quot;,&quot;cc&quot;];
-console.log(a.slice(1,2))   //[&quot;bb&quot;]从第一个开始到第二个，但不包含第二个
-console.log(a.slice(1))        //[&quot;bb&quot;, &quot;cc&quot;]
-</code></pre><h1 id="数组方法小试牛刀"><a href="#数组方法小试牛刀" class="headerlink" title="数组方法小试牛刀"></a>数组方法小试牛刀</h1><ol>
-<li>翻转字符串</li>
-</ol>
-<hr>
-<pre><code>console.log(&quot;asd&quot;.split(&quot;&quot;))            //[&quot;a&quot;, &quot;s&quot;, &quot;d&quot;]
-console.log(&quot;asd&quot;.split(&quot;&quot;).reverse().join())   //d,s,a        
-</code></pre><ol>
-<li>[1,2,1,3,2,3,5,6,5] 去除重复元素</li>
-</ol>
-<hr>
-<pre><code>var arr=[1,2,1,3,2,3,5,6,5];
-var newarr=[];
-for(var i=0;i&lt;arr.length;i++){
-    if(newarr.indexOf(arr[i])==-1){
-        newarr.push(arr[i]);
-    }
-}
-console.log(newarr)//[1, 2, 3, 5, 6]    
-</code></pre><p>3.获取里面字面最多的字母</p>
-<hr>
-<pre><code>var str = &quot;asdfjksdjfljsdflkjsdjf&quot; //定义需要判断的字符串
-var maxlength = 0; //用来存最大数量的变量，并初始化为0
-var result; //用来接收结果
-
-while(str != &quot;&quot;){
-      var oldstr = str; 
-      var getstr = str.substr(0,1);
-    str = str.replace(new RegExp(getstr,&quot;g&quot;),&quot;&quot;);
-  if(oldstr.length - str.length &gt;maxlength){
-      maxlength = oldstr.length - str.length;
-      result = getstr + &apos;=&apos;+ maxlength;
-  }
-}
-console.log(result);
+对应的导入方式：
+//demo2.js
+import str from &apos;demo1&apos; //导入的时候没有花括号
+</code></pre><h2 id="使用export-default命令，为模块指定默认输出，这样就不需要知道所要加载模块的变量名"><a href="#使用export-default命令，为模块指定默认输出，这样就不需要知道所要加载模块的变量名" class="headerlink" title="使用export default命令，为模块指定默认输出，这样就不需要知道所要加载模块的变量名"></a>使用export default命令，为模块指定默认输出，这样就不需要知道所要加载模块的变量名</h2><p><code>//a.js</code></p>
+<pre><code>let sex = &quot;boy&quot;;
+export default sex（sex不能加大括号）
+//原本直接export sex外部是无法识别的，加上default就可以了.但是一个文件内最多只能有一个export default。
+其实此处相当于为sex变量值&quot;boy&quot;起了一个系统默认的变量名default，自然default只能有一个值，所以一个文件内不能有多个export default。
+</code></pre><p><code>//a.js</code></p>
+<pre><code>let sex = &quot;boy&quot;;
+export default sex（sex不能加大括号）
+//原本直接export sex外部是无法识别的，加上default就可以了.但是一个文件内最多只能有一个export default。
+其实此处相当于为sex变量值&quot;boy&quot;起了一个系统默认的变量名default，自然default只能有一个值，所以一个文件内不能有多个export default。
 </code></pre>
       
 
@@ -291,7 +237,7 @@ console.log(result);
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
         		</li>
       		
 		</ul>
@@ -347,7 +293,7 @@ console.log(result);
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/08/07/数组常见函数/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/06/16/ES6-两种导出方式的区别/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -361,18 +307,9 @@ console.log(result);
   
 <nav id="article-nav">
   
-    <a href="/2016/09/03/基于github和hexo创建个人博客/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          基于github和hexo创建个人博客
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/08/06/js字符串函数小结/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">js字符串函数</div>
+    <a href="/2017/06/15/ES6的let和const与var的浅谈/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6的let和const与var的浅谈</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -385,7 +322,7 @@ console.log(result);
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="数组常见函数" data-title="数组常见函数" data-url="http://yoursite.com/2016/08/07/数组常见函数/"></div>
+	<div class="ds-thread" data-thread-key="ES6-两种导出方式的区别" data-title="ES6:两种导出方式的区别" data-url="http://yoursite.com/2017/06/16/ES6-两种导出方式的区别/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
