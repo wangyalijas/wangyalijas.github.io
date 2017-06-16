@@ -6,17 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | 王二爷</title>
+  <title>JavaScript插入节点小结 | 王二爷</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端小菜鸟的进阶之路">
-<meta property="og:type" content="website">
-<meta property="og:title" content="王二爷">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="1.JS原生API插入节点的方式大致有innerHTML、outerHTML、appendChild、insertBefore、insertAdjacentHTML、applyElement这6种。2.这里总结一下各自的用法，并封装包含before、prepend、append、after、applyElement的一系列函数。1. 六种方式的用法 innerHTML：获取标签内部的HTML内容。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript插入节点小结">
+<meta property="og:url" content="http://yoursite.com/2016/08/04/JavaScript插入节点小结/index.html">
 <meta property="og:site_name" content="王二爷">
-<meta property="og:description" content="前端小菜鸟的进阶之路">
+<meta property="og:description" content="1.JS原生API插入节点的方式大致有innerHTML、outerHTML、appendChild、insertBefore、insertAdjacentHTML、applyElement这6种。2.这里总结一下各自的用法，并封装包含before、prepend、append、after、applyElement的一系列函数。1. 六种方式的用法 innerHTML：获取标签内部的HTML内容。">
+<meta property="og:updated_time" content="2016-11-16T02:40:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="王二爷">
-<meta name="twitter:description" content="前端小菜鸟的进阶之路">
+<meta name="twitter:title" content="JavaScript插入节点小结">
+<meta name="twitter:description" content="1.JS原生API插入节点的方式大致有innerHTML、outerHTML、appendChild、insertBefore、insertAdjacentHTML、applyElement这6种。2.这里总结一下各自的用法，并封装包含before、prepend、append、after、applyElement的一系列函数。1. 六种方式的用法 innerHTML：获取标签内部的HTML内容。">
   
     <link rel="alternative" href="/atom.xml" title="王二爷" type="application/atom+xml">
   
@@ -156,60 +157,257 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JavaScript插入节点小结" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/15/ES6的let和const与var的浅谈/" class="archive-article-date">
-  	<time datetime="2017-06-15T09:47:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/15/ES6的let和const与var的浅谈/">ES6的let和const与var的浅谈</a>
+    <h1 class="article-title" itemprop="name">
+      JavaScript插入节点小结
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        <a href="/2016/08/04/JavaScript插入节点小结/" class="archive-article-date">
+  	<time datetime="2016-08-04T02:28:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-JS原生API插入节点的方式大致有innerHTML、outerHTML、appendChild、insertBefore、insertAdjacentHTML、applyElement这6种。"><a href="#1-JS原生API插入节点的方式大致有innerHTML、outerHTML、appendChild、insertBefore、insertAdjacentHTML、applyElement这6种。" class="headerlink" title="1.JS原生API插入节点的方式大致有innerHTML、outerHTML、appendChild、insertBefore、insertAdjacentHTML、applyElement这6种。"></a><code>1.</code>JS原生API插入节点的方式大致有innerHTML、outerHTML、appendChild、insertBefore、insertAdjacentHTML、applyElement这6种。</h4><h4 id="2-这里总结一下各自的用法，并封装包含before、prepend、append、after、applyElement的一系列函数。"><a href="#2-这里总结一下各自的用法，并封装包含before、prepend、append、after、applyElement的一系列函数。" class="headerlink" title="2.这里总结一下各自的用法，并封装包含before、prepend、append、after、applyElement的一系列函数。"></a><code>2.</code>这里总结一下各自的用法，并封装包含before、prepend、append、after、applyElement的一系列函数。</h4><h1 id="1-六种方式的用法"><a href="#1-六种方式的用法" class="headerlink" title="1. 六种方式的用法"></a>1. 六种方式的用法</h1><ol>
+<li><p>innerHTML：获取标签内部的HTML内容。</p>
+</li>
+<li><p>outerHTML：获取包括目标标签在内，以及内部HTML的内容。</p>
+</li>
+<li><p>appendChild：向目标标签末尾添加子节点，返回参数节点。</p>
+</li>
+<li><p>insertBefore：向目标节点的第二个参数位置添加第一个参数为子节点，返回第一个参数。</p>
+</li>
+<li><p>insertAdjacentHTML：向目标节点的指定位置添加节点；第二个参数为要添加的节点，第一个参数指定位置，位置包括beforebegin(添加为previousSibling)、afterbegin(添加为firstChild)、beforeend(添加为lastChild)、afterend(添加为nextSibling)。它还有两个兄弟函数，分别是insertAdjacentElement和insertAdjacentText，前者添加元素并返回该元素，后者添加文本。</p>
+</li>
+<li><p>applyElement：IE的函数，将参数节点设置成目标节点的外包围或者内包围；第一个为参数节点，第二个参数指定方式，方式包括inside(内包围，即参数节点将目标节点的子节点包起来)、outside(外包围，即参数节点将目标节点包起来)。</p>
+</li>
+</ol>
+<h4 id="上面6种方式除了前两个是属性外，另外4个都是函数。innerHTML与outerHTML没有什么好说的，直接用HTML字符串赋值就能达到插入的目的了；appendChild简单套一层函数外壳就能封装成append函数；insertBefore让节点的插入方式非常灵活；insertAdjacentHTML可以实现字符串的插入方式；applyElement函数兼容一下即可成为JQuery的Wrap系列函数。"><a href="#上面6种方式除了前两个是属性外，另外4个都是函数。innerHTML与outerHTML没有什么好说的，直接用HTML字符串赋值就能达到插入的目的了；appendChild简单套一层函数外壳就能封装成append函数；insertBefore让节点的插入方式非常灵活；insertAdjacentHTML可以实现字符串的插入方式；applyElement函数兼容一下即可成为JQuery的Wrap系列函数。" class="headerlink" title="上面6种方式除了前两个是属性外，另外4个都是函数。innerHTML与outerHTML没有什么好说的，直接用HTML字符串赋值就能达到插入的目的了；appendChild简单套一层函数外壳就能封装成append函数；insertBefore让节点的插入方式非常灵活；insertAdjacentHTML可以实现字符串的插入方式；applyElement函数兼容一下即可成为JQuery的Wrap系列函数。"></a>上面6种方式除了前两个是属性外，另外4个都是函数。innerHTML与outerHTML没有什么好说的，直接用HTML字符串赋值就能达到插入的目的了；appendChild简单套一层函数外壳就能封装成append函数；insertBefore让节点的插入方式非常灵活；insertAdjacentHTML可以实现字符串的插入方式；applyElement函数兼容一下即可成为JQuery的Wrap系列函数。</h4><h1 id="二、实现before、prepend、append、after函数"><a href="#二、实现before、prepend、append、after函数" class="headerlink" title="二、实现before、prepend、append、after函数"></a>二、实现before、prepend、append、after函数</h1><h5 id="before把参数节点插入到目标节点前面，只需获取目标节点的父节点，然后父节点调用insertBefore即可。"><a href="#before把参数节点插入到目标节点前面，只需获取目标节点的父节点，然后父节点调用insertBefore即可。" class="headerlink" title="before把参数节点插入到目标节点前面，只需获取目标节点的父节点，然后父节点调用insertBefore即可。"></a>before把参数节点插入到目标节点前面，只需获取目标节点的父节点，然后父节点调用insertBefore即可。</h5><h5 id="prepend把参数节点插入到目标节点第一个子节点的位置，获取目标节点的第一个子节点，然后调用insertBefore即可。"><a href="#prepend把参数节点插入到目标节点第一个子节点的位置，获取目标节点的第一个子节点，然后调用insertBefore即可。" class="headerlink" title="prepend把参数节点插入到目标节点第一个子节点的位置，获取目标节点的第一个子节点，然后调用insertBefore即可。"></a>prepend把参数节点插入到目标节点第一个子节点的位置，获取目标节点的第一个子节点，然后调用insertBefore即可。</h5><h5 id="append的功能和原生API里appendChild的功能一样。"><a href="#append的功能和原生API里appendChild的功能一样。" class="headerlink" title="append的功能和原生API里appendChild的功能一样。"></a>append的功能和原生API里appendChild的功能一样。</h5><h5 id="after把参数节点插入到目标节点的后面，只需获取目标节点的nextSibling，然后调用insertBefore即可。"><a href="#after把参数节点插入到目标节点的后面，只需获取目标节点的nextSibling，然后调用insertBefore即可。" class="headerlink" title="after把参数节点插入到目标节点的后面，只需获取目标节点的nextSibling，然后调用insertBefore即可。"></a>after把参数节点插入到目标节点的后面，只需获取目标节点的nextSibling，然后调用insertBefore即可。</h5><h5 id="具体实现如下："><a href="#具体实现如下：" class="headerlink" title="具体实现如下："></a>具体实现如下：</h5><pre><code>var append = function(node, scope) {
+    if(node.nodeType === 1 || node.nodeType === 9 || node.nodeType === 11) {
+        scope.appendChild(node);
+    }
+};
+var prepend = function(node, scope) {
+    if(node.nodeType === 1 || node.nodeType === 9 || node.nodeType === 11) {
+        scope.insertBefore(node, scope.firstChild);
+    }
+};
+var before = function(node, scope) {
+    if(node.nodeType === 1 || node.nodeType === 9 || node.nodeType === 11) {
+        scope.parentNode.insertBefore(node, scope);
+    }
+};
+var after = function(node, scope) {
+    if(node.nodeType === 1 || node.nodeType === 9 || node.nodeType === 11) {
+        scope.parentNode.insertBefore(node, scope.nextSibling);
+    }
+};
+</code></pre><h5 id="上面函数只能插入元素节点、文档节点以及文档碎片，都是节点类型。如果我们想要支持字符串形式的插入方式，则需要封装insertAdjacentHTML了。"><a href="#上面函数只能插入元素节点、文档节点以及文档碎片，都是节点类型。如果我们想要支持字符串形式的插入方式，则需要封装insertAdjacentHTML了。" class="headerlink" title="上面函数只能插入元素节点、文档节点以及文档碎片，都是节点类型。如果我们想要支持字符串形式的插入方式，则需要封装insertAdjacentHTML了。"></a>上面函数只能插入元素节点、文档节点以及文档碎片，都是节点类型。如果我们想要支持字符串形式的插入方式，则需要封装insertAdjacentHTML了。</h5><h5 id="这里利用策略模式，将我要实现的四个函数做成策略对象，然后动态生成，以达到精简代码的效果："><a href="#这里利用策略模式，将我要实现的四个函数做成策略对象，然后动态生成，以达到精简代码的效果：" class="headerlink" title="这里利用策略模式，将我要实现的四个函数做成策略对象，然后动态生成，以达到精简代码的效果："></a>这里利用策略模式，将我要实现的四个函数做成策略对象，然后动态生成，以达到精简代码的效果：</h5><pre><code>//E5才有的迭代, 所以迭代要预先兼容
+Array.prototype.forEach = [].forEach || function(callback) {
+    for(var i = 0, len = this.length; i &lt; len; i++) {
+        callback.call(this[i], this[i], i, this);
+     }
+};  
 
-          
+/**插入策略集合**/
+var insertStrategies = {
+    before : function(node, scope) {
+    scope.parentNode.insertBefore(node, scope);
+},
+prepend : function(node, scope) {
+    scope.insertBefore(node, scope.firstChild);
+},
+append : function(node, scope) {
+    scope.appendChild(node);
+},
+after : function(node, scope) {
+    scope.parentNode.insertBefore(node, scope.nextSibling);
+},
 
+/*支持字符串格式的插入, 注意：要兼容不可直接做div子类的元素*/
+/*insertAdjace还有Element和Text，前者只能插元素，后者只能插文本*/
+beforestr : function(node, scope) {
+    scope.insertAdjacentHTML(&apos;beforeBegin&apos;, node);
+},
+prependstr : function(node, scope) {
+    scope.insertAdjacentHTML(&apos;afterBegin&apos;, node);
+},
+appendstr : function(node, scope) {
+    scope.insertAdjacentHTML(&apos;beforeEnd&apos;, node);
+},
+afterstr : function(node, scope) {
+    scope.insertAdjacentHTML(&apos;afterEnd&apos;, node);
+}
+};
+
+//响应函数
+var returnMethod = function(method, node, scope) {
+//如果是字符串
+if(typeof node === &apos;string&apos;) {
+    return insertStrategies[method + &apos;str&apos;](node, scope);
+}
+//1(元素)、9(文档)、11(文档碎片)
+if(node.nodeType === 1 || node.nodeType === 9 || node.nodeType === 11) {
+    return insertStrategies[method](node, scope);
+}
+//此处还可添加节点集合的处理逻辑，用于处理选择其引擎获取的节点集合。
+};
+
+[&apos;before&apos;, &apos;prepend&apos;, &apos;append&apos;, &apos;after&apos;].forEach(function(method){
+window[method] = function(node, scope) {
+    returnMethod(method, node, scope);
+};
+});
+</code></pre><h5 id="所有函数都被实现为window的属性，所以直接当全局函数调用即可，这些函数并不属于节点对象，所以scope参数指代的是目标节点。下面兼容applyElement后，我们将所有的函数都扩展到HTMLElement的原型上面去，这样就可以省略scope参数，以达到元素节点直接调用的效果。当然对于框架来说，一般是生成框架对象，然后把这些函数扩展到其原型上去，这样可以避免修改原生对象的原型"><a href="#所有函数都被实现为window的属性，所以直接当全局函数调用即可，这些函数并不属于节点对象，所以scope参数指代的是目标节点。下面兼容applyElement后，我们将所有的函数都扩展到HTMLElement的原型上面去，这样就可以省略scope参数，以达到元素节点直接调用的效果。当然对于框架来说，一般是生成框架对象，然后把这些函数扩展到其原型上去，这样可以避免修改原生对象的原型" class="headerlink" title="所有函数都被实现为window的属性，所以直接当全局函数调用即可，这些函数并不属于节点对象，所以scope参数指代的是目标节点。下面兼容applyElement后，我们将所有的函数都扩展到HTMLElement的原型上面去，这样就可以省略scope参数，以达到元素节点直接调用的效果。当然对于框架来说，一般是生成框架对象，然后把这些函数扩展到其原型上去，这样可以避免修改原生对象的原型"></a>所有函数都被实现为window的属性，所以直接当全局函数调用即可，这些函数并不属于节点对象，所以scope参数指代的是目标节点。下面兼容applyElement后，我们将所有的函数都扩展到HTMLElement的原型上面去，这样就可以省略scope参数，以达到元素节点直接调用的效果。当然对于框架来说，一般是生成框架对象，然后把这些函数扩展到其原型上去，这样可以避免修改原生对象的原型</h5>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/08/04/JavaScript插入节点小结/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/08/05/用Javascript获取页面元素的位置/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          用Javascript获取页面元素的位置
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2016/08/03/面向对象编程（一）：封装/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">面向对象编程（一）：封装</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="JavaScript插入节点小结" data-title="JavaScript插入节点小结" data-url="http://yoursite.com/2016/08/04/JavaScript插入节点小结/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -232,8 +430,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

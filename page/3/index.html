@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | 王二爷</title>
+  <title>王二爷</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前端小菜鸟的进阶之路">
 <meta property="og:type" content="website">
 <meta property="og:title" content="王二爷">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
 <meta property="og:site_name" content="王二爷">
 <meta property="og:description" content="前端小菜鸟的进阶之路">
 <meta name="twitter:card" content="summary">
@@ -158,58 +158,650 @@
           <div id="js-content" class="content-ll">
             
   
-  
+    <article id="post-用Javascript获取页面元素的位置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/15/ES6的let和const与var的浅谈/" class="archive-article-date">
-  	<time datetime="2017-06-15T09:47:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/15/ES6的let和const与var的浅谈/">ES6的let和const与var的浅谈</a>
+      <a class="article-title" href="/2016/08/05/用Javascript获取页面元素的位置/">用Javascript获取页面元素的位置</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2016/08/05/用Javascript获取页面元素的位置/" class="archive-article-date">
+  	<time datetime="2016-08-05T06:41:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、网页的大小和浏览器窗口的大小"><a href="#一、网页的大小和浏览器窗口的大小" class="headerlink" title="一、网页的大小和浏览器窗口的大小"></a>一、网页的大小和浏览器窗口的大小</h1><h3 id="首先，要明确两个基本概念。"><a href="#首先，要明确两个基本概念。" class="headerlink" title="首先，要明确两个基本概念。"></a>首先，要明确两个基本概念。</h3><h3 id="一张网页的全部面积，就是它的大小。通常情况下，网页的大小由内容和CSS样式表决定。"><a href="#一张网页的全部面积，就是它的大小。通常情况下，网页的大小由内容和CSS样式表决定。" class="headerlink" title="一张网页的全部面积，就是它的大小。通常情况下，网页的大小由内容和CSS样式表决定。"></a>一张网页的全部面积，就是它的大小。通常情况下，网页的大小由内容和CSS样式表决定。</h3><h3 id="浏览器窗口的大小，则是指在浏览器窗口中看到的那部分网页面积，又叫做viewport（视口）。"><a href="#浏览器窗口的大小，则是指在浏览器窗口中看到的那部分网页面积，又叫做viewport（视口）。" class="headerlink" title="浏览器窗口的大小，则是指在浏览器窗口中看到的那部分网页面积，又叫做viewport（视口）。"></a>浏览器窗口的大小，则是指在浏览器窗口中看到的那部分网页面积，又叫做viewport（视口）。</h3><h3 id="很显然，如果网页的内容能够在浏览器窗口中全部显示（也就是不出现滚动条），那么网页的大小和浏览器窗口的大小是相等的。如果不能全部显示，则滚动浏览器窗口，可以显示出网页的各个部分。"><a href="#很显然，如果网页的内容能够在浏览器窗口中全部显示（也就是不出现滚动条），那么网页的大小和浏览器窗口的大小是相等的。如果不能全部显示，则滚动浏览器窗口，可以显示出网页的各个部分。" class="headerlink" title="很显然，如果网页的内容能够在浏览器窗口中全部显示（也就是不出现滚动条），那么网页的大小和浏览器窗口的大小是相等的。如果不能全部显示，则滚动浏览器窗口，可以显示出网页的各个部分。"></a>很显然，如果网页的内容能够在浏览器窗口中全部显示（也就是不出现滚动条），那么网页的大小和浏览器窗口的大小是相等的。如果不能全部显示，则滚动浏览器窗口，可以显示出网页的各个部分。</h3><h1 id="二、获取网页的大小"><a href="#二、获取网页的大小" class="headerlink" title="二、获取网页的大小"></a>二、获取网页的大小</h1><h3 id="网页上的每个元素，都有clientHeight和clientWidth属性。这两个属性指元素的内容部分再加上padding的所占据的视觉面积，不包括border和滚动条占用的空间。"><a href="#网页上的每个元素，都有clientHeight和clientWidth属性。这两个属性指元素的内容部分再加上padding的所占据的视觉面积，不包括border和滚动条占用的空间。" class="headerlink" title="网页上的每个元素，都有clientHeight和clientWidth属性。这两个属性指元素的内容部分再加上padding的所占据的视觉面积，不包括border和滚动条占用的空间。"></a>网页上的每个元素，都有clientHeight和clientWidth属性。这两个属性指元素的内容部分再加上padding的所占据的视觉面积，不包括border和滚动条占用的空间。</h3><p><img src="http://ww1.sinaimg.cn/mw690/005WhkQKgw1f9sshtfwx7j30dm089dg6.jpg" alt=""></p>
+<h3 id="因此，document元素的clientHeight和clientWidth属性，就代表了网页的大小。"><a href="#因此，document元素的clientHeight和clientWidth属性，就代表了网页的大小。" class="headerlink" title="因此，document元素的clientHeight和clientWidth属性，就代表了网页的大小。"></a>因此，document元素的clientHeight和clientWidth属性，就代表了网页的大小。</h3><pre><code>function getViewport(){
+if (document.compatMode == &quot;BackCompat&quot;){
+    return {
+        width: document.body.clientWidth,
+        height: document.body.clientHeight
+    }
+} else {
+    return {
+        width: document.documentElement.clientWidth,
+        height: document.documentElement.clientHeight
+        }
+    }
+}
+</code></pre><h3 id="上面的getViewport函数就可以返回浏览器窗口的高和宽。使用的时候，有三个地方需要注意："><a href="#上面的getViewport函数就可以返回浏览器窗口的高和宽。使用的时候，有三个地方需要注意：" class="headerlink" title="上面的getViewport函数就可以返回浏览器窗口的高和宽。使用的时候，有三个地方需要注意："></a>上面的getViewport函数就可以返回浏览器窗口的高和宽。使用的时候，有三个地方需要注意：</h3><p><code>1）这个函数必须在页面加载完成后才能运行，否则document对象还没生成，浏览器会报错。</code></p>
+<p><code>2）大多数情况下，都是document.documentElement.clientWidth返回正确值。但是，在IE6的quirks模式中，document.body.clientWidth返回正确的值，因此函数中加入了对文档模式的判断。</code></p>
+<p><code>3）clientWidth和clientHeight都是只读属性，不能对它们赋值。</code></p>
+<h1 id="三、获取网页大小的另一种方法"><a href="#三、获取网页大小的另一种方法" class="headerlink" title="三、获取网页大小的另一种方法"></a>三、获取网页大小的另一种方法</h1><h3 id="网页上的每个元素还有scrollHeight和scrollWidth属性，指包含滚动条在内的该元素的视觉面积。"><a href="#网页上的每个元素还有scrollHeight和scrollWidth属性，指包含滚动条在内的该元素的视觉面积。" class="headerlink" title="网页上的每个元素还有scrollHeight和scrollWidth属性，指包含滚动条在内的该元素的视觉面积。"></a>网页上的每个元素还有scrollHeight和scrollWidth属性，指包含滚动条在内的该元素的视觉面积。</h3><h3 id="那么，document对象的scrollHeight和scrollWidth属性就是网页的大小，意思就是滚动条滚过的所有长度和宽度。"><a href="#那么，document对象的scrollHeight和scrollWidth属性就是网页的大小，意思就是滚动条滚过的所有长度和宽度。" class="headerlink" title="那么，document对象的scrollHeight和scrollWidth属性就是网页的大小，意思就是滚动条滚过的所有长度和宽度。"></a>那么，document对象的scrollHeight和scrollWidth属性就是网页的大小，意思就是滚动条滚过的所有长度和宽度。</h3><h3 id="仿照getViewport-函数，可以写出getPagearea-函数。"><a href="#仿照getViewport-函数，可以写出getPagearea-函数。" class="headerlink" title="仿照getViewport()函数，可以写出getPagearea()函数。"></a>仿照getViewport()函数，可以写出getPagearea()函数。</h3><pre><code>function getPagearea(){
+    if (document.compatMode == &quot;BackCompat&quot;){
+        return {
+            width: document.body.scrollWidth,
+            height: document.body.scrollHeight
+        }
+    } else {
+        return {
+            width: document.documentElement.scrollWidth,
+            height: document.documentElement.scrollHeight
+        }
+    }
+}
+</code></pre><h3 id="但是，这个函数有一个问题。如果网页内容能够在浏览器窗口中全部显示，不出现滚动条，那么网页的clientWidth和scrollWidth应该相等。但是实际上，不同浏览器有不同的处理，这两个值未必相等。所以，我们需要取它们之中较大的那个值，因此要对getPagearea-函数进行改写。"><a href="#但是，这个函数有一个问题。如果网页内容能够在浏览器窗口中全部显示，不出现滚动条，那么网页的clientWidth和scrollWidth应该相等。但是实际上，不同浏览器有不同的处理，这两个值未必相等。所以，我们需要取它们之中较大的那个值，因此要对getPagearea-函数进行改写。" class="headerlink" title="但是，这个函数有一个问题。如果网页内容能够在浏览器窗口中全部显示，不出现滚动条，那么网页的clientWidth和scrollWidth应该相等。但是实际上，不同浏览器有不同的处理，这两个值未必相等。所以，我们需要取它们之中较大的那个值，因此要对getPagearea()函数进行改写。"></a>但是，这个函数有一个问题。如果网页内容能够在浏览器窗口中全部显示，不出现滚动条，那么网页的clientWidth和scrollWidth应该相等。但是实际上，不同浏览器有不同的处理，这两个值未必相等。所以，我们需要取它们之中较大的那个值，因此要对getPagearea()函数进行改写。</h3><pre><code>function getPagearea(){
+    if (document.compatMode == &quot;BackCompat&quot;){
+        return {
+            width: Math.max(document.body.scrollWidth,
+                            document.body.clientWidth),
+            height: Math.max(document.body.scrollHeight,
+                            document.body.clientHeight)
+        }
+    } else {
+        return {
+            width: Math.max(document.documentElement.scrollWidth,
+                            document.documentElement.clientWidth),
+            height: Math.max(document.documentElement.scrollHeight,
+                            document.documentElement.clientHeight)
+        }
+    }
+}
+</code></pre><h1 id="四、获取网页元素的绝对位置"><a href="#四、获取网页元素的绝对位置" class="headerlink" title="四、获取网页元素的绝对位置"></a>四、获取网页元素的绝对位置</h1><h3 id="网页元素的绝对位置，指该元素的左上角相对于整张网页左上角的坐标。这个绝对位置要通过计算才能得到。"><a href="#网页元素的绝对位置，指该元素的左上角相对于整张网页左上角的坐标。这个绝对位置要通过计算才能得到。" class="headerlink" title="网页元素的绝对位置，指该元素的左上角相对于整张网页左上角的坐标。这个绝对位置要通过计算才能得到。"></a>网页元素的绝对位置，指该元素的左上角相对于整张网页左上角的坐标。这个绝对位置要通过计算才能得到。</h3><h3 id="首先，每个元素都有offsetTop和offsetLeft属性，表示该元素的左上角与父容器（offsetParent对象）左上角的距离。所以，只需要将这两个值进行累加，就可以得到该元素的绝对坐标。"><a href="#首先，每个元素都有offsetTop和offsetLeft属性，表示该元素的左上角与父容器（offsetParent对象）左上角的距离。所以，只需要将这两个值进行累加，就可以得到该元素的绝对坐标。" class="headerlink" title="首先，每个元素都有offsetTop和offsetLeft属性，表示该元素的左上角与父容器（offsetParent对象）左上角的距离。所以，只需要将这两个值进行累加，就可以得到该元素的绝对坐标。"></a>首先，每个元素都有offsetTop和offsetLeft属性，表示该元素的左上角与父容器（offsetParent对象）左上角的距离。所以，只需要将这两个值进行累加，就可以得到该元素的绝对坐标。</h3><p><img src="http://ww2.sinaimg.cn/mw690/005WhkQKgw1f9sshtgwkgj30dg09qwew.jpg" alt=""></p>
+<p><code>下面两个函数可以用来获取绝对位置的横坐标和纵坐标。</code></p>
+<pre><code>function getElementLeft(element){
+    var actualLeft = element.offsetLeft;
+    var current = element.offsetParent;
+    while (current !== null){
+        actualLeft += current.offsetLeft;
+        current = current.offsetParent;
+    }
+    return actualLeft;
+}
+</code></pre><hr>
+<pre><code>function getElementTop(element){
+    var actualTop = element.offsetTop;
+    var current = element.offsetParent;
+    while (current !== null){
+        actualTop += current.offsetTop;
+        current = current.offsetParent;
+    }
+    return actualTop;
+}
+</code></pre><h3 id="由于在表格和iframe中，offsetParent对象未必等于父容器，所以上面的函数对于表格和iframe中的元素不适用。"><a href="#由于在表格和iframe中，offsetParent对象未必等于父容器，所以上面的函数对于表格和iframe中的元素不适用。" class="headerlink" title="由于在表格和iframe中，offsetParent对象未必等于父容器，所以上面的函数对于表格和iframe中的元素不适用。"></a>由于在表格和iframe中，offsetParent对象未必等于父容器，所以上面的函数对于表格和iframe中的元素不适用。</h3><h1 id="五、获取网页元素的相对位置"><a href="#五、获取网页元素的相对位置" class="headerlink" title="五、获取网页元素的相对位置"></a>五、获取网页元素的相对位置</h1><h3 id="网页元素的相对位置，指该元素左上角相对于浏览器窗口左上角的坐标。"><a href="#网页元素的相对位置，指该元素左上角相对于浏览器窗口左上角的坐标。" class="headerlink" title="网页元素的相对位置，指该元素左上角相对于浏览器窗口左上角的坐标。"></a>网页元素的相对位置，指该元素左上角相对于浏览器窗口左上角的坐标。</h3><h3 id="有了绝对位置以后，获得相对位置就很容易了，只要将绝对坐标减去页面的滚动条滚动的距离就可以了。滚动条滚动的垂直距离，是document对象的scrollTop属性；滚动条滚动的水平距离是document对象的scrollLeft属性。"><a href="#有了绝对位置以后，获得相对位置就很容易了，只要将绝对坐标减去页面的滚动条滚动的距离就可以了。滚动条滚动的垂直距离，是document对象的scrollTop属性；滚动条滚动的水平距离是document对象的scrollLeft属性。" class="headerlink" title="有了绝对位置以后，获得相对位置就很容易了，只要将绝对坐标减去页面的滚动条滚动的距离就可以了。滚动条滚动的垂直距离，是document对象的scrollTop属性；滚动条滚动的水平距离是document对象的scrollLeft属性。"></a>有了绝对位置以后，获得相对位置就很容易了，只要将绝对坐标减去页面的滚动条滚动的距离就可以了。滚动条滚动的垂直距离，是document对象的scrollTop属性；滚动条滚动的水平距离是document对象的scrollLeft属性。</h3><p><img src="http://ww1.sinaimg.cn/mw690/005WhkQKgw1f9sshth6i3j30f30a3gm6.jpg" alt=""></p>
+<h3 id="对上一节中的两个函数进行相应的改写："><a href="#对上一节中的两个函数进行相应的改写：" class="headerlink" title="对上一节中的两个函数进行相应的改写："></a>对上一节中的两个函数进行相应的改写：</h3><pre><code>function getElementViewLeft(element){
+    var actualLeft = element.offsetLeft;
+    var current = element.offsetParent;
+    while (current !== null){
+        actualLeft += current.offsetLeft;
+        current = current.offsetParent;
+    }
+    if (document.compatMode == &quot;BackCompat&quot;){
+        var elementScrollLeft=document.body.scrollLeft;
+    } else {
+        var elementScrollLeft=document.documentElement.scrollLeft; 
+    }
+        return actualLeft-elementScrollLeft;
+    }
+function getElementViewTop(element){
+    var actualTop = element.offsetTop;
+    var current = element.offsetParent;
+    while (current !== null){
+        actualTop += current. offsetTop;
+        current = current.offsetParent;
+    }
+    if (document.compatMode == &quot;BackCompat&quot;){
+        var elementScrollTop=document.body.scrollTop;
+    } else {
+        var elementScrollTop=document.documentElement.scrollTop; 
+    }
+    return actualTop-elementScrollTop;
+}
+</code></pre><h3 id="scrollTop和scrollLeft属性是可以赋值的，并且会立即自动滚动网页到相应位置，因此可以利用它们改变网页元素的相对位置。另外，element-scrollIntoView-方法也有类似作用，可以使网页元素出现在浏览器窗口的左上角。"><a href="#scrollTop和scrollLeft属性是可以赋值的，并且会立即自动滚动网页到相应位置，因此可以利用它们改变网页元素的相对位置。另外，element-scrollIntoView-方法也有类似作用，可以使网页元素出现在浏览器窗口的左上角。" class="headerlink" title="scrollTop和scrollLeft属性是可以赋值的，并且会立即自动滚动网页到相应位置，因此可以利用它们改变网页元素的相对位置。另外，element.scrollIntoView()方法也有类似作用，可以使网页元素出现在浏览器窗口的左上角。"></a>scrollTop和scrollLeft属性是可以赋值的，并且会立即自动滚动网页到相应位置，因此可以利用它们改变网页元素的相对位置。另外，element.scrollIntoView()方法也有类似作用，可以使网页元素出现在浏览器窗口的左上角。</h3><h1 id="六、获取元素位置的快速方法"><a href="#六、获取元素位置的快速方法" class="headerlink" title="六、获取元素位置的快速方法"></a>六、获取元素位置的快速方法</h1><h3 id="除了上面的函数以外，还有一种快速方法，可以立刻获得网页元素的位置。"><a href="#除了上面的函数以外，还有一种快速方法，可以立刻获得网页元素的位置。" class="headerlink" title="除了上面的函数以外，还有一种快速方法，可以立刻获得网页元素的位置。"></a>除了上面的函数以外，还有一种快速方法，可以立刻获得网页元素的位置。</h3><h3 id="那就是使用getBoundingClientRect-方法。它返回一个对象，其中包含了left、right、top、bottom四个属性，分别对应了该元素的左上角和右下角相对于浏览器窗口（viewport）左上角的距离。"><a href="#那就是使用getBoundingClientRect-方法。它返回一个对象，其中包含了left、right、top、bottom四个属性，分别对应了该元素的左上角和右下角相对于浏览器窗口（viewport）左上角的距离。" class="headerlink" title="那就是使用getBoundingClientRect()方法。它返回一个对象，其中包含了left、right、top、bottom四个属性，分别对应了该元素的左上角和右下角相对于浏览器窗口（viewport）左上角的距离。"></a>那就是使用getBoundingClientRect()方法。它返回一个对象，其中包含了left、right、top、bottom四个属性，分别对应了该元素的左上角和右下角相对于浏览器窗口（viewport）左上角的距离。</h3><h3 id="所以，网页元素的相对位置就是"><a href="#所以，网页元素的相对位置就是" class="headerlink" title="所以，网页元素的相对位置就是"></a>所以，网页元素的相对位置就是</h3><pre><code>var X= this.getBoundingClientRect().left;
+
+var Y =this.getBoundingClientRect().top;
+</code></pre><h3 id="再加上滚动距离，就可以得到绝对位置"><a href="#再加上滚动距离，就可以得到绝对位置" class="headerlink" title="再加上滚动距离，就可以得到绝对位置"></a>再加上滚动距离，就可以得到绝对位置</h3><pre><code>var X= this.getBoundingClientRect().left+document.documentElement.scrollLeft;
+
+var Y =this.getBoundingClientRect().top+document.documentElement.scrollTop;
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/08/05/用Javascript获取页面元素的位置/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+
+
+
+
   
+    <article id="post-JavaScript插入节点小结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
-    </div></section>
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/04/JavaScript插入节点小结/">JavaScript插入节点小结</a>
+    </h1>
   
 
+        
+        <a href="/2016/08/04/JavaScript插入节点小结/" class="archive-article-date">
+  	<time datetime="2016-08-04T02:28:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-04</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-JS原生API插入节点的方式大致有innerHTML、outerHTML、appendChild、insertBefore、insertAdjacentHTML、applyElement这6种。"><a href="#1-JS原生API插入节点的方式大致有innerHTML、outerHTML、appendChild、insertBefore、insertAdjacentHTML、applyElement这6种。" class="headerlink" title="1.JS原生API插入节点的方式大致有innerHTML、outerHTML、appendChild、insertBefore、insertAdjacentHTML、applyElement这6种。"></a><code>1.</code>JS原生API插入节点的方式大致有innerHTML、outerHTML、appendChild、insertBefore、insertAdjacentHTML、applyElement这6种。</h4><h4 id="2-这里总结一下各自的用法，并封装包含before、prepend、append、after、applyElement的一系列函数。"><a href="#2-这里总结一下各自的用法，并封装包含before、prepend、append、after、applyElement的一系列函数。" class="headerlink" title="2.这里总结一下各自的用法，并封装包含before、prepend、append、after、applyElement的一系列函数。"></a><code>2.</code>这里总结一下各自的用法，并封装包含before、prepend、append、after、applyElement的一系列函数。</h4><h1 id="1-六种方式的用法"><a href="#1-六种方式的用法" class="headerlink" title="1. 六种方式的用法"></a>1. 六种方式的用法</h1><ol>
+<li><p>innerHTML：获取标签内部的HTML内容。</p>
+</li>
+<li><p>outerHTML：获取包括目标标签在内，以及内部HTML的内容。</p>
+</li>
+<li><p>appendChild：向目标标签末尾添加子节点，返回参数节点。</p>
+</li>
+<li><p>insertBefore：向目标节点的第二个参数位置添加第一个参数为子节点，返回第一个参数。</p>
+</li>
+<li><p>insertAdjacentHTML：向目标节点的指定位置添加节点；第二个参数为要添加的节点，第一个参数指定位置，位置包括beforebegin(添加为previousSibling)、afterbegin(添加为firstChild)、beforeend(添加为lastChild)、afterend(添加为nextSibling)。它还有两个兄弟函数，分别是insertAdjacentElement和insertAdjacentText，前者添加元素并返回该元素，后者添加文本。</p>
+</li>
+<li><p>applyElement：IE的函数，将参数节点设置成目标节点的外包围或者内包围；第一个为参数节点，第二个参数指定方式，方式包括inside(内包围，即参数节点将目标节点的子节点包起来)、outside(外包围，即参数节点将目标节点包起来)。</p>
+</li>
+</ol>
+<h4 id="上面6种方式除了前两个是属性外，另外4个都是函数。innerHTML与outerHTML没有什么好说的，直接用HTML字符串赋值就能达到插入的目的了；appendChild简单套一层函数外壳就能封装成append函数；insertBefore让节点的插入方式非常灵活；insertAdjacentHTML可以实现字符串的插入方式；applyElement函数兼容一下即可成为JQuery的Wrap系列函数。"><a href="#上面6种方式除了前两个是属性外，另外4个都是函数。innerHTML与outerHTML没有什么好说的，直接用HTML字符串赋值就能达到插入的目的了；appendChild简单套一层函数外壳就能封装成append函数；insertBefore让节点的插入方式非常灵活；insertAdjacentHTML可以实现字符串的插入方式；applyElement函数兼容一下即可成为JQuery的Wrap系列函数。" class="headerlink" title="上面6种方式除了前两个是属性外，另外4个都是函数。innerHTML与outerHTML没有什么好说的，直接用HTML字符串赋值就能达到插入的目的了；appendChild简单套一层函数外壳就能封装成append函数；insertBefore让节点的插入方式非常灵活；insertAdjacentHTML可以实现字符串的插入方式；applyElement函数兼容一下即可成为JQuery的Wrap系列函数。"></a>上面6种方式除了前两个是属性外，另外4个都是函数。innerHTML与outerHTML没有什么好说的，直接用HTML字符串赋值就能达到插入的目的了；appendChild简单套一层函数外壳就能封装成append函数；insertBefore让节点的插入方式非常灵活；insertAdjacentHTML可以实现字符串的插入方式；applyElement函数兼容一下即可成为JQuery的Wrap系列函数。</h4><h1 id="二、实现before、prepend、append、after函数"><a href="#二、实现before、prepend、append、after函数" class="headerlink" title="二、实现before、prepend、append、after函数"></a>二、实现before、prepend、append、after函数</h1><h5 id="before把参数节点插入到目标节点前面，只需获取目标节点的父节点，然后父节点调用insertBefore即可。"><a href="#before把参数节点插入到目标节点前面，只需获取目标节点的父节点，然后父节点调用insertBefore即可。" class="headerlink" title="before把参数节点插入到目标节点前面，只需获取目标节点的父节点，然后父节点调用insertBefore即可。"></a>before把参数节点插入到目标节点前面，只需获取目标节点的父节点，然后父节点调用insertBefore即可。</h5><h5 id="prepend把参数节点插入到目标节点第一个子节点的位置，获取目标节点的第一个子节点，然后调用insertBefore即可。"><a href="#prepend把参数节点插入到目标节点第一个子节点的位置，获取目标节点的第一个子节点，然后调用insertBefore即可。" class="headerlink" title="prepend把参数节点插入到目标节点第一个子节点的位置，获取目标节点的第一个子节点，然后调用insertBefore即可。"></a>prepend把参数节点插入到目标节点第一个子节点的位置，获取目标节点的第一个子节点，然后调用insertBefore即可。</h5><h5 id="append的功能和原生API里appendChild的功能一样。"><a href="#append的功能和原生API里appendChild的功能一样。" class="headerlink" title="append的功能和原生API里appendChild的功能一样。"></a>append的功能和原生API里appendChild的功能一样。</h5><h5 id="after把参数节点插入到目标节点的后面，只需获取目标节点的nextSibling，然后调用insertBefore即可。"><a href="#after把参数节点插入到目标节点的后面，只需获取目标节点的nextSibling，然后调用insertBefore即可。" class="headerlink" title="after把参数节点插入到目标节点的后面，只需获取目标节点的nextSibling，然后调用insertBefore即可。"></a>after把参数节点插入到目标节点的后面，只需获取目标节点的nextSibling，然后调用insertBefore即可。</h5><h5 id="具体实现如下："><a href="#具体实现如下：" class="headerlink" title="具体实现如下："></a>具体实现如下：</h5><pre><code>var append = function(node, scope) {
+    if(node.nodeType === 1 || node.nodeType === 9 || node.nodeType === 11) {
+        scope.appendChild(node);
+    }
+};
+var prepend = function(node, scope) {
+    if(node.nodeType === 1 || node.nodeType === 9 || node.nodeType === 11) {
+        scope.insertBefore(node, scope.firstChild);
+    }
+};
+var before = function(node, scope) {
+    if(node.nodeType === 1 || node.nodeType === 9 || node.nodeType === 11) {
+        scope.parentNode.insertBefore(node, scope);
+    }
+};
+var after = function(node, scope) {
+    if(node.nodeType === 1 || node.nodeType === 9 || node.nodeType === 11) {
+        scope.parentNode.insertBefore(node, scope.nextSibling);
+    }
+};
+</code></pre><h5 id="上面函数只能插入元素节点、文档节点以及文档碎片，都是节点类型。如果我们想要支持字符串形式的插入方式，则需要封装insertAdjacentHTML了。"><a href="#上面函数只能插入元素节点、文档节点以及文档碎片，都是节点类型。如果我们想要支持字符串形式的插入方式，则需要封装insertAdjacentHTML了。" class="headerlink" title="上面函数只能插入元素节点、文档节点以及文档碎片，都是节点类型。如果我们想要支持字符串形式的插入方式，则需要封装insertAdjacentHTML了。"></a>上面函数只能插入元素节点、文档节点以及文档碎片，都是节点类型。如果我们想要支持字符串形式的插入方式，则需要封装insertAdjacentHTML了。</h5><h5 id="这里利用策略模式，将我要实现的四个函数做成策略对象，然后动态生成，以达到精简代码的效果："><a href="#这里利用策略模式，将我要实现的四个函数做成策略对象，然后动态生成，以达到精简代码的效果：" class="headerlink" title="这里利用策略模式，将我要实现的四个函数做成策略对象，然后动态生成，以达到精简代码的效果："></a>这里利用策略模式，将我要实现的四个函数做成策略对象，然后动态生成，以达到精简代码的效果：</h5><pre><code>//E5才有的迭代, 所以迭代要预先兼容
+Array.prototype.forEach = [].forEach || function(callback) {
+    for(var i = 0, len = this.length; i &lt; len; i++) {
+        callback.call(this[i], this[i], i, this);
+     }
+};  
+
+/**插入策略集合**/
+var insertStrategies = {
+    before : function(node, scope) {
+    scope.parentNode.insertBefore(node, scope);
+},
+prepend : function(node, scope) {
+    scope.insertBefore(node, scope.firstChild);
+},
+append : function(node, scope) {
+    scope.appendChild(node);
+},
+after : function(node, scope) {
+    scope.parentNode.insertBefore(node, scope.nextSibling);
+},
+
+/*支持字符串格式的插入, 注意：要兼容不可直接做div子类的元素*/
+/*insertAdjace还有Element和Text，前者只能插元素，后者只能插文本*/
+beforestr : function(node, scope) {
+    scope.insertAdjacentHTML(&apos;beforeBegin&apos;, node);
+},
+prependstr : function(node, scope) {
+    scope.insertAdjacentHTML(&apos;afterBegin&apos;, node);
+},
+appendstr : function(node, scope) {
+    scope.insertAdjacentHTML(&apos;beforeEnd&apos;, node);
+},
+afterstr : function(node, scope) {
+    scope.insertAdjacentHTML(&apos;afterEnd&apos;, node);
+}
+};
+
+//响应函数
+var returnMethod = function(method, node, scope) {
+//如果是字符串
+if(typeof node === &apos;string&apos;) {
+    return insertStrategies[method + &apos;str&apos;](node, scope);
+}
+//1(元素)、9(文档)、11(文档碎片)
+if(node.nodeType === 1 || node.nodeType === 9 || node.nodeType === 11) {
+    return insertStrategies[method](node, scope);
+}
+//此处还可添加节点集合的处理逻辑，用于处理选择其引擎获取的节点集合。
+};
+
+[&apos;before&apos;, &apos;prepend&apos;, &apos;append&apos;, &apos;after&apos;].forEach(function(method){
+window[method] = function(node, scope) {
+    returnMethod(method, node, scope);
+};
+});
+</code></pre><h5 id="所有函数都被实现为window的属性，所以直接当全局函数调用即可，这些函数并不属于节点对象，所以scope参数指代的是目标节点。下面兼容applyElement后，我们将所有的函数都扩展到HTMLElement的原型上面去，这样就可以省略scope参数，以达到元素节点直接调用的效果。当然对于框架来说，一般是生成框架对象，然后把这些函数扩展到其原型上去，这样可以避免修改原生对象的原型"><a href="#所有函数都被实现为window的属性，所以直接当全局函数调用即可，这些函数并不属于节点对象，所以scope参数指代的是目标节点。下面兼容applyElement后，我们将所有的函数都扩展到HTMLElement的原型上面去，这样就可以省略scope参数，以达到元素节点直接调用的效果。当然对于框架来说，一般是生成框架对象，然后把这些函数扩展到其原型上去，这样可以避免修改原生对象的原型" class="headerlink" title="所有函数都被实现为window的属性，所以直接当全局函数调用即可，这些函数并不属于节点对象，所以scope参数指代的是目标节点。下面兼容applyElement后，我们将所有的函数都扩展到HTMLElement的原型上面去，这样就可以省略scope参数，以达到元素节点直接调用的效果。当然对于框架来说，一般是生成框架对象，然后把这些函数扩展到其原型上去，这样可以避免修改原生对象的原型"></a>所有函数都被实现为window的属性，所以直接当全局函数调用即可，这些函数并不属于节点对象，所以scope参数指代的是目标节点。下面兼容applyElement后，我们将所有的函数都扩展到HTMLElement的原型上面去，这样就可以省略scope参数，以达到元素节点直接调用的效果。当然对于框架来说，一般是生成框架对象，然后把这些函数扩展到其原型上去，这样可以避免修改原生对象的原型</h5>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/08/04/JavaScript插入节点小结/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="javascript-面向对象编程（一）：封装" class="article article-type-javascript  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/03/面向对象编程（一）：封装/">面向对象编程（一）：封装</a>
+    </h1>
+  
+
+        
+        <a href="/2016/08/03/面向对象编程（一）：封装/" class="archive-article-date">
+  	<time datetime="2016-08-03T13:38:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Javascript是一种基于对象（object-based）的语言，你遇到的所有东西几乎都是对象。但是，它又不是一种真正的面向对象编程（OOP）语言，因为它的语法中没有class（类）。"><a href="#Javascript是一种基于对象（object-based）的语言，你遇到的所有东西几乎都是对象。但是，它又不是一种真正的面向对象编程（OOP）语言，因为它的语法中没有class（类）。" class="headerlink" title="Javascript是一种基于对象（object-based）的语言，你遇到的所有东西几乎都是对象。但是，它又不是一种真正的面向对象编程（OOP）语言，因为它的语法中没有class（类）。"></a>Javascript是一种基于对象（object-based）的语言，你遇到的所有东西几乎都是对象。但是，它又不是一种真正的面向对象编程（OOP）语言，因为它的语法中没有<code>class</code>（类）。</h4><h4 id="那么，如果我们要把”属性”（property）和”方法”（method），封装成一个对象，甚至要从原型对象生成一个实例对象，我们应该怎么做呢？"><a href="#那么，如果我们要把”属性”（property）和”方法”（method），封装成一个对象，甚至要从原型对象生成一个实例对象，我们应该怎么做呢？" class="headerlink" title="那么，如果我们要把”属性”（property）和”方法”（method），封装成一个对象，甚至要从原型对象生成一个实例对象，我们应该怎么做呢？"></a>那么，如果我们要把”属性”（property）和”方法”（method），封装成一个对象，甚至要从原型对象生成一个实例对象，我们应该怎么做呢？</h4><h1 id="一、-生成实例对象的原始模式"><a href="#一、-生成实例对象的原始模式" class="headerlink" title="一、 生成实例对象的原始模式"></a>一、 生成实例对象的原始模式</h1><h4 id="一、-生成实例对象的原始模式-1"><a href="#一、-生成实例对象的原始模式-1" class="headerlink" title="一、 生成实例对象的原始模式"></a>一、 生成实例对象的原始模式</h4><pre><code>var Cat = {
+    name : &apos;&apos;,
+    color : &apos;&apos;
+}
+</code></pre><h4 id="现在，我们需要根据这个原型对象的规格（schema），生成两个实例对象。"><a href="#现在，我们需要根据这个原型对象的规格（schema），生成两个实例对象。" class="headerlink" title="现在，我们需要根据这个原型对象的规格（schema），生成两个实例对象。"></a>现在，我们需要根据这个原型对象的规格（schema），生成两个实例对象。</h4><pre><code>var cat1 = {}; // 创建一个空对象
+    cat1.name = &quot;大毛&quot;; // 按照原型对象的属性赋值
+    cat1.color = &quot;黄色&quot;;
+var cat2 = {};
+    cat2.name = &quot;二毛&quot;;
+    cat2.color = &quot;黑色&quot;;
+</code></pre><h4 id="好了，这就是最简单的封装了，把两个属性封装在一个对象里面。但是，这样的写法有两个缺点，一是如果多生成几个实例，写起来就非常麻烦；二是实例与原型之间，没有任何办法，可以看出有什么联系。"><a href="#好了，这就是最简单的封装了，把两个属性封装在一个对象里面。但是，这样的写法有两个缺点，一是如果多生成几个实例，写起来就非常麻烦；二是实例与原型之间，没有任何办法，可以看出有什么联系。" class="headerlink" title="好了，这就是最简单的封装了，把两个属性封装在一个对象里面。但是，这样的写法有两个缺点，一是如果多生成几个实例，写起来就非常麻烦；二是实例与原型之间，没有任何办法，可以看出有什么联系。"></a>好了，这就是最简单的封装了，把两个属性封装在一个对象里面。但是，这样的写法有两个缺点，一是如果多生成几个实例，写起来就非常麻烦；二是实例与原型之间，没有任何办法，可以看出有什么联系。</h4><h1 id="二、-原始模式的改进"><a href="#二、-原始模式的改进" class="headerlink" title="二、 原始模式的改进"></a>二、 原始模式的改进</h1><h4 id="我们可以写一个函数，解决代码重复的问题。"><a href="#我们可以写一个函数，解决代码重复的问题。" class="headerlink" title="我们可以写一个函数，解决代码重复的问题。"></a>我们可以写一个函数，解决代码重复的问题。</h4><pre><code>function Cat(name,color) {
+    return {
+        name:name,
+        color:color
+    }
+}
+</code></pre><h4 id="然后生成实例对象，就等于是在调用函数："><a href="#然后生成实例对象，就等于是在调用函数：" class="headerlink" title="然后生成实例对象，就等于是在调用函数："></a>然后生成实例对象，就等于是在调用函数：</h4><pre><code>var cat1 = Cat(&quot;大毛&quot;,&quot;黄色&quot;);
+var cat2 = Cat(&quot;二毛&quot;,&quot;黑色&quot;);
+</code></pre><h4 id="这种方法的问题依然是，cat1和cat2之间没有内在的联系，不能反映出它们是同一个原型对象的实例。"><a href="#这种方法的问题依然是，cat1和cat2之间没有内在的联系，不能反映出它们是同一个原型对象的实例。" class="headerlink" title="这种方法的问题依然是，cat1和cat2之间没有内在的联系，不能反映出它们是同一个原型对象的实例。"></a>这种方法的问题依然是，<code>cat1</code>和<code>cat2</code>之间没有内在的联系，不能反映出它们是同一个原型对象的实例。</h4><h1 id="三、-构造函数模式"><a href="#三、-构造函数模式" class="headerlink" title="三、 构造函数模式"></a>三、 构造函数模式</h1><h4 id="为了解决从原型对象生成实例的问题，Javascript提供了一个构造函数（Constructor）模式。"><a href="#为了解决从原型对象生成实例的问题，Javascript提供了一个构造函数（Constructor）模式。" class="headerlink" title="为了解决从原型对象生成实例的问题，Javascript提供了一个构造函数（Constructor）模式。"></a>为了解决从原型对象生成实例的问题，Javascript提供了一个构造函数（Constructor）模式。</h4><h4 id="所谓”构造函数”，其实就是一个普通函数，但是内部使用了this变量。对构造函数使用new运算符，就能生成实例，并且this变量会绑定在实例对象上。"><a href="#所谓”构造函数”，其实就是一个普通函数，但是内部使用了this变量。对构造函数使用new运算符，就能生成实例，并且this变量会绑定在实例对象上。" class="headerlink" title="所谓”构造函数”，其实就是一个普通函数，但是内部使用了this变量。对构造函数使用new运算符，就能生成实例，并且this变量会绑定在实例对象上。"></a>所谓”构造函数”，其实就是一个普通函数，但是内部使用了<code>this</code>变量。对构造函数使用<code>new</code>运算符，就能生成实例，并且<code>this</code>变量会绑定在实例对象上。</h4><h4 id="比如，猫的原型对象现在可以这样写，"><a href="#比如，猫的原型对象现在可以这样写，" class="headerlink" title="比如，猫的原型对象现在可以这样写，"></a>比如，猫的原型对象现在可以这样写，</h4><pre><code>function Cat(name,color){
+    this.name=name;
+    this.color=color;
+}
+</code></pre><h4 id="我们现在就可以生成实例对象了。"><a href="#我们现在就可以生成实例对象了。" class="headerlink" title="我们现在就可以生成实例对象了。"></a>我们现在就可以生成实例对象了。</h4><pre><code>var cat1 = new Cat(&quot;大毛&quot;,&quot;黄色&quot;);
+var cat2 = new Cat(&quot;二毛&quot;,&quot;黑色&quot;);
+alert(cat1.name); // 大毛
+alert(cat1.color); // 黄色
+</code></pre><h4 id="这时cat1和cat2会自动含有一个constructor属性，指向它们的构造函数。"><a href="#这时cat1和cat2会自动含有一个constructor属性，指向它们的构造函数。" class="headerlink" title="这时cat1和cat2会自动含有一个constructor属性，指向它们的构造函数。"></a>这时<code>cat1</code>和<code>cat2</code>会自动含有一个<code>constructor</code>属性，指向它们的构造函数。</h4><pre><code>alert(cat1.constructor == Cat); //true
+alert(cat2.constructor == Cat); //true
+</code></pre><h4 id="Javascript还提供了一个instanceof运算符，验证原型对象与实例对象之间的关系。"><a href="#Javascript还提供了一个instanceof运算符，验证原型对象与实例对象之间的关系。" class="headerlink" title="Javascript还提供了一个instanceof运算符，验证原型对象与实例对象之间的关系。"></a>Javascript还提供了一个<code>instanceof</code>运算符，验证原型对象与实例对象之间的关系。</h4><h1 id="四、构造函数模式的问题"><a href="#四、构造函数模式的问题" class="headerlink" title="四、构造函数模式的问题"></a>四、构造函数模式的问题</h1><h4 id="构造函数方法很好用，但是存在一个浪费内存的问题。"><a href="#构造函数方法很好用，但是存在一个浪费内存的问题。" class="headerlink" title="构造函数方法很好用，但是存在一个浪费内存的问题。"></a>构造函数方法很好用，但是存在一个浪费内存的问题。</h4><h4 id="请看，我们现在为Cat对象添加一个不变的属性type（种类），再添加一个方法eat（吃）。那么，原型对象Cat就变成了下面这样："><a href="#请看，我们现在为Cat对象添加一个不变的属性type（种类），再添加一个方法eat（吃）。那么，原型对象Cat就变成了下面这样：" class="headerlink" title="请看，我们现在为Cat对象添加一个不变的属性type（种类），再添加一个方法eat（吃）。那么，原型对象Cat就变成了下面这样："></a>请看，我们现在为<code>Cat</code>对象添加一个不变的属性<code>type</code>（种类），再添加一个方法<code>eat</code>（吃）。那么，原型对象Cat就变成了下面这样：</h4><pre><code>function Cat(name,color){
+    this.name = name;
+    this.color = color;
+    this.type = &quot;猫科动物&quot;;
+    this.eat = function(){alert(&quot;吃老鼠&quot;);};
+}
+</code></pre><h4 id="还是采用同样的方法，生成实例："><a href="#还是采用同样的方法，生成实例：" class="headerlink" title="还是采用同样的方法，生成实例："></a>还是采用同样的方法，生成实例：</h4><pre><code>var cat1 = new Cat(&quot;大毛&quot;,&quot;黄色&quot;);
+var cat2 = new Cat (&quot;二毛&quot;,&quot;黑色&quot;);
+alert(cat1.type); // 猫科动物
+cat1.eat(); // 吃老鼠
+</code></pre><h4 id="表面上好像没什么问题，但是实际上这样做，有一个很大的弊端。那就是对于每一个实例对象，type属性和eat-方法都是一模一样的内容，每一次生成一个实例，都必须为重复的内容，多占用一些内存。这样既不环保，也缺乏效率。"><a href="#表面上好像没什么问题，但是实际上这样做，有一个很大的弊端。那就是对于每一个实例对象，type属性和eat-方法都是一模一样的内容，每一次生成一个实例，都必须为重复的内容，多占用一些内存。这样既不环保，也缺乏效率。" class="headerlink" title="表面上好像没什么问题，但是实际上这样做，有一个很大的弊端。那就是对于每一个实例对象，type属性和eat()方法都是一模一样的内容，每一次生成一个实例，都必须为重复的内容，多占用一些内存。这样既不环保，也缺乏效率。"></a>表面上好像没什么问题，但是实际上这样做，有一个很大的弊端。那就是对于每一个实例对象，<code>type</code>属性和<code>eat()</code>方法都是一模一样的内容，每一次生成一个实例，都必须为重复的内容，多占用一些内存。这样既不环保，也缺乏效率。</h4><pre><code>alert(cat1.eat == cat2.eat); //false
+</code></pre><h4 id="能不能让type属性和eat-方法在内存中只生成一次，然后所有实例都指向那个内存地址呢？回答是可以的。"><a href="#能不能让type属性和eat-方法在内存中只生成一次，然后所有实例都指向那个内存地址呢？回答是可以的。" class="headerlink" title="能不能让type属性和eat()方法在内存中只生成一次，然后所有实例都指向那个内存地址呢？回答是可以的。"></a>能不能让<code>type</code>属性和<code>eat()</code>方法在内存中只生成一次，然后所有实例都指向那个内存地址呢？回答是可以的。</h4><h1 id="五、-Prototype模式"><a href="#五、-Prototype模式" class="headerlink" title="五、 Prototype模式"></a>五、 Prototype模式</h1><h4 id="Javascript规定，每一个构造函数都有一个prototype属性，指向另一个对象。这个对象的所有属性和方法，都会被构造函数的实例继承。"><a href="#Javascript规定，每一个构造函数都有一个prototype属性，指向另一个对象。这个对象的所有属性和方法，都会被构造函数的实例继承。" class="headerlink" title="Javascript规定，每一个构造函数都有一个prototype属性，指向另一个对象。这个对象的所有属性和方法，都会被构造函数的实例继承。"></a>Javascript规定，每一个构造函数都有一个<code>prototype</code>属性，指向另一个对象。这个对象的所有属性和方法，都会被构造函数的实例继承。</h4><h4 id="这意味着，我们可以把那些不变的属性和方法，直接定义在prototype对象上。"><a href="#这意味着，我们可以把那些不变的属性和方法，直接定义在prototype对象上。" class="headerlink" title="这意味着，我们可以把那些不变的属性和方法，直接定义在prototype对象上。"></a>这意味着，我们可以把那些不变的属性和方法，直接定义在<code>prototype</code>对象上。</h4><pre><code>function Cat(name,color){
+    this.name = name;
+    this.color = color;
+}
+Cat.prototype.type = &quot;猫科动物&quot;;
+Cat.prototype.eat = function(){alert(&quot;吃老鼠&quot;)};
+</code></pre><h4 id="然后，生成实例"><a href="#然后，生成实例" class="headerlink" title="然后，生成实例"></a>然后，生成实例</h4><pre><code>var cat1 = new Cat(&quot;大毛&quot;,&quot;黄色&quot;);
+var cat2 = new Cat(&quot;二毛&quot;,&quot;黑色&quot;);
+alert(cat1.type); // 猫科动物
+cat1.eat(); // 吃老鼠
+</code></pre><h4 id="这时所有实例的type属性和eat-方法，其实都是同一个内存地址，指向prototype对象，因此就提高了运行效率"><a href="#这时所有实例的type属性和eat-方法，其实都是同一个内存地址，指向prototype对象，因此就提高了运行效率" class="headerlink" title="这时所有实例的type属性和eat()方法，其实都是同一个内存地址，指向prototype对象，因此就提高了运行效率"></a>这时所有实例的<code>type</code>属性和<code>eat()</code>方法，其实都是同一个内存地址，指向prototype对象，因此就提高了运行效率</h4><pre><code>　　alert(cat1.eat == cat2.eat); //true
+</code></pre><h1 id="六、-Prototype模式的验证方法"><a href="#六、-Prototype模式的验证方法" class="headerlink" title="六、 Prototype模式的验证方法"></a>六、 Prototype模式的验证方法</h1><h4 id="为了配合prototype属性，Javascript定义了一些辅助方法，帮助我们使用它。"><a href="#为了配合prototype属性，Javascript定义了一些辅助方法，帮助我们使用它。" class="headerlink" title="为了配合prototype属性，Javascript定义了一些辅助方法，帮助我们使用它。"></a>为了配合<code>prototype</code>属性，Javascript定义了一些辅助方法，帮助我们使用它。</h4><h2 id="6-1-isPrototypeOf"><a href="#6-1-isPrototypeOf" class="headerlink" title="6.1 isPrototypeOf()"></a>6.1 isPrototypeOf()</h2><h4 id="这个方法用来判断，某个proptotype对象和某个实例之间的关系。"><a href="#这个方法用来判断，某个proptotype对象和某个实例之间的关系。" class="headerlink" title="这个方法用来判断，某个proptotype对象和某个实例之间的关系。"></a>这个方法用来判断，某个<code>proptotype</code>对象和某个实例之间的关系。</h4><pre><code>alert(Cat.prototype.isPrototypeOf(cat1)); //true
+alert(Cat.prototype.isPrototypeOf(cat2)); //true
+</code></pre><h2 id="6-2-hasOwnProperty"><a href="#6-2-hasOwnProperty" class="headerlink" title="6.2 hasOwnProperty()"></a>6.2 hasOwnProperty()</h2><h4 id="每个实例对象都有一个hasOwnProperty-方法，用来判断某一个属性到底是本地属性，还是继承自prototype对象的属性。"><a href="#每个实例对象都有一个hasOwnProperty-方法，用来判断某一个属性到底是本地属性，还是继承自prototype对象的属性。" class="headerlink" title="每个实例对象都有一个hasOwnProperty()方法，用来判断某一个属性到底是本地属性，还是继承自prototype对象的属性。"></a>每个实例对象都有一个<code>hasOwnProperty()</code>方法，用来判断某一个属性到底是本地属性，还是继承自<code>prototype</code>对象的属性。</h4><pre><code>alert(cat1.hasOwnProperty(&quot;name&quot;)); // true
+alert(cat1.hasOwnProperty(&quot;type&quot;)); // false
+</code></pre><h2 id="6-3-in运算符"><a href="#6-3-in运算符" class="headerlink" title="6.3 in运算符"></a>6.3 in运算符</h2><h4 id="in运算符可以用来判断，某个实例是否含有某个属性，不管是不是本地属性。"><a href="#in运算符可以用来判断，某个实例是否含有某个属性，不管是不是本地属性。" class="headerlink" title="in运算符可以用来判断，某个实例是否含有某个属性，不管是不是本地属性。"></a><code>in</code>运算符可以用来判断，某个实例是否含有某个属性，不管是不是本地属性。</h4><pre><code>alert(&quot;name&quot; in cat1); // true
+alert(&quot;type&quot; in cat1); // true
+</code></pre><h4 id="in运算符还可以用来遍历某个对象的所有属性。"><a href="#in运算符还可以用来遍历某个对象的所有属性。" class="headerlink" title="in运算符还可以用来遍历某个对象的所有属性。"></a><code>in</code>运算符还可以用来遍历某个对象的所有属性。</h4><pre><code>for(var prop in cat1) { alert(&quot;cat1[&quot;+prop+&quot;]=&quot;+cat1[prop]); }
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/08/03/面向对象编程（一）：封装/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-Javascript的this用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/02/Javascript的this用法/">Javascript的this用法</a>
+    </h1>
+  
+
+        
+        <a href="/2016/08/02/Javascript的this用法/" class="archive-article-date">
+  	<time datetime="2016-08-02T13:25:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="this是Javascript语言的一个关键字。"><a href="#this是Javascript语言的一个关键字。" class="headerlink" title="this是Javascript语言的一个关键字。"></a>this是Javascript语言的一个关键字。</h3><h3 id="它代表函数运行时，自动生成的一个内部对象，只能在函数内部使用。比如，"><a href="#它代表函数运行时，自动生成的一个内部对象，只能在函数内部使用。比如，" class="headerlink" title="它代表函数运行时，自动生成的一个内部对象，只能在函数内部使用。比如，"></a>它代表函数运行时，自动生成的一个内部对象，只能在函数内部使用。比如，</h3><pre><code>function test(){
+    this.x = 1;
+}
+</code></pre><h3 id="随着函数使用场合的不同，this的值会发生变化。但是有一个总的原则，那就是this指的是，调用函数的那个对象。"><a href="#随着函数使用场合的不同，this的值会发生变化。但是有一个总的原则，那就是this指的是，调用函数的那个对象。" class="headerlink" title="随着函数使用场合的不同，this的值会发生变化。但是有一个总的原则，那就是this指的是，调用函数的那个对象。"></a>随着函数使用场合的不同，this的值会发生变化。但是有一个总的原则，那就是this指的是，调用函数的那个对象。</h3><h3 id="下面分四种情况，详细讨论this的用法。"><a href="#下面分四种情况，详细讨论this的用法。" class="headerlink" title="下面分四种情况，详细讨论this的用法。"></a>下面分四种情况，详细讨论this的用法。</h3><h1 id="情况一：纯粹的函数调用"><a href="#情况一：纯粹的函数调用" class="headerlink" title="情况一：纯粹的函数调用"></a>情况一：纯粹的函数调用</h1><h3 id="这是函数的最通常用法，属于全局性调用，因此this就代表全局对象Global。"><a href="#这是函数的最通常用法，属于全局性调用，因此this就代表全局对象Global。" class="headerlink" title="这是函数的最通常用法，属于全局性调用，因此this就代表全局对象Global。"></a>这是函数的最通常用法，属于全局性调用，因此this就代表全局对象Global。</h3><h3 id="请看下面这段代码，它的运行结果是1。"><a href="#请看下面这段代码，它的运行结果是1。" class="headerlink" title="请看下面这段代码，它的运行结果是1。"></a>请看下面这段代码，它的运行结果是1。</h3><pre><code>　function test(){
+    this.x = 1;
+    alert(this.x);
+}
+test(); // 1
+</code></pre><h3 id="为了证明this就是全局对象，我对代码做一些改变："><a href="#为了证明this就是全局对象，我对代码做一些改变：" class="headerlink" title="为了证明this就是全局对象，我对代码做一些改变："></a>为了证明this就是全局对象，我对代码做一些改变：</h3><pre><code>var x = 1;
+function test(){
+    alert(this.x);
+}
+test(); // 1
+</code></pre><h3 id="运行结果还是1。再变一下"><a href="#运行结果还是1。再变一下" class="headerlink" title="运行结果还是1。再变一下"></a>运行结果还是1。再变一下</h3><pre><code>var x = 1;
+function test(){
+    this.x = 0;
+}
+test();
+alert(x); //0
+</code></pre><h1 id="情况二：作为对象方法的调用"><a href="#情况二：作为对象方法的调用" class="headerlink" title="情况二：作为对象方法的调用"></a>情况二：作为对象方法的调用</h1><h3 id="函数还可以作为某个对象的方法调用，这时this就指这个上级对象。"><a href="#函数还可以作为某个对象的方法调用，这时this就指这个上级对象。" class="headerlink" title="函数还可以作为某个对象的方法调用，这时this就指这个上级对象。"></a>函数还可以作为某个对象的方法调用，这时this就指这个上级对象。</h3><pre><code>function test(){
+    alert(this.x);
+}
+var o = {};
+o.x = 1;
+o.m = test;
+o.m(); // 1
+</code></pre><h1 id="情况三-作为构造函数调用"><a href="#情况三-作为构造函数调用" class="headerlink" title="情况三 作为构造函数调用"></a>情况三 作为构造函数调用</h1><h3 id="所谓构造函数，就是通过这个函数生成一个新对象（object）。这时，this就指这个新对象。"><a href="#所谓构造函数，就是通过这个函数生成一个新对象（object）。这时，this就指这个新对象。" class="headerlink" title="所谓构造函数，就是通过这个函数生成一个新对象（object）。这时，this就指这个新对象。"></a>所谓构造函数，就是通过这个函数生成一个新对象（object）。这时，this就指这个新对象。</h3><pre><code>function test(){
+    this.x = 1;
+}
+var o = new test();
+alert(o.x); // 1
+</code></pre><h3 id="运行结果为1。为了表明这时this不是全局对象，我对代码做一些改变："><a href="#运行结果为1。为了表明这时this不是全局对象，我对代码做一些改变：" class="headerlink" title="运行结果为1。为了表明这时this不是全局对象，我对代码做一些改变："></a>运行结果为1。为了表明这时this不是全局对象，我对代码做一些改变：</h3><pre><code>var x = 2;
+function test(){
+    this.x = 1;
+}
+var o = new test();
+alert(x); //2
+</code></pre><h3 id="运行结果为2，表明全局变量x的值根本没变"><a href="#运行结果为2，表明全局变量x的值根本没变" class="headerlink" title="运行结果为2，表明全局变量x的值根本没变"></a>运行结果为2，表明全局变量x的值根本没变</h3><h1 id="情况四-apply调用"><a href="#情况四-apply调用" class="headerlink" title="情况四 apply调用"></a>情况四 apply调用</h1><h3 id="apply-是函数对象的一个方法，它的作用是改变函数的调用对象，它的第一个参数就表示改变后的调用这个函数的对象。因此，this指的就是这第一个参数。"><a href="#apply-是函数对象的一个方法，它的作用是改变函数的调用对象，它的第一个参数就表示改变后的调用这个函数的对象。因此，this指的就是这第一个参数。" class="headerlink" title="apply()是函数对象的一个方法，它的作用是改变函数的调用对象，它的第一个参数就表示改变后的调用这个函数的对象。因此，this指的就是这第一个参数。"></a>apply()是函数对象的一个方法，它的作用是改变函数的调用对象，它的第一个参数就表示改变后的调用这个函数的对象。因此，this指的就是这第一个参数。</h3><pre><code>var x = 0;
+function test(){
+    alert(this.x);
+}
+var o={};
+o.x = 1;
+o.m = test;
+o.m.apply(); //0
+</code></pre><h3 id="apply-的参数为空时，默认调用全局对象。因此，这时的运行结果为0，证明this指的是全局对象。"><a href="#apply-的参数为空时，默认调用全局对象。因此，这时的运行结果为0，证明this指的是全局对象。" class="headerlink" title="apply()的参数为空时，默认调用全局对象。因此，这时的运行结果为0，证明this指的是全局对象。"></a>apply()的参数为空时，默认调用全局对象。因此，这时的运行结果为0，证明this指的是全局对象。</h3><h3 id="如果把最后一行代码修改为"><a href="#如果把最后一行代码修改为" class="headerlink" title="如果把最后一行代码修改为"></a>如果把最后一行代码修改为</h3><pre><code>o.m.apply(o); //1
+</code></pre><h3 id="运行结果就变成了1，证明了这时this代表的是对象o。"><a href="#运行结果就变成了1，证明了这时this代表的是对象o。" class="headerlink" title="运行结果就变成了1，证明了这时this代表的是对象o。"></a>运行结果就变成了1，证明了这时this代表的是对象o。</h3>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/08/02/Javascript的this用法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-学习Javascript闭包" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/01/学习Javascript闭包/">学习Javascript闭包</a>
+    </h1>
+  
+
+        
+        <a href="/2016/08/01/学习Javascript闭包/" class="archive-article-date">
+  	<time datetime="2016-08-01T06:37:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/wangyalijas" target="_blank" rel="external">github主页</a></p>
+<h2 id="闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。"><a href="#闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。" class="headerlink" title="闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。"></a>闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。</h2><h2 id="下面就是我的学习笔记，对于Javascript初学者应该是很有用的。"><a href="#下面就是我的学习笔记，对于Javascript初学者应该是很有用的。" class="headerlink" title="下面就是我的学习笔记，对于Javascript初学者应该是很有用的。"></a>下面就是我的学习笔记，对于Javascript初学者应该是很有用的。</h2><p><code>1. 变量的作用域</code></p>
+<h4 id="要理解闭包，首先必须理解Javascript特殊的变量作用域。变量的作用域无非就是两种：全局变量和局部变量。Javascript语言的特殊之处，就在于函数内部可以直接读取全局变量。"><a href="#要理解闭包，首先必须理解Javascript特殊的变量作用域。变量的作用域无非就是两种：全局变量和局部变量。Javascript语言的特殊之处，就在于函数内部可以直接读取全局变量。" class="headerlink" title="要理解闭包，首先必须理解Javascript特殊的变量作用域。变量的作用域无非就是两种：全局变量和局部变量。Javascript语言的特殊之处，就在于函数内部可以直接读取全局变量。"></a>要理解闭包，首先必须理解Javascript特殊的变量作用域。变量的作用域无非就是两种：全局变量和局部变量。Javascript语言的特殊之处，就在于函数内部可以直接读取全局变量。</h4><pre><code>var n=999;
+function fn(){
+alert(n)
+}
+fn()
+</code></pre><h4 id="另一方面，在函数外部自然无法读取函数内的局部变量。"><a href="#另一方面，在函数外部自然无法读取函数内的局部变量。" class="headerlink" title="另一方面，在函数外部自然无法读取函数内的局部变量。"></a>另一方面，在函数外部自然无法读取函数内的局部变量。</h4><pre><code>function f1(){
+var n=999;
+}
+alert(n); // error
+</code></pre><h4 id="这里有一个地方需要注意，函数内部声明变量的时候，一定要使用var命令。如果不用的话，你实际上声明了一个全局变量！"><a href="#这里有一个地方需要注意，函数内部声明变量的时候，一定要使用var命令。如果不用的话，你实际上声明了一个全局变量！" class="headerlink" title="这里有一个地方需要注意，函数内部声明变量的时候，一定要使用var命令。如果不用的话，你实际上声明了一个全局变量！"></a>这里有一个地方需要注意，函数内部声明变量的时候，一定要使用var命令。如果不用的话，你实际上声明了一个全局变量！</h4><pre><code>function f1(){
+n=999;
+}
+f1();    
+alert(n); // 999
+</code></pre><p><code>2. 如何从外部读取局部变量？</code></p>
+<pre><code>function f1(){
+
+    var n=999;
+
+    function f2(){
+        alert(n);//999
+    }
+
+}
+</code></pre><h4 id="在上面的代码中，函数f2就被包括在函数f1内部，这时f1内部的所有局部变量，对f2都是可见的。但是反过来就不行，f2内部的局部变量，对f1就是不可见的。这就是Javascript语言特有的”链式作用域”结构（chain-scope），子对象会一级一级地向上寻找所有父对象的变量。所以，父对象的所有变量，对子对象都是可见的，反之则不成立。"><a href="#在上面的代码中，函数f2就被包括在函数f1内部，这时f1内部的所有局部变量，对f2都是可见的。但是反过来就不行，f2内部的局部变量，对f1就是不可见的。这就是Javascript语言特有的”链式作用域”结构（chain-scope），子对象会一级一级地向上寻找所有父对象的变量。所以，父对象的所有变量，对子对象都是可见的，反之则不成立。" class="headerlink" title="在上面的代码中，函数f2就被包括在函数f1内部，这时f1内部的所有局部变量，对f2都是可见的。但是反过来就不行，f2内部的局部变量，对f1就是不可见的。这就是Javascript语言特有的”链式作用域”结构（chain scope），子对象会一级一级地向上寻找所有父对象的变量。所以，父对象的所有变量，对子对象都是可见的，反之则不成立。"></a>在上面的代码中，函数f2就被包括在函数f1内部，这时f1内部的所有局部变量，对f2都是可见的。但是反过来就不行，f2内部的局部变量，对f1就是不可见的。这就是Javascript语言特有的”链式作用域”结构（chain scope），子对象会一级一级地向上寻找所有父对象的变量。所以，父对象的所有变量，对子对象都是可见的，反之则不成立。</h4><h4 id="既然f2可以读取f1中的局部变量，那么只要把f2作为返回值，我们不就可以在f1外部读取它的内部变量了吗！"><a href="#既然f2可以读取f1中的局部变量，那么只要把f2作为返回值，我们不就可以在f1外部读取它的内部变量了吗！" class="headerlink" title="既然f2可以读取f1中的局部变量，那么只要把f2作为返回值，我们不就可以在f1外部读取它的内部变量了吗！"></a>既然f2可以读取f1中的局部变量，那么只要把f2作为返回值，我们不就可以在f1外部读取它的内部变量了吗！</h4><pre><code>function f1(){
+
+    var n=999;
+
+    function f2(){
+        alert(n); 
+    }
+
+    return f2;
+
+}
+
+var result=f1();
+
+result(); // 999
+</code></pre><p><code>3. 闭包的概念</code></p>
+<h4 id="各种专业文献上的”闭包”（closure）定义非常抽象，很难看懂。我的理解是，闭包就是能够读取其他函数内部变量的函数。"><a href="#各种专业文献上的”闭包”（closure）定义非常抽象，很难看懂。我的理解是，闭包就是能够读取其他函数内部变量的函数。" class="headerlink" title="各种专业文献上的”闭包”（closure）定义非常抽象，很难看懂。我的理解是，闭包就是能够读取其他函数内部变量的函数。"></a>各种专业文献上的”闭包”（closure）定义非常抽象，很难看懂。我的理解是，闭包就是能够读取其他函数内部变量的函数。</h4><h4 id="由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成”定义在一个函数内部的函数”。"><a href="#由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成”定义在一个函数内部的函数”。" class="headerlink" title="由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成”定义在一个函数内部的函数”。"></a>由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成”定义在一个函数内部的函数”。</h4><h4 id="所以，在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。"><a href="#所以，在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。" class="headerlink" title="所以，在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。"></a>所以，在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。</h4><p><code>4. 闭包的用途</code></p>
+<h4 id="闭包可以用在许多地方。它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。"><a href="#闭包可以用在许多地方。它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。" class="headerlink" title="闭包可以用在许多地方。它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。"></a>闭包可以用在许多地方。它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。</h4><pre><code>function f1(){
+
+var n=999;
+
+nAdd=function(){n+=1}
+
+function f2(){
+    alert(n);
+}
+
+return f2;
+
+}
+
+var result=f1();
+
+result(); // 999
+
+nAdd();
+
+result(); // 1000
+</code></pre><h4 id="在这段代码中，result实际上就是闭包f2函数。它一共运行了两次，第一次的值是999，第二次的值是1000。这证明了，函数f1中的局部变量n一直保存在内存中，并没有在f1调用后被自动清除。"><a href="#在这段代码中，result实际上就是闭包f2函数。它一共运行了两次，第一次的值是999，第二次的值是1000。这证明了，函数f1中的局部变量n一直保存在内存中，并没有在f1调用后被自动清除。" class="headerlink" title="在这段代码中，result实际上就是闭包f2函数。它一共运行了两次，第一次的值是999，第二次的值是1000。这证明了，函数f1中的局部变量n一直保存在内存中，并没有在f1调用后被自动清除。"></a>在这段代码中，result实际上就是闭包f2函数。它一共运行了两次，第一次的值是999，第二次的值是1000。这证明了，函数f1中的局部变量n一直保存在内存中，并没有在f1调用后被自动清除。</h4><h4 id="为什么会这样呢？原因就在于f1是f2的父函数，而f2被赋给了一个全局变量，这导致f2始终在内存中，而f2的存在依赖于f1，因此f1也始终在内存中，不会在调用结束后，被垃圾回收机制（garbage-collection）回收。"><a href="#为什么会这样呢？原因就在于f1是f2的父函数，而f2被赋给了一个全局变量，这导致f2始终在内存中，而f2的存在依赖于f1，因此f1也始终在内存中，不会在调用结束后，被垃圾回收机制（garbage-collection）回收。" class="headerlink" title="为什么会这样呢？原因就在于f1是f2的父函数，而f2被赋给了一个全局变量，这导致f2始终在内存中，而f2的存在依赖于f1，因此f1也始终在内存中，不会在调用结束后，被垃圾回收机制（garbage collection）回收。"></a>为什么会这样呢？原因就在于f1是f2的父函数，而f2被赋给了一个全局变量，这导致f2始终在内存中，而f2的存在依赖于f1，因此f1也始终在内存中，不会在调用结束后，被垃圾回收机制（garbage collection）回收。</h4><h4 id="这段代码中另一个值得注意的地方，就是”nAdd-function-n-1-”这一行，首先在nAdd前面没有使用var关键字，因此nAdd是一个全局变量，而不是局部变量。其次，nAdd的值是一个匿名函数（anonymous-function），而这个匿名函数本身也是一个闭包，所以nAdd相当于是一个setter，可以在函数外部对函数内部的局部变量进行操作。"><a href="#这段代码中另一个值得注意的地方，就是”nAdd-function-n-1-”这一行，首先在nAdd前面没有使用var关键字，因此nAdd是一个全局变量，而不是局部变量。其次，nAdd的值是一个匿名函数（anonymous-function），而这个匿名函数本身也是一个闭包，所以nAdd相当于是一个setter，可以在函数外部对函数内部的局部变量进行操作。" class="headerlink" title="这段代码中另一个值得注意的地方，就是”nAdd=function(){n+=1}”这一行，首先在nAdd前面没有使用var关键字，因此nAdd是一个全局变量，而不是局部变量。其次，nAdd的值是一个匿名函数（anonymous function），而这个匿名函数本身也是一个闭包，所以nAdd相当于是一个setter，可以在函数外部对函数内部的局部变量进行操作。"></a>这段代码中另一个值得注意的地方，就是”nAdd=function(){n+=1}”这一行，首先在nAdd前面没有使用var关键字，因此nAdd是一个全局变量，而不是局部变量。其次，nAdd的值是一个匿名函数（anonymous function），而这个匿名函数本身也是一个闭包，所以nAdd相当于是一个setter，可以在函数外部对函数内部的局部变量进行操作。</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/08/01/学习Javascript闭包/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
+  
 
 
           </div>
@@ -231,9 +823,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
+		isHome: true,
 		isPost: false,
-		isArchive: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

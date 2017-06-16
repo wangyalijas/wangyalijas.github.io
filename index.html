@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>null</title>
+  <title>王二爷</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前端小菜鸟的进阶之路">
 <meta property="og:type" content="website">
-<meta property="og:title">
+<meta property="og:title" content="王二爷">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name">
+<meta property="og:site_name" content="王二爷">
 <meta property="og:description" content="前端小菜鸟的进阶之路">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title">
+<meta name="twitter:title" content="王二爷">
 <meta name="twitter:description" content="前端小菜鸟的进阶之路">
   
-    <link rel="alternative" href="/atom.xml" title="null" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="王二爷" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -50,6 +50,8 @@
 		<hgroup>
 		  <h1 class="header-author"><a href="/">jasmine</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">前端小菜鸟的进阶之路</p>
 		
 
 		<nav class="header-menu">
@@ -108,6 +110,8 @@
 			<hgroup>
 			  <h1 class="header-author js-header-author">jasmine</h1>
 			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>前端小菜鸟的进阶之路<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -237,6 +241,1058 @@
 
 
   
+    <article id="post-js基础知识小结（一）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/04/js基础知识小结（一）/">js基础知识小结（一）</a>
+    </h1>
+  
+
+        
+        <a href="/2016/12/04/js基础知识小结（一）/" class="archive-article-date">
+  	<time datetime="2016-12-04T10:59:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一-拖拽"><a href="#一-拖拽" class="headerlink" title="(一)拖拽"></a>(一)拖拽</h1><pre><code>box.onmousedown=function(eve){                //拖拽 mousedown-&gt;mousemove-&gt;mouseup
+    var eve=eve||window.event;                //eve指所有代码的集合，通过它可以获取事件的各种属性。
+    var pos=box.getBoundingClientRect();    //getBoundingClientRect()用于获取元素的left、top、right、bottom。offset获取相对于父级的left和top。getBoundingClientRect()获取相对于窗口的left、top、right、bottom。
+
+    var oX=eve.clientX-pos.left;            //clientX指相对于窗口的坐标。
+    var oY=eve.clientY-pos.top;
+
+
+    document.onmousemove=function(eve){
+        var eve=eve||window.event;
+        left=eve.clientX-oX;
+        top1=eve.clientY-oY;
+        box.style.left=left+&apos;px&apos;;
+        box.style.top=top1+&apos;px&apos;;
+        if(left&lt;0){
+            box.style.left=0+&apos;px&apos;;
+        }
+        if(top1&lt;0){
+            box.style.top=0+&apos;px&apos;;
+        }
+    }
+
+
+    document.onmouseup = function() {
+        document.onmousemove = null;
+    }
+
+
+}
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/04/js基础知识小结（一）/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-基于php和mysqli写的网上书城（下）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/03/基于php和mysqli写的网上书城（下）/">基于php和mysqli写的网上书城（下）</a>
+    </h1>
+  
+
+        
+        <a href="/2016/12/03/基于php和mysqli写的网上书城（下）/" class="archive-article-date">
+  	<time datetime="2016-12-03T01:28:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/03/基于php和mysqli写的网上书城（下）/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-基于php和mysqli写的网上书城" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/02/基于php和mysqli写的网上书城/">基于php和mysqli写的网上书城</a>
+    </h1>
+  
+
+        
+        <a href="/2016/12/02/基于php和mysqli写的网上书城/" class="archive-article-date">
+  	<time datetime="2016-12-02T14:03:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="基于php和mysqli写的网上书城"><a href="#基于php和mysqli写的网上书城" class="headerlink" title="基于php和mysqli写的网上书城"></a>基于php和mysqli写的网上书城</h1><h1 id="github地址-bookstore欢迎star"><a href="#github地址-bookstore欢迎star" class="headerlink" title="github地址 !bookstore欢迎star!"></a>github地址 <a href="https://github.com/wangyalijas/bookstore" target="_blank" rel="external">!bookstore欢迎star!</a></h1><h2 id="一-添加图书页-addbook-html"><a href="#一-添加图书页-addbook-html" class="headerlink" title="一.添加图书页   addbook.html"></a>一.添加图书页   <code>addbook.html</code></h2><p><img src="http://ww1.sinaimg.cn/mw690/005WhkQKgw1facqbljqrwj30qo0f7ta9.jpg" alt=""></p>
+<pre><code>&lt;h1&gt;添加图书&lt;/h1&gt;
+书名：&lt;input type=&quot;text&quot; id=&quot;bookname&quot;&gt;&lt;br&gt;
+简洁：&lt;input type=&quot;text&quot; id=&quot;intro&quot;&gt;&lt;br&gt;
+作者：&lt;input type=&quot;text&quot; id=&quot;author&quot;&gt;&lt;br&gt;
+出版社：&lt;input type=&quot;text&quot; id=&quot;press&quot;&gt;&lt;br&gt;
+出版日期：&lt;input type=&quot;text&quot; id=&quot;presstime&quot;&gt;&lt;br&gt;
+价格：&lt;input type=&quot;text&quot; id=&quot;price&quot;&gt;&lt;br&gt;
+ISBN：&lt;input type=&quot;text&quot; id=&quot;ISBN&quot;&gt;&lt;br&gt;
+书籍图片：&lt;input type=&quot;file&quot; id=&quot;images&quot;&gt;&lt;br&gt;
+&lt;button onclick=&quot;add()&quot;&gt;添加&lt;/button&gt;
+</code></pre><p><code>js部分</code></p>
+<pre><code>function add(){
+    var bookname=$(&quot;#bookname&quot;).val();
+    var intro=$(&quot;#intro&quot;).val();
+    var author=$(&quot;#author&quot;).val();
+    var press=$(&quot;#press&quot;).val();
+    var presstime=$(&quot;#presstime&quot;).val();
+    var price=$(&quot;#price&quot;).val();
+    var ISBN=$(&quot;#ISBN&quot;).val();
+    var images=$(&quot;#images&quot;)[0].files[0];//?
+    var form = new FormData();
+    form.append(&apos;bookname&apos;,bookname);
+    form.append(&apos;intro&apos;,intro);
+    form.append(&apos;author&apos;,author);
+    form.append(&apos;press&apos;,press);
+    form.append(&apos;presstime&apos;,presstime);
+    form.append(&apos;price&apos;,price);
+    form.append(&apos;ISBN&apos;,ISBN);
+    form.append(&apos;images&apos;,images);
+    console.log(form);
+    $.ajax({
+        type:&quot;post&quot;,
+        url:&quot;../php/add.php&quot;,
+        data:form,
+        async:true,
+        dataType:&quot;json&quot;,
+        processData:false,    
+        contentType:false,
+        success:function(data){
+            //接收后台返还的信息
+            if(data.status==1){
+                console.log(&quot;添加成功&quot;);
+            }else{
+                console.log(&quot;添加失败&quot;);
+            }
+        }
+    });
+}
+</code></pre><p><code>后台add.php处理</code></p>
+<pre><code>//接收数据
+$bookname= $_POST[&apos;bookname&apos;];
+$intro= $_POST[&apos;intro&apos;];
+$author= $_POST[&apos;author&apos;];
+$press= $_POST[&apos;press&apos;];
+$presstime= $_POST[&apos;presstime&apos;];
+$price= $_POST[&apos;price&apos;];
+$ISBN= $_POST[&apos;ISBN&apos;];
+
+
+$images= $_FILES[&apos;images&apos;][&apos;name&apos;];//获取图片名字
+$tmpPath = $_FILES[&apos;images&apos;][&apos;tmp_name&apos;];  //获取图片文件
+$res1 = move_uploaded_file($tmpPath,&quot;../images/{$images}&quot;);//原名上传到指定文件夹
+
+
+
+//添加到数据库的函数
+function add($sql){
+    $link = mysqli_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;,&quot;book&quot;);//连接数据库
+    mysqli_query($link, &quot;set names utf8&quot;);//转译数据库
+    $res = mysqli_query($link, $sql);//执行数据库
+    if($res){
+        return true;    
+    }else{
+        return false;
+    }
+}
+
+
+
+$sql = &quot;INSERT INTO books (bookname,intro,author,press,presstime,price,ISBN,images) VALUES (&apos;$bookname&apos;,&apos;$intro&apos;,&apos;$author&apos;,&apos;$press&apos;,&apos;$presstime&apos;,&apos;$price&apos;,&apos;$ISBN&apos;,&apos;$images&apos;)&quot;;
+$res = add($sql);
+if($res){
+    $info[&apos;status&apos;] = 1;
+    info[&apos;info&apos;] = &quot;添加成功&quot;; 
+}else{
+    $info[&apos;status&apos;] = 0;
+    $info[&apos;info&apos;] = &quot;添加失败&quot;;    
+}
+echo json_encode($info);
+</code></pre><h3 id="这时候数据库已经加入了你输入的信息了，在这一步操作中有一个亮点就是在add-php中先获取你的图片文件名字-images-FILES-39-images-39-39-name-39-，然后获取图片文件-tmpPath-FILES-39-images-39-39-tmp-name-39-，最后原名将图片上传至imagesmove-uploaded-file-tmpPath-quot-images-images-quot"><a href="#这时候数据库已经加入了你输入的信息了，在这一步操作中有一个亮点就是在add-php中先获取你的图片文件名字-images-FILES-39-images-39-39-name-39-，然后获取图片文件-tmpPath-FILES-39-images-39-39-tmp-name-39-，最后原名将图片上传至imagesmove-uploaded-file-tmpPath-quot-images-images-quot" class="headerlink" title="这时候数据库已经加入了你输入的信息了，在这一步操作中有一个亮点就是在add.php中先获取你的图片文件名字$images= $_FILES[&#39;images&#39;][&#39;name&#39;];，然后获取图片文件$tmpPath = $_FILES[&#39;images&#39;][&#39;tmp_name&#39;];，最后原名将图片上传至imagesmove_uploaded_file($tmpPath,&quot;../images/{$images}&quot;);"></a>这时候数据库已经加入了你输入的信息了，在这一步操作中有一个亮点就是在add.php中先获取你的图片文件名字<code>$images= $_FILES[&#39;images&#39;][&#39;name&#39;];</code>，然后获取图片文件<code>$tmpPath = $_FILES[&#39;images&#39;][&#39;tmp_name&#39;];</code>，最后原名将图片上传至images<code>move_uploaded_file($tmpPath,&quot;../images/{$images}&quot;);</code></h3><h3 id="现在数据库中已经有信息了"><a href="#现在数据库中已经有信息了" class="headerlink" title="现在数据库中已经有信息了"></a>现在数据库中已经有信息了</h3><h1 id="二-图书列表页，根据数据库书本展示页数index-php"><a href="#二-图书列表页，根据数据库书本展示页数index-php" class="headerlink" title="二.图书列表页，根据数据库书本展示页数index.php"></a>二.图书列表页，根据数据库书本展示页数<code>index.php</code></h1><p><img src="http://ww1.sinaimg.cn/mw690/005WhkQKgw1facr42q2csj31870pm46o.jpg" alt=""></p>
+<pre><code>&lt;?php
+function getlist($sql){
+//连接数据库
+$link=mysqli_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;,&quot;book&quot;);
+//设置编码格式    
+mysqli_query($link,&quot;set names utf8&quot;);
+//执行sql
+$res=mysqli_query($link,$sql);
+
+while($list = mysqli_fetch_assoc($res)){
+    $arr[] = $list;
+}
+return $arr;
+}
+
+
+$sql = &quot;SELECT * FROM books&quot;;//检索数据库
+$list = getlist($sql);//执行getlist()函数，返回数据库里所有的书本信息
+
+$perPage = 6;//每页显示的个数
+$totalCount=count($list);//数据库里书本的总数目
+$pages=ceil($totalCount/$perPage);//显示的页数
+
+if(empty($_GET[&apos;p&apos;])){
+    $startPage = 0;
+}else{
+    $startPage = ($_GET[&apos;p&apos;]-1)*$perPage;
+}
+
+$sql1 = &quot;SELECT * FROM books LIMIT $startPage,$perPage&quot;;
+$list1 = getlist($sql1);
+
+
+
+
+?&gt;
+</code></pre><h3 id="展示"><a href="#展示" class="headerlink" title="展示"></a>展示</h3><pre><code>&lt;?php foreach($list1 as $k=&gt; $v) {?&gt;
+            &lt;li&gt;
+                &lt;img src=&quot;../images/&lt;?php echo $v[&apos;images&apos;]?&gt;&quot;&gt;
+                &lt;a href=&quot;list.php?id=&lt;?php echo $v[&apos;id&apos;]?&gt;&quot;&gt;&lt;?php echo $v[&apos;bookname&apos;]?&gt;&lt;/a&gt;
+                &lt;div&gt;
+                    &lt;span class=&quot;price&quot;&gt;&lt;?php echo $v[&apos;price&apos;]?&gt;&lt;/span&gt;
+                    &lt;span class=&quot;btn&quot;&gt;立即购买&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+
+&lt;?php }?&gt;
+</code></pre><h3 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h3><pre><code>&lt;?php 
+                for($i=1;$i&lt;=$pages;$i++){
+                     echo &quot;&lt;li&gt;&lt;a href=&apos;index.php?p={$i}&apos;&gt;&quot;.$i.&quot;&lt;/a&gt;&lt;/li&gt;&quot;;  
+                } 
+ ?&gt;
+</code></pre><h1 id="三-点击书本进入书本详情页"><a href="#三-点击书本进入书本详情页" class="headerlink" title="三.点击书本进入书本详情页"></a>三.点击书本进入书本详情页</h1><h3 id="在上面的代码中我们给了每个书本一个get请求-把书本的id给她了"><a href="#在上面的代码中我们给了每个书本一个get请求-把书本的id给她了" class="headerlink" title="在上面的代码中我们给了每个书本一个get请求,把书本的id给她了"></a>在上面的代码中我们给了每个书本一个get请求,把书本的id给她了</h3><pre><code>&lt;a href=&quot;list.php?id=&lt;?php echo $v[&apos;id&apos;]?&gt;&quot;&gt;&lt;?php echo $v[&apos;bookname&apos;]?&gt;&lt;/a&gt;
+</code></pre><h3 id="点击书本时候给list一个get请求，现在请入list-php"><a href="#点击书本时候给list一个get请求，现在请入list-php" class="headerlink" title="点击书本时候给list一个get请求，现在请入list.php"></a>点击书本时候给list一个get请求，现在请入<code>list.php</code></h3><pre><code>&lt;?php
+include &apos;../php/mysqli.php&apos;;
+$id=$_GET[&apos;id&apos;];
+$sql=&quot;SELECT * FROM books WHERE id=$id&quot;;
+$one=getlist($sql);//同理，检索那个id打印，返回$one
+
+
+
+?&gt;
+</code></pre><h3 id="展示-1"><a href="#展示-1" class="headerlink" title="展示"></a>展示</h3><p><img src="http://ww4.sinaimg.cn/mw690/005WhkQKgw1facs6kobv8j311r0m1n4h.jpg" alt=""></p>
+<h4 id="例如展示图片"><a href="#例如展示图片" class="headerlink" title="例如展示图片"></a>例如展示图片</h4><pre><code>&lt;img src=&quot;../images/&lt;?php echo $one[0][&apos;images&apos;]?&gt;&quot;&gt;
+</code></pre><h4 id="其他同理"><a href="#其他同理" class="headerlink" title="其他同理"></a>其他同理</h4><h1 id="四-登陆注册页面"><a href="#四-登陆注册页面" class="headerlink" title="四.登陆注册页面"></a>四.登陆注册页面</h1><p><img src="http://ww2.sinaimg.cn/mw690/005WhkQKgw1facs11qcjvj30m60hmmyu.jpg" alt=""></p>
+<h2 id="需求分析：1首先注册，添加到数据库，2登陆判断数据库是否有相同的名字和密码，如果有登陆成功否则失败，3再判断是否记住，如果记住，就种cookie-4注销的话就取消cookie和session"><a href="#需求分析：1首先注册，添加到数据库，2登陆判断数据库是否有相同的名字和密码，如果有登陆成功否则失败，3再判断是否记住，如果记住，就种cookie-4注销的话就取消cookie和session" class="headerlink" title="需求分析：1首先注册，添加到数据库，2登陆判断数据库是否有相同的名字和密码，如果有登陆成功否则失败，3再判断是否记住，如果记住，就种cookie,4注销的话就取消cookie和session"></a>需求分析：1首先注册，添加到数据库，2登陆判断数据库是否有相同的名字和密码，如果有登陆成功否则失败，3再判断是否记住，如果记住，就种cookie,4注销的话就取消cookie和session</h2><pre><code>&lt;h1&gt;快速登录&lt;/h1&gt;
+            &lt;input type=&quot;text&quot; id=&quot;username&quot; placeholder=&quot;用户名&quot; id=&quot;username&quot;&gt;
+            &lt;br&gt;
+            &lt;input type=&quot;text&quot; id=&quot;pwd&quot; placeholder=&quot;密码&quot; id=&quot;pwd&quot;&gt;
+            &lt;br&gt;
+            &lt;input type=&apos;checkbox&apos; id=&quot;rem&quot;&gt;&lt;p class=&quot;re&quot;&gt;记住我？&lt;/p&gt;
+            &lt;br&gt;
+            &lt;input type=&quot;submit&quot; onclick=&quot;sub()&quot; value=&apos;登陆&apos;&gt;
+            &lt;input type=&quot;submit&quot; onclick=&quot;reg()&quot; value=&quot;注册&quot;&gt;
+</code></pre><p><code>注册的ajax</code></p>
+<pre><code>function reg() {
+    var username = $(&quot;#username&quot;).val();
+    var pwd = $(&quot;#pwd&quot;).val();
+    $.ajax({
+        type: &apos;post&apos;,
+        url: &apos;../php/reg.php&apos;,
+        async: true,
+        dataType: &apos;json&apos;,
+        data: {
+            username: username,
+            pwd: pwd,
+        },
+        success: function(data) {
+            //接收后台返还的信息
+            if (data.status == 1) {
+                console.log(&quot;添加成功&quot;);
+            } else {
+                console.log(&quot;添加失败&quot;);
+            }
+        }
+    })
+}
+</code></pre><p><code>reg的后台php</code></p>
+<pre><code>&lt;?php 
+include &apos;../php/mysqli.php&apos;;
+print_r($_POST);
+$username=$_POST[&apos;username&apos;];
+$pwd=$_POST[&apos;pwd&apos;];
+
+$sql=&quot;INSERT INTO reg (username,pwd) VALUES (&apos;$username&apos;,&apos;$pwd&apos;)&quot;;
+$res=add($sql);
+if($res){
+    $info[&apos;status&apos;]=1;
+}else{
+    $info[&apos;status&apos;]=0;
+}
+echo json_encode($info);
+
+
+
+
+
+
+
+
+
+
+
+?&gt;
+</code></pre><p><code>登陆的ajax</code></p>
+<pre><code>function sub() {
+    var username = $(&quot;#username&quot;).val();
+    var pwd = $(&quot;#pwd&quot;).val();
+    var rem = document.getElementById(&quot;rem&quot;).checked;
+    if (rem) {
+        var value = &apos;1&apos;;
+    }
+    console.log(username);
+    console.log(value);
+    $.ajax({
+        type: &apos;post&apos;,
+        url: &apos;../php/sub.php&apos;,
+        async: true,
+        dataType: &apos;json&apos;,
+        data: {
+            username: username,
+            pwd: pwd,
+            value: value,
+        },
+        success: function(data) {
+            //接收后台返还的信息
+            console.log(data);
+            if (data.status == 1) {
+                console.log(&quot;添加成功&quot;);
+                window.location.reload();
+            } else {
+                console.log(&quot;添加失败&quot;);
+            }
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    })
+}
+</code></pre><p><code>登陆的后台php</code>    </p>
+<pre><code>&lt;?php 
+include &apos;../php/mysqli.php&apos;;
+$username=$_POST[&apos;username&apos;];
+$pwd=$_POST[&apos;pwd&apos;];
+$value=$_POST[&apos;value&apos;];
+$sql=&quot;SELECT * FROM  reg  WHERE username=&apos;$username&apos; AND pwd=&apos;$pwd&apos;&quot;;
+
+$res=add($sql);
+// print_r($sql);
+// print_r($res);               
+if(!empty($res)){
+    $info[&apos;status&apos;]=1;
+    // 存session
+    session_start();
+    $_SESSION[&apos;username&apos;]=$username;
+    if($value[0]){
+        // 存cookie
+        setcookie(&apos;username&apos;,$username,time()+3600);
+    }
+}else{
+    $info[&apos;status&apos;]=0;
+}
+
+echo json_encode($info);
+
+
+ ?&gt;
+</code></pre><h4 id="登陆注册主页"><a href="#登陆注册主页" class="headerlink" title="登陆注册主页"></a>登陆注册主页</h4><pre><code>&lt;?php
+include &apos;../php/mysqli.php&apos;;
+session_start();
+$_SESSION[&apos;test&apos;]=&quot;12345646&quot;;
+if(!empty($_GET[&apos;out&apos;])){
+    $res = setcookie(&quot;username&quot;,&quot;&quot;,0);
+    unset($_SESSION[&apos;username&apos;]);
+    if($res){
+        echo &quot;销毁成功&quot;;
+    }else{
+        echo &quot;销毁失败&quot;;
+    }
+    header(&quot;Location:login.php&quot;);
+}
+?&gt;
+</code></pre><h4 id="注销"><a href="#注销" class="headerlink" title="注销"></a>注销</h4><pre><code>&lt;?php
+              if(!empty($_SESSION[&apos;username&apos;])){
+            echo &quot;&lt;li style=&apos;color: red&apos;&gt;&quot;.$_SESSION[&apos;username&apos;].&quot; 欢迎你&lt;/li&gt;&lt;li&gt;&lt;a href=&apos;login.php?out=1&apos; style=&apos;color:red&apos;&gt;注销&lt;/a&gt;&lt;/li&gt;&quot;;
+          }
+?&gt;
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目实战</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/02/基于php和mysqli写的网上书城/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="php-连接数据库mysql" class="article article-type-php  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/28/连接数据库mysql/">连接数据库mysql</a>
+    </h1>
+  
+
+        
+        <a href="/2016/11/28/连接数据库mysql/" class="archive-article-date">
+  	<time datetime="2016-11-28T01:55:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">mysqli</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/11/28/连接数据库mysql/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-数据库操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/26/数据库操作/">数据库操作</a>
+    </h1>
+  
+
+        
+        <a href="/2016/11/26/数据库操作/" class="archive-article-date">
+  	<time datetime="2016-11-26T01:41:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="打开"><a href="#打开" class="headerlink" title="打开"></a>打开</h1><p><a href="http://localhost/phpmyadmin/" target="_blank" rel="external">http://localhost/phpmyadmin/</a></p>
+<p><code>1. 增</code></p>
+<pre><code>INSERT INTO users(username,pwd,age) VALUES(&quot;李四&quot;,123,19)
+
+INSERT INTO users(username,pwd,age) VALUE (&quot;张三&quot;,123,12)
+
+
+
+INSERT INTO users(username,pwd,age) VALUES (&quot;王二1&quot;,1,1);
+INSERT INTO users(username,pwd,age) VALUES (&quot;王二2&quot;,1,1);
+INSERT INTO users(username,pwd,age) VALUES (&quot;王二3&quot;,1,1);
+INSERT INTO users(username,pwd,age) VALUES (&quot;王二4&quot;,1,1);
+INSERT INTO users(username,pwd,age) VALUES (&quot;王二5&quot;,1,1);
+INSERT INTO users(username,pwd,age) VALUES (&quot;王二6&quot;,1,1)
+</code></pre><p><code>2. 删除</code></p>
+<pre><code>DELETE FROM users WHERE username=&quot;张三&quot;
+
+
+DELETE FROM users WHERE id=1 or id=4
+
+
+DELETE FROM users WHERE id IN(5,6,7)
+
+
+AND 
+BETWEEN  AND
+OR 
+ONT
+</code></pre><p><code>3.修改</code></p>
+<pre><code>UPDATE 表名 SET 设置的内容 WHERE 加条件语句
+
+UPDATE users SET username=&quot;张三&quot;,pwd=321 WHERE id=3
+</code></pre><p><code>4.查询</code></p>
+<pre><code>SELECT * FROM `users` WHERE 1
+
+
+SELECT * FROM `users` WHERE username LIKE &quot;李%&quot;
+
+
+SELECT * FROM `users` WHERE username LIKE &quot;张%&quot; AND age=12
+</code></pre><p><code>5.分页查询</code></p>
+<pre><code>SELECT * FROM `users` LIMIT 2,2//第二条数据，查三条
+</code></pre><p><code>6.倒序排列</code></p>
+<pre><code>SELECT * FROM `users` ORDER BY id DESC
+</code></pre><p><code>7.统计条数</code><br>    SELECT COUNT(*) FROM <code>users</code></p>
+<p><code>8.联表查询</code><br><code>将两张表连在一起进行查询</code></p>
+<pre><code>SELECT * FROM 表名1 JOIN 表名2
+
+SELECT * FROM users JOIN product ON users.id=product.id;
+</code></pre><p><code>9.简写</code></p>
+<pre><code>SELECT * FROM `users` AS u JOIN product AS p ON u.id=p.id
+</code></pre><p><code>10.以左边为主表</code></p>
+<pre><code>SELECT * FROM `users` AS u LEFT JOIN product AS p ON u.id=p.id
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">mysqli</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/11/26/数据库操作/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-php入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/22/php入门/">php入门</a>
+    </h1>
+  
+
+        
+        <a href="/2016/11/22/php入门/" class="archive-article-date">
+  	<time datetime="2016-11-22T11:01:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="本地服务器"><a href="#本地服务器" class="headerlink" title="本地服务器"></a>本地服务器</h1><p><code>1.打开本地服务器</code></p>
+<pre><code>sudo apachectl start
+</code></pre><p><code>2.进入服务器</code></p>
+<pre><code>/jas/资源库/webserver/Documents/    可以改权限
+</code></pre><p><img src="http://ww3.sinaimg.cn/mw690/005WhkQKgw1fa13dg1visj30wa0c3q6k.jpg" alt=""></p>
+<h4 id="里面放文件访问-打开127-0-0-1"><a href="#里面放文件访问-打开127-0-0-1" class="headerlink" title="里面放文件访问,打开127.0.0.1"></a>里面放文件访问,打开127.0.0.1</h4><p><code>3.结束</code></p>
+<pre><code>sudo apachectl stop
+</code></pre><h1 id="XAMPP服务"><a href="#XAMPP服务" class="headerlink" title="XAMPP服务"></a>XAMPP服务</h1><p><code>1.打开阿帕奇</code><br><img src="http://ww2.sinaimg.cn/mw690/005WhkQKgw1fa13df8379j30ip0d5dh5.jpg" alt=""></p>
+<p><code>2.测试版本,在服务器里放入一个test.php文件</code></p>
+<p><img src="http://ww1.sinaimg.cn/mw690/005WhkQKgw1fa13os08h5j30tu0by77v.jpg" alt=""></p>
+<p><code>3.在test.php文件里写上</code></p>
+<p><img src="http://ww4.sinaimg.cn/mw690/005WhkQKgw1fa13orv94yj30de0ammxp.jpg" alt=""></p>
+<h3 id="出现版本号"><a href="#出现版本号" class="headerlink" title="出现版本号"></a>出现版本号</h3><p><img src="http://ww4.sinaimg.cn/mw690/005WhkQKgw1fa13dfnm1hj30tc08p0x7.jpg" alt=""></p>
+<p><code>4.访问http://localhost/class/test/test.php</code></p>
+<h1 id="php语法入门"><a href="#php语法入门" class="headerlink" title="php语法入门"></a>php语法入门</h1><p><code>1.echo只能打印字符串和数字</code></p>
+<pre><code>echo &quot;hello world!&quot;;
+echo &quot;&lt;br&gt;&quot;;
+echo (111);//数字不加引号可以
+</code></pre><p><code>2.变量声明</code></p>
+<pre><code>$a = &quot;你好&quot;;
+echo $a;
+
+$b=&quot;hello&quot;;
+$hello=&quot;hello jas&quot;;
+echo $$b;                //hello jas
+</code></pre><p><code>3.变量解析，字符串连接使用“.”</code></p>
+<pre><code>$c=&quot;你好&quot;;
+$res1=&quot;张三&quot;;
+echo $c.$res1;  //你好张三
+
+$res2=&quot;张三$c&quot;;//必须双引号才会解析
+$res2=&quot;张三&apos;$c&apos;&quot;;//张三&apos;你好&apos;
+echo $res2;
+</code></pre><p><code>4.自动转换</code></p>
+<pre><code>$d=1;
+$e=&quot;2&quot;;
+echo gettype($d+$e);//整型integer
+echo ($d+$e);//3
+</code></pre><p><code>5.强制转换</code></p>
+<pre><code>echo gettype($e);  //string
+echo gettype((int)$e);//integer
+</code></pre><p><code>6.字符串定义方式二：</code></p>
+<pre><code>// 定界符,一般定义长字符串；注意，结尾顶头写，前后不许有空格
+$str=&lt;&lt;&lt;AAA
+fdffdfdfdfdfdff
+AAA;
+echo $str;//fdffdfdfdfdfdff
+</code></pre><p><code>7.php不会传值</code></p>
+<pre><code>$arr1=[1,2,3];
+$arr2=$arr1;//想传值加&amp;符号
+$arr2[0]=5;
+print_r($arr1);//Array ( [0] =&gt; 1 [1] =&gt; 2 [2] =&gt; 3 )
+
+
+$arr1=[1,2,3];
+$arr3=&amp;$arr1;//想传值加&amp;符号
+$arr3[0]=5;
+print_r($arr1);//Array ( [0] =&gt; 5 [1] =&gt; 2 [2] =&gt; 3 )
+</code></pre><p><code>8.数组定义方式</code></p>
+<pre><code>$arr=array(&quot;张三&quot;,&quot;李四&quot;,&quot;王二&quot;);//索引数组
+print_r($arr);    //Array ( [0] =&gt; 张三 [1] =&gt; 李四 [2] =&gt; 王二 )
+var_dump();    // array(3) { [0]=&gt; string(6) &quot;张三&quot; [1]=&gt; string(6) &quot;李四&quot; [2]=&gt; string(6) &quot;王二&quot; }
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/11/22/php入门/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-mongodb与nodejs与Express搭建项目" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/21/mongodb与nodejs与Express搭建项目/">mongodb与nodejs与Express搭建项目</a>
+    </h1>
+  
+
+        
+        <a href="/2016/11/21/mongodb与nodejs与Express搭建项目/" class="archive-article-date">
+  	<time datetime="2016-11-21T09:40:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1.安装node.js"></a>1.安装node.js</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="external">node.js</a></p>
+<h3 id="2-安装mongodb"><a href="#2-安装mongodb" class="headerlink" title="2.安装mongodb"></a>2.安装mongodb</h3><p><a href="https://pan.baidu.com/s/1eRCoVE6" target="_blank" rel="external">mongodb</a></p>
+<h3 id="3-把下载文件移动至"><a href="#3-把下载文件移动至" class="headerlink" title="3.把下载文件移动至"></a>3.把下载文件移动至</h3><pre><code>mv -n ~/Downloads/mongodb-osx-x86_64-3.2.9 ~/Applications/mongodb/
+</code></pre><h3 id="4-去根目录"><a href="#4-去根目录" class="headerlink" title="4.去根目录"></a>4.去根目录</h3><pre><code>sudo mkdir -p /data/db
+sudo chown -R  电脑用户名后面有空格看清楚 /data
+cd Users/lanou/Applications/mongodb/bin    
+</code></pre><h3 id="5-数据库操作"><a href="#5-数据库操作" class="headerlink" title="5.数据库操作"></a>5.数据库操作</h3><pre><code>./mongo   打开shell脚本
+show dbs   查看可用的数据库
+use 数据库名  创建数据库
+db.集合名称.insert({})  创建集合，可有多个，向集合插入数据
+db.集合名.find()  查找
+db.集合名.find().pretty（）  查找
+db.集合名.findOne()  查找第一个集合
+db.dropDatabase()删除
+db.col.grop()删除集合
+db.集合名.remove({age:30})删除
+npm install mongoose --save
+</code></pre><h3 id="6-mongobooster"><a href="#6-mongobooster" class="headerlink" title="6.mongobooster"></a>6.mongobooster</h3><p><a href="https://pan.baidu.com/s/1bpeLuSv" target="_blank" rel="external">mongobooster</a></p>
+<h1 id="express安装"><a href="#express安装" class="headerlink" title="express安装"></a>express安装</h1><pre><code>npm install express-generator -g //全局安装
+express h  //测试
+express -e -C less expressTest  //初始化目录
+cd expressTest //进入目录
+nam install //初始化
+DEBUG=expresstest:* npm start  //开始
+热更新 npm i supervisor -g
+</code></pre><p>#我github上基于上述的项目，欢迎star<br><a href="https://github.com/wangyalijas/jingyingba" target="_blank" rel="external">精英吧项目</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/11/21/mongodb与nodejs与Express搭建项目/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-网站常见的几种js特效" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/17/网站常见的几种js特效/">网站常见的几种js特效</a>
+    </h1>
+  
+
+        
+        <a href="/2016/11/17/网站常见的几种js特效/" class="archive-article-date">
+  	<time datetime="2016-11-17T07:03:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/11/17/网站常见的几种js特效/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-你有必要知道的25个JavaScript面试题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/16/你有必要知道的25个JavaScript面试题/">你有必要知道的25个JavaScript面试题</a>
+    </h1>
+  
+
+        
+        <a href="/2016/11/16/你有必要知道的25个JavaScript面试题/" class="archive-article-date">
+  	<time datetime="2016-11-16T07:59:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="转载自"><a href="#转载自" class="headerlink" title="转载自"></a><a href="http://www.jb51.net/article/77140.htm" target="_blank" rel="external">转载自</a></h1><h1 id="1-使用-typeof-bar-“object”-判断-bar-是不是一个对象有神马潜在的弊端？如何避免这种弊端？"><a href="#1-使用-typeof-bar-“object”-判断-bar-是不是一个对象有神马潜在的弊端？如何避免这种弊端？" class="headerlink" title="1.使用 typeof bar === “object” 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？"></a>1.使用 typeof bar === “object” 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？</h1><h3 id="使用-typeof-的弊端是显而易见的-这种弊端同使用-instanceof-："><a href="#使用-typeof-的弊端是显而易见的-这种弊端同使用-instanceof-：" class="headerlink" title="使用 typeof 的弊端是显而易见的(这种弊端同使用 instanceof)："></a>使用 typeof 的弊端是显而易见的(这种弊端同使用 instanceof)：</h3><pre><code>var obj = {};
+var arr = [];
+
+console.log(typeof obj === &apos;object&apos;); //true
+console.log(typeof arr === &apos;object&apos;); //true
+console.log(typeof null === &apos;object&apos;); //true
+</code></pre><p><code>从上面的输出结果可知，typeof bar === &quot;object&quot; 并不能准确判断 bar 就是一个 Object。可以通过 Object.prototype.toString.call(bar) === &quot;[object Object]&quot; 来避免这种弊端：</code></p>
+<pre><code>let obj = {};
+let arr = [];
+
+console.log(Object.prototype.toString.call(obj)); //[object Object]
+console.log(Object.prototype.toString.call(arr)); //[object Array]
+console.log(Object.prototype.toString.call(null)); //[object Null]
+</code></pre><h3 id="关于Object-prototype-toString-call-与window-toString-call-的结合理解"><a href="#关于Object-prototype-toString-call-与window-toString-call-的结合理解" class="headerlink" title="关于Object.prototype.toString.call()与window.toString.call()的结合理解"></a><em>关于Object.prototype.toString.call()与window.toString.call()的结合理解</em></h3><hr>
+<h1 id="2-下面的代码会在-console-输出神马？为什么？"><a href="#2-下面的代码会在-console-输出神马？为什么？" class="headerlink" title="2. 下面的代码会在 console 输出神马？为什么？"></a>2. 下面的代码会在 console 输出神马？为什么？</h1><pre><code>(function(){
+    var a = b = 3;
+})();
+
+console.log(&quot;a defined? &quot; + (typeof a !== &apos;undefined&apos;)); 
+console.log(&quot;b defined? &quot; + (typeof b !== &apos;undefined&apos;));
+</code></pre><h4 id="这跟变量作用域有关，输出换成下面的："><a href="#这跟变量作用域有关，输出换成下面的：" class="headerlink" title="这跟变量作用域有关，输出换成下面的："></a>这跟变量作用域有关，输出换成下面的：</h4><pre><code>console.log(b); //3
+console,log(typeof a); //undefined
+</code></pre><h4 id="拆解一下自执行函数中的变量赋值："><a href="#拆解一下自执行函数中的变量赋值：" class="headerlink" title="拆解一下自执行函数中的变量赋值："></a>拆解一下自执行函数中的变量赋值：</h4><pre><code>b = 3;
+var a = b;
+</code></pre><h4 id="所以-b-成了全局变量，而-a-是自执行函数的一个局部变量。"><a href="#所以-b-成了全局变量，而-a-是自执行函数的一个局部变量。" class="headerlink" title="所以 b 成了全局变量，而 a 是自执行函数的一个局部变量。"></a>所以 b 成了全局变量，而 a 是自执行函数的一个局部变量。</h4><h1 id="3-下面的代码会在-console-输出神马？为什么？"><a href="#3-下面的代码会在-console-输出神马？为什么？" class="headerlink" title="3. 下面的代码会在 console 输出神马？为什么？"></a>3. 下面的代码会在 console 输出神马？为什么？</h1><pre><code>var myObject = {
+     foo: &quot;bar&quot;,
+     func: function() {
+
+    var self = this;
+    console.log(&quot;outer func: this.foo = &quot; + this.foo);
+    console.log(&quot;outer func: self.foo = &quot; + self.foo);
+
+        (function() {
+            console.log(&quot;inner func: this.foo = &quot; + this.foo);
+            console.log(&quot;inner func: self.foo = &quot; + self.foo);
+        }());
+    }
+};
+myObject.func();
+</code></pre><p><code>打印结果：</code></p>
+<pre><code>outer func: this.foo = bar
+outer func: self.foo = bar
+inner func: this.foo = undefined
+inner func: self.foo = bar
+</code></pre><h1 id="4-将-JavaScript-代码包含在一个函数块中有神马意思呢？为什么要这么做？"><a href="#4-将-JavaScript-代码包含在一个函数块中有神马意思呢？为什么要这么做？" class="headerlink" title="4.将 JavaScript 代码包含在一个函数块中有神马意思呢？为什么要这么做？"></a>4.将 JavaScript 代码包含在一个函数块中有神马意思呢？为什么要这么做？</h1><h4 id="换句话说，为什么要用立即执行函数表达式（Immediately-Invoked-Function-Expression）。"><a href="#换句话说，为什么要用立即执行函数表达式（Immediately-Invoked-Function-Expression）。" class="headerlink" title="换句话说，为什么要用立即执行函数表达式（Immediately-Invoked Function Expression）。"></a>换句话说，为什么要用立即执行函数表达式（Immediately-Invoked Function Expression）。</h4><h4 id="IIFE-有两个比较经典的使用场景，一是类似于在循环中定时输出数据项，二是类似于-JQuery-Node-的插件和模块开发。"><a href="#IIFE-有两个比较经典的使用场景，一是类似于在循环中定时输出数据项，二是类似于-JQuery-Node-的插件和模块开发。" class="headerlink" title="IIFE 有两个比较经典的使用场景，一是类似于在循环中定时输出数据项，二是类似于 JQuery/Node 的插件和模块开发。"></a>IIFE 有两个比较经典的使用场景，一是类似于在循环中定时输出数据项，二是类似于 JQuery/Node 的插件和模块开发。</h4><pre><code>for(var i = 0; i &lt; 5; i++) {
+    setTimeout(function() {console.log(i); }, 1000);
+}
+</code></pre><p><code>上面的输出并不是你以为的0，1，2，3，4，而输出的全部是5，这时 IIFE 就能有用了：</code></p>
+<pre><code>for(var i = 0; i &lt; 5; i++) {
+    (function(i) {
+        setTimeout(function() {console.log(i);}, 1000);
+    })(i)
+}
+</code></pre><p><code>而在 JQuery/Node 的插件和模块开发中，为避免变量污染，也是一个大大的 IIFE：</code></p>
+<pre><code>(function($) { 
+    //代码
+} )(jQuery);
+</code></pre><h1 id="5-在严格模式-‘use-strict’-下进行-JavaScript-开发有神马好处？"><a href="#5-在严格模式-‘use-strict’-下进行-JavaScript-开发有神马好处？" class="headerlink" title="5. 在严格模式(‘use strict’)下进行 JavaScript 开发有神马好处？"></a>5. 在严格模式(‘use strict’)下进行 JavaScript 开发有神马好处？</h1><h4 id="1-消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为"><a href="#1-消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为" class="headerlink" title="1.消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;"></a>1.消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;</h4><h4 id="2-消除代码运行的一些不安全之处，保证代码运行的安全；"><a href="#2-消除代码运行的一些不安全之处，保证代码运行的安全；" class="headerlink" title="2.消除代码运行的一些不安全之处，保证代码运行的安全；"></a>2.消除代码运行的一些不安全之处，保证代码运行的安全；</h4><h4 id="3-提高编译器效率，增加运行速度；"><a href="#3-提高编译器效率，增加运行速度；" class="headerlink" title="3.提高编译器效率，增加运行速度；"></a>3.提高编译器效率，增加运行速度；</h4><h4 id="4-为未来新版本的Javascript做好铺垫。"><a href="#4-为未来新版本的Javascript做好铺垫。" class="headerlink" title="4.为未来新版本的Javascript做好铺垫。"></a>4.为未来新版本的Javascript做好铺垫。</h4><h1 id="6-下面两个函数的返回值是一样的吗？为什么？"><a href="#6-下面两个函数的返回值是一样的吗？为什么？" class="headerlink" title="6.下面两个函数的返回值是一样的吗？为什么？"></a>6.下面两个函数的返回值是一样的吗？为什么？</h1><pre><code>function foo1(){
+    return {
+    bar: &quot;hello&quot;
+    };
+}
+</code></pre><p> <code>下一个</code></p>
+<pre><code>function foo2(){
+    return
+{
+    bar: &quot;hello&quot;
+};
+}
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/11/16/你有必要知道的25个JavaScript面试题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -329,7 +1385,47 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">16个正则表达式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">node.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">项目实战</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">mysqli</a>
               </li>
             
             <div class="clearfix"></div>

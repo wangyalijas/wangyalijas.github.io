@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | 王二爷</title>
+  <title>js字符串函数 | 王二爷</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端小菜鸟的进阶之路">
-<meta property="og:type" content="website">
-<meta property="og:title" content="王二爷">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="（一）concat将两个或多个字符的文本组合起来，返回一个新的字符串。var a=&amp;apos;hello&amp;apos;; var b=&amp;apos;,world&amp;apos;; console.log(a.concat(b));//hello,world （二）indexOf返回字符串中一个子串第一处出现的索引（从左到右搜索）。如果没有匹配项，返回 -1 。var index1 = a.indexOf(">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js字符串函数">
+<meta property="og:url" content="http://yoursite.com/2016/08/06/js字符串函数小结/index.html">
 <meta property="og:site_name" content="王二爷">
-<meta property="og:description" content="前端小菜鸟的进阶之路">
+<meta property="og:description" content="（一）concat将两个或多个字符的文本组合起来，返回一个新的字符串。var a=&amp;apos;hello&amp;apos;; var b=&amp;apos;,world&amp;apos;; console.log(a.concat(b));//hello,world （二）indexOf返回字符串中一个子串第一处出现的索引（从左到右搜索）。如果没有匹配项，返回 -1 。var index1 = a.indexOf(">
+<meta property="og:updated_time" content="2016-12-07T07:12:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="王二爷">
-<meta name="twitter:description" content="前端小菜鸟的进阶之路">
+<meta name="twitter:title" content="js字符串函数">
+<meta name="twitter:description" content="（一）concat将两个或多个字符的文本组合起来，返回一个新的字符串。var a=&amp;apos;hello&amp;apos;; var b=&amp;apos;,world&amp;apos;; console.log(a.concat(b));//hello,world （二）indexOf返回字符串中一个子串第一处出现的索引（从左到右搜索）。如果没有匹配项，返回 -1 。var index1 = a.indexOf(">
   
     <link rel="alternative" href="/atom.xml" title="王二爷" type="application/atom+xml">
   
@@ -156,60 +158,236 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-js字符串函数小结" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/15/ES6的let和const与var的浅谈/" class="archive-article-date">
-  	<time datetime="2017-06-15T09:47:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/15/ES6的let和const与var的浅谈/">ES6的let和const与var的浅谈</a>
+    <h1 class="article-title" itemprop="name">
+      js字符串函数
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2016/08/06/js字符串函数小结/" class="archive-article-date">
+  	<time datetime="2016-08-06T12:01:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="（一）concat"><a href="#（一）concat" class="headerlink" title="（一）concat"></a>（一）concat</h3><h4 id="将两个或多个字符的文本组合起来，返回一个新的字符串。"><a href="#将两个或多个字符的文本组合起来，返回一个新的字符串。" class="headerlink" title="将两个或多个字符的文本组合起来，返回一个新的字符串。"></a>将两个或多个字符的文本组合起来，返回一个新的字符串。</h4><pre><code>var a=&apos;hello&apos;;
+var b=&apos;,world&apos;;
+console.log(a.concat(b));//hello,world
+</code></pre><h3 id="（二）indexOf"><a href="#（二）indexOf" class="headerlink" title="（二）indexOf"></a>（二）indexOf</h3><h4 id="返回字符串中一个子串第一处出现的索引（从左到右搜索）。如果没有匹配项，返回-1-。"><a href="#返回字符串中一个子串第一处出现的索引（从左到右搜索）。如果没有匹配项，返回-1-。" class="headerlink" title="返回字符串中一个子串第一处出现的索引（从左到右搜索）。如果没有匹配项，返回 -1 。"></a>返回字符串中一个子串第一处出现的索引（从左到右搜索）。如果没有匹配项，返回 -1 。</h4><pre><code>var index1 = a.indexOf(&quot;l&quot;);
+//index1 = 2
+var index2 = a.indexOf(&quot;l&quot;,3);
+//index2 = 3
+</code></pre><h3 id="（三）charAt"><a href="#（三）charAt" class="headerlink" title="（三）charAt"></a>（三）charAt</h3><h4 id="返回指定位置的字符。"><a href="#返回指定位置的字符。" class="headerlink" title="返回指定位置的字符。"></a>返回指定位置的字符。</h4><pre><code>console.log(a.charAt(0));//h
+</code></pre><h3 id="（四）lastIndexOf"><a href="#（四）lastIndexOf" class="headerlink" title="（四）lastIndexOf"></a>（四）lastIndexOf</h3><h4 id="返回字符串中一个子串最后一处出现的索引（从右到左搜索），如果没有匹配项，返回-1-。"><a href="#返回字符串中一个子串最后一处出现的索引（从右到左搜索），如果没有匹配项，返回-1-。" class="headerlink" title="返回字符串中一个子串最后一处出现的索引（从右到左搜索），如果没有匹配项，返回 -1 。"></a>返回字符串中一个子串最后一处出现的索引（从右到左搜索），如果没有匹配项，返回 -1 。</h4><pre><code>console.log(a.lastIndexOf(&apos;l&apos;))  //3
+console.log(a.indexOf(&quot;l&quot;))   //2
+</code></pre><h3 id="（五）match"><a href="#（五）match" class="headerlink" title="（五）match"></a>（五）match</h3><h4 id="检查一个字符串匹配一个正则表达式内容，如果么有匹配返回-null。"><a href="#检查一个字符串匹配一个正则表达式内容，如果么有匹配返回-null。" class="headerlink" title="检查一个字符串匹配一个正则表达式内容，如果么有匹配返回 null。"></a>检查一个字符串匹配一个正则表达式内容，如果么有匹配返回 null。</h4><pre><code>var re = new RegExp(/^\w+$/);
+var is_alpha1 = a.match(re);
+//is_alpha1 = &quot;hello&quot;
+var is_alpha2 = b.match(re);
+//is_alpha2 = null
+</code></pre><h3 id="（六）substring"><a href="#（六）substring" class="headerlink" title="（六）substring"></a>（六）substring</h3><h4 id="返回字符串的一个子串，传入参数是起始位置和结束位置。"><a href="#返回字符串的一个子串，传入参数是起始位置和结束位置。" class="headerlink" title="返回字符串的一个子串，传入参数是起始位置和结束位置。"></a>返回字符串的一个子串，传入参数是起始位置和结束位置。</h4><pre><code>var str=&apos;absd&apos;;
+console.log(str.substring(2));//sd
+</code></pre><h3 id="（七）substr"><a href="#（七）substr" class="headerlink" title="（七）substr"></a>（七）substr</h3><h4 id="返回字符串的一个子串，传入参数是起始位置和长度"><a href="#返回字符串的一个子串，传入参数是起始位置和长度" class="headerlink" title="返回字符串的一个子串，传入参数是起始位置和长度"></a>返回字符串的一个子串，传入参数是起始位置和长度</h4><pre><code>var str=&apos;absd&apos;;
+console.log(str.substr(2,1));//s
+</code></pre><h3 id="（八）replace"><a href="#（八）replace" class="headerlink" title="（八）replace"></a>（八）replace</h3><h4 id="用来查找匹配一个正则表达式的字符串，然后使用新字符串代替匹配的字符串。"><a href="#用来查找匹配一个正则表达式的字符串，然后使用新字符串代替匹配的字符串。" class="headerlink" title="用来查找匹配一个正则表达式的字符串，然后使用新字符串代替匹配的字符串。"></a>用来查找匹配一个正则表达式的字符串，然后使用新字符串代替匹配的字符串。</h4><pre><code>var result1 = a.replace(re,&quot;Hello&quot;);
+//result1 = &quot;Hello&quot;
+var result2 = b.replace(re,&quot;Hello&quot;);
+//result2 = &quot;,world&quot;
+</code></pre><h3 id="（九）toLowerCase"><a href="#（九）toLowerCase" class="headerlink" title="（九）toLowerCase"></a>（九）toLowerCase</h3><h4 id="将整个字符串转成小写字母。"><a href="#将整个字符串转成小写字母。" class="headerlink" title="将整个字符串转成小写字母。"></a>将整个字符串转成小写字母。</h4><pre><code>var lower_string = a.toLowerCase();
+//lower_string = &quot;hello&quot;
+</code></pre><h3 id="（十）toUpperCase"><a href="#（十）toUpperCase" class="headerlink" title="（十）toUpperCase"></a>（十）toUpperCase</h3><h4 id="将整个字符串转成大写字母。"><a href="#将整个字符串转成大写字母。" class="headerlink" title="将整个字符串转成大写字母。"></a>将整个字符串转成大写字母。</h4><pre><code>var upper_string = a.toUpperCase();
+//upper_string = &quot;HELLO&quot;
+</code></pre><hr>
+<p>title: js字符串函数小结<br>date: 2016-12-04 18:40:21</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><hr>
+<p>title: js字符串函数<br>date: 2016-8-03 20:01:37</p>
+<h2 id="tags-1"><a href="#tags-1" class="headerlink" title="tags:"></a>tags:</h2><h3 id="（一）concat-1"><a href="#（一）concat-1" class="headerlink" title="（一）concat"></a>（一）concat</h3><h4 id="将两个或多个字符的文本组合起来，返回一个新的字符串。-1"><a href="#将两个或多个字符的文本组合起来，返回一个新的字符串。-1" class="headerlink" title="将两个或多个字符的文本组合起来，返回一个新的字符串。"></a>将两个或多个字符的文本组合起来，返回一个新的字符串。</h4><pre><code>var a=&apos;hello&apos;;
+var b=&apos;,world&apos;;
+console.log(a.concat(b));//hello,world
+</code></pre><h3 id="（二）indexOf-1"><a href="#（二）indexOf-1" class="headerlink" title="（二）indexOf"></a>（二）indexOf</h3><h4 id="返回字符串中一个子串第一处出现的索引（从左到右搜索）。如果没有匹配项，返回-1-。-1"><a href="#返回字符串中一个子串第一处出现的索引（从左到右搜索）。如果没有匹配项，返回-1-。-1" class="headerlink" title="返回字符串中一个子串第一处出现的索引（从左到右搜索）。如果没有匹配项，返回 -1 。"></a>返回字符串中一个子串第一处出现的索引（从左到右搜索）。如果没有匹配项，返回 -1 。</h4><pre><code>var index1 = a.indexOf(&quot;l&quot;);
+//index1 = 2
+var index2 = a.indexOf(&quot;l&quot;,3);
+//index2 = 3
+</code></pre><h3 id="（三）charAt-1"><a href="#（三）charAt-1" class="headerlink" title="（三）charAt"></a>（三）charAt</h3><h4 id="返回指定位置的字符。-1"><a href="#返回指定位置的字符。-1" class="headerlink" title="返回指定位置的字符。"></a>返回指定位置的字符。</h4><pre><code>console.log(a.charAt(0));//h
+</code></pre><h3 id="（四）lastIndexOf-1"><a href="#（四）lastIndexOf-1" class="headerlink" title="（四）lastIndexOf"></a>（四）lastIndexOf</h3><h4 id="返回字符串中一个子串最后一处出现的索引（从右到左搜索），如果没有匹配项，返回-1-。-1"><a href="#返回字符串中一个子串最后一处出现的索引（从右到左搜索），如果没有匹配项，返回-1-。-1" class="headerlink" title="返回字符串中一个子串最后一处出现的索引（从右到左搜索），如果没有匹配项，返回 -1 。"></a>返回字符串中一个子串最后一处出现的索引（从右到左搜索），如果没有匹配项，返回 -1 。</h4><pre><code>console.log(a.lastIndexOf(&apos;l&apos;))  //3
+console.log(a.indexOf(&quot;l&quot;))   //2
+</code></pre><h3 id="（五）match-1"><a href="#（五）match-1" class="headerlink" title="（五）match"></a>（五）match</h3><h4 id="检查一个字符串匹配一个正则表达式内容，如果么有匹配返回-null。-1"><a href="#检查一个字符串匹配一个正则表达式内容，如果么有匹配返回-null。-1" class="headerlink" title="检查一个字符串匹配一个正则表达式内容，如果么有匹配返回 null。"></a>检查一个字符串匹配一个正则表达式内容，如果么有匹配返回 null。</h4><pre><code>var re = new RegExp(/^\w+$/);
+var is_alpha1 = a.match(re);
+//is_alpha1 = &quot;hello&quot;
+var is_alpha2 = b.match(re);
+//is_alpha2 = null
+</code></pre><h3 id="（六）substring-1"><a href="#（六）substring-1" class="headerlink" title="（六）substring"></a>（六）substring</h3><h4 id="返回字符串的一个子串，传入参数是起始位置和结束位置。-1"><a href="#返回字符串的一个子串，传入参数是起始位置和结束位置。-1" class="headerlink" title="返回字符串的一个子串，传入参数是起始位置和结束位置。"></a>返回字符串的一个子串，传入参数是起始位置和结束位置。</h4><pre><code>var str=&apos;absd&apos;;
+console.log(str.substring(2));//sd
+</code></pre><h3 id="（七）substr-1"><a href="#（七）substr-1" class="headerlink" title="（七）substr"></a>（七）substr</h3><h4 id="返回字符串的一个子串，传入参数是起始位置和长度-1"><a href="#返回字符串的一个子串，传入参数是起始位置和长度-1" class="headerlink" title="返回字符串的一个子串，传入参数是起始位置和长度"></a>返回字符串的一个子串，传入参数是起始位置和长度</h4><pre><code>var str=&apos;absd&apos;;
+console.log(str.substr(2,1));//s
+</code></pre><h3 id="（八）replace-1"><a href="#（八）replace-1" class="headerlink" title="（八）replace"></a>（八）replace</h3><h4 id="用来查找匹配一个正则表达式的字符串，然后使用新字符串代替匹配的字符串。-1"><a href="#用来查找匹配一个正则表达式的字符串，然后使用新字符串代替匹配的字符串。-1" class="headerlink" title="用来查找匹配一个正则表达式的字符串，然后使用新字符串代替匹配的字符串。"></a>用来查找匹配一个正则表达式的字符串，然后使用新字符串代替匹配的字符串。</h4><pre><code>var result1 = a.replace(re,&quot;Hello&quot;);
+//result1 = &quot;Hello&quot;
+var result2 = b.replace(re,&quot;Hello&quot;);
+//result2 = &quot;,world&quot;
+</code></pre><h3 id="（九）toLowerCase-1"><a href="#（九）toLowerCase-1" class="headerlink" title="（九）toLowerCase"></a>（九）toLowerCase</h3><h4 id="将整个字符串转成小写字母。-1"><a href="#将整个字符串转成小写字母。-1" class="headerlink" title="将整个字符串转成小写字母。"></a>将整个字符串转成小写字母。</h4><pre><code>var lower_string = a.toLowerCase();
+//lower_string = &quot;hello&quot;
+</code></pre><h3 id="（十）toUpperCase-1"><a href="#（十）toUpperCase-1" class="headerlink" title="（十）toUpperCase"></a>（十）toUpperCase</h3><h4 id="将整个字符串转成大写字母。-1"><a href="#将整个字符串转成大写字母。-1" class="headerlink" title="将整个字符串转成大写字母。"></a>将整个字符串转成大写字母。</h4><pre><code>var upper_string = a.toUpperCase();
+//upper_string = &quot;HELLO&quot;
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/08/06/js字符串函数小结/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/08/07/数组常见函数/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          数组常见函数
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2016/08/05/用Javascript获取页面元素的位置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">用Javascript获取页面元素的位置</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="js字符串函数小结" data-title="js字符串函数" data-url="http://yoursite.com/2016/08/06/js字符串函数小结/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -232,8 +410,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

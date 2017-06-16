@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | 王二爷</title>
+  <title>数据库操作 | 王二爷</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端小菜鸟的进阶之路">
-<meta property="og:type" content="website">
-<meta property="og:title" content="王二爷">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="打开http://localhost/phpmyadmin/ 1. 增 INSERT INTO users(username,pwd,age) VALUES(&amp;quot;李四&amp;quot;,123,19)  INSERT INTO users(username,pwd,age) VALUE (&amp;quot;张三&amp;quot;,123,12)    INSERT INTO users(username,p">
+<meta name="keywords" content="mysqli">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库操作">
+<meta property="og:url" content="http://yoursite.com/2016/11/26/数据库操作/index.html">
 <meta property="og:site_name" content="王二爷">
-<meta property="og:description" content="前端小菜鸟的进阶之路">
+<meta property="og:description" content="打开http://localhost/phpmyadmin/ 1. 增 INSERT INTO users(username,pwd,age) VALUES(&amp;quot;李四&amp;quot;,123,19)  INSERT INTO users(username,pwd,age) VALUE (&amp;quot;张三&amp;quot;,123,12)    INSERT INTO users(username,p">
+<meta property="og:updated_time" content="2016-12-07T07:14:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="王二爷">
-<meta name="twitter:description" content="前端小菜鸟的进阶之路">
+<meta name="twitter:title" content="数据库操作">
+<meta name="twitter:description" content="打开http://localhost/phpmyadmin/ 1. 增 INSERT INTO users(username,pwd,age) VALUES(&amp;quot;李四&amp;quot;,123,19)  INSERT INTO users(username,pwd,age) VALUE (&amp;quot;张三&amp;quot;,123,12)    INSERT INTO users(username,p">
   
     <link rel="alternative" href="/atom.xml" title="王二爷" type="application/atom+xml">
   
@@ -156,60 +158,231 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-数据库操作" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/15/ES6的let和const与var的浅谈/" class="archive-article-date">
-  	<time datetime="2017-06-15T09:47:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/15/ES6的let和const与var的浅谈/">ES6的let和const与var的浅谈</a>
+    <h1 class="article-title" itemprop="name">
+      数据库操作
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2016/11/26/数据库操作/" class="archive-article-date">
+  	<time datetime="2016-11-26T01:41:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="打开"><a href="#打开" class="headerlink" title="打开"></a>打开</h1><p><a href="http://localhost/phpmyadmin/" target="_blank" rel="external">http://localhost/phpmyadmin/</a></p>
+<p><code>1. 增</code></p>
+<pre><code>INSERT INTO users(username,pwd,age) VALUES(&quot;李四&quot;,123,19)
+
+INSERT INTO users(username,pwd,age) VALUE (&quot;张三&quot;,123,12)
+
+
+
+INSERT INTO users(username,pwd,age) VALUES (&quot;王二1&quot;,1,1);
+INSERT INTO users(username,pwd,age) VALUES (&quot;王二2&quot;,1,1);
+INSERT INTO users(username,pwd,age) VALUES (&quot;王二3&quot;,1,1);
+INSERT INTO users(username,pwd,age) VALUES (&quot;王二4&quot;,1,1);
+INSERT INTO users(username,pwd,age) VALUES (&quot;王二5&quot;,1,1);
+INSERT INTO users(username,pwd,age) VALUES (&quot;王二6&quot;,1,1)
+</code></pre><p><code>2. 删除</code></p>
+<pre><code>DELETE FROM users WHERE username=&quot;张三&quot;
+
+
+DELETE FROM users WHERE id=1 or id=4
+
+
+DELETE FROM users WHERE id IN(5,6,7)
+
+
+AND 
+BETWEEN  AND
+OR 
+ONT
+</code></pre><p><code>3.修改</code></p>
+<pre><code>UPDATE 表名 SET 设置的内容 WHERE 加条件语句
+
+UPDATE users SET username=&quot;张三&quot;,pwd=321 WHERE id=3
+</code></pre><p><code>4.查询</code></p>
+<pre><code>SELECT * FROM `users` WHERE 1
+
+
+SELECT * FROM `users` WHERE username LIKE &quot;李%&quot;
+
+
+SELECT * FROM `users` WHERE username LIKE &quot;张%&quot; AND age=12
+</code></pre><p><code>5.分页查询</code></p>
+<pre><code>SELECT * FROM `users` LIMIT 2,2//第二条数据，查三条
+</code></pre><p><code>6.倒序排列</code></p>
+<pre><code>SELECT * FROM `users` ORDER BY id DESC
+</code></pre><p><code>7.统计条数</code><br>    SELECT COUNT(*) FROM <code>users</code></p>
+<p><code>8.联表查询</code><br><code>将两张表连在一起进行查询</code></p>
+<pre><code>SELECT * FROM 表名1 JOIN 表名2
+
+SELECT * FROM users JOIN product ON users.id=product.id;
+</code></pre><p><code>9.简写</code></p>
+<pre><code>SELECT * FROM `users` AS u JOIN product AS p ON u.id=p.id
+</code></pre><p><code>10.以左边为主表</code></p>
+<pre><code>SELECT * FROM `users` AS u LEFT JOIN product AS p ON u.id=p.id
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">mysqli</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/11/26/数据库操作/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/11/28/连接数据库mysql/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          连接数据库mysql
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2016/11/22/php入门/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">php入门</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="数据库操作" data-title="数据库操作" data-url="http://yoursite.com/2016/11/26/数据库操作/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -232,8 +405,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

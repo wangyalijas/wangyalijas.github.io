@@ -6,17 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | 王二爷</title>
+  <title>用Javascript获取页面元素的位置 | 王二爷</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端小菜鸟的进阶之路">
-<meta property="og:type" content="website">
-<meta property="og:title" content="王二爷">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="一、网页的大小和浏览器窗口的大小首先，要明确两个基本概念。一张网页的全部面积，就是它的大小。通常情况下，网页的大小由内容和CSS样式表决定。浏览器窗口的大小，则是指在浏览器窗口中看到的那部分网页面积，又叫做viewport（视口）。很显然，如果网页的内容能够在浏览器窗口中全部显示（也就是不出现滚动条），那么网页的大小和浏览器窗口的大小是相等的。如果不能全部显示，则滚动浏览器窗口，可以显示出网页的各">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用Javascript获取页面元素的位置">
+<meta property="og:url" content="http://yoursite.com/2016/08/05/用Javascript获取页面元素的位置/index.html">
 <meta property="og:site_name" content="王二爷">
-<meta property="og:description" content="前端小菜鸟的进阶之路">
+<meta property="og:description" content="一、网页的大小和浏览器窗口的大小首先，要明确两个基本概念。一张网页的全部面积，就是它的大小。通常情况下，网页的大小由内容和CSS样式表决定。浏览器窗口的大小，则是指在浏览器窗口中看到的那部分网页面积，又叫做viewport（视口）。很显然，如果网页的内容能够在浏览器窗口中全部显示（也就是不出现滚动条），那么网页的大小和浏览器窗口的大小是相等的。如果不能全部显示，则滚动浏览器窗口，可以显示出网页的各">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/005WhkQKgw1f9sshtfwx7j30dm089dg6.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/mw690/005WhkQKgw1f9sshtgwkgj30dg09qwew.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/005WhkQKgw1f9sshth6i3j30f30a3gm6.jpg">
+<meta property="og:updated_time" content="2016-12-07T07:13:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="王二爷">
-<meta name="twitter:description" content="前端小菜鸟的进阶之路">
+<meta name="twitter:title" content="用Javascript获取页面元素的位置">
+<meta name="twitter:description" content="一、网页的大小和浏览器窗口的大小首先，要明确两个基本概念。一张网页的全部面积，就是它的大小。通常情况下，网页的大小由内容和CSS样式表决定。浏览器窗口的大小，则是指在浏览器窗口中看到的那部分网页面积，又叫做viewport（视口）。很显然，如果网页的内容能够在浏览器窗口中全部显示（也就是不出现滚动条），那么网页的大小和浏览器窗口的大小是相等的。如果不能全部显示，则滚动浏览器窗口，可以显示出网页的各">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/mw690/005WhkQKgw1f9sshtfwx7j30dm089dg6.jpg">
   
     <link rel="alternative" href="/atom.xml" title="王二爷" type="application/atom+xml">
   
@@ -156,60 +162,281 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-用Javascript获取页面元素的位置" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/15/ES6的let和const与var的浅谈/" class="archive-article-date">
-  	<time datetime="2017-06-15T09:47:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/15/ES6的let和const与var的浅谈/">ES6的let和const与var的浅谈</a>
+    <h1 class="article-title" itemprop="name">
+      用Javascript获取页面元素的位置
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2016/08/05/用Javascript获取页面元素的位置/" class="archive-article-date">
+  	<time datetime="2016-08-05T06:41:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、网页的大小和浏览器窗口的大小"><a href="#一、网页的大小和浏览器窗口的大小" class="headerlink" title="一、网页的大小和浏览器窗口的大小"></a>一、网页的大小和浏览器窗口的大小</h1><h3 id="首先，要明确两个基本概念。"><a href="#首先，要明确两个基本概念。" class="headerlink" title="首先，要明确两个基本概念。"></a>首先，要明确两个基本概念。</h3><h3 id="一张网页的全部面积，就是它的大小。通常情况下，网页的大小由内容和CSS样式表决定。"><a href="#一张网页的全部面积，就是它的大小。通常情况下，网页的大小由内容和CSS样式表决定。" class="headerlink" title="一张网页的全部面积，就是它的大小。通常情况下，网页的大小由内容和CSS样式表决定。"></a>一张网页的全部面积，就是它的大小。通常情况下，网页的大小由内容和CSS样式表决定。</h3><h3 id="浏览器窗口的大小，则是指在浏览器窗口中看到的那部分网页面积，又叫做viewport（视口）。"><a href="#浏览器窗口的大小，则是指在浏览器窗口中看到的那部分网页面积，又叫做viewport（视口）。" class="headerlink" title="浏览器窗口的大小，则是指在浏览器窗口中看到的那部分网页面积，又叫做viewport（视口）。"></a>浏览器窗口的大小，则是指在浏览器窗口中看到的那部分网页面积，又叫做viewport（视口）。</h3><h3 id="很显然，如果网页的内容能够在浏览器窗口中全部显示（也就是不出现滚动条），那么网页的大小和浏览器窗口的大小是相等的。如果不能全部显示，则滚动浏览器窗口，可以显示出网页的各个部分。"><a href="#很显然，如果网页的内容能够在浏览器窗口中全部显示（也就是不出现滚动条），那么网页的大小和浏览器窗口的大小是相等的。如果不能全部显示，则滚动浏览器窗口，可以显示出网页的各个部分。" class="headerlink" title="很显然，如果网页的内容能够在浏览器窗口中全部显示（也就是不出现滚动条），那么网页的大小和浏览器窗口的大小是相等的。如果不能全部显示，则滚动浏览器窗口，可以显示出网页的各个部分。"></a>很显然，如果网页的内容能够在浏览器窗口中全部显示（也就是不出现滚动条），那么网页的大小和浏览器窗口的大小是相等的。如果不能全部显示，则滚动浏览器窗口，可以显示出网页的各个部分。</h3><h1 id="二、获取网页的大小"><a href="#二、获取网页的大小" class="headerlink" title="二、获取网页的大小"></a>二、获取网页的大小</h1><h3 id="网页上的每个元素，都有clientHeight和clientWidth属性。这两个属性指元素的内容部分再加上padding的所占据的视觉面积，不包括border和滚动条占用的空间。"><a href="#网页上的每个元素，都有clientHeight和clientWidth属性。这两个属性指元素的内容部分再加上padding的所占据的视觉面积，不包括border和滚动条占用的空间。" class="headerlink" title="网页上的每个元素，都有clientHeight和clientWidth属性。这两个属性指元素的内容部分再加上padding的所占据的视觉面积，不包括border和滚动条占用的空间。"></a>网页上的每个元素，都有clientHeight和clientWidth属性。这两个属性指元素的内容部分再加上padding的所占据的视觉面积，不包括border和滚动条占用的空间。</h3><p><img src="http://ww1.sinaimg.cn/mw690/005WhkQKgw1f9sshtfwx7j30dm089dg6.jpg" alt=""></p>
+<h3 id="因此，document元素的clientHeight和clientWidth属性，就代表了网页的大小。"><a href="#因此，document元素的clientHeight和clientWidth属性，就代表了网页的大小。" class="headerlink" title="因此，document元素的clientHeight和clientWidth属性，就代表了网页的大小。"></a>因此，document元素的clientHeight和clientWidth属性，就代表了网页的大小。</h3><pre><code>function getViewport(){
+if (document.compatMode == &quot;BackCompat&quot;){
+    return {
+        width: document.body.clientWidth,
+        height: document.body.clientHeight
+    }
+} else {
+    return {
+        width: document.documentElement.clientWidth,
+        height: document.documentElement.clientHeight
+        }
+    }
+}
+</code></pre><h3 id="上面的getViewport函数就可以返回浏览器窗口的高和宽。使用的时候，有三个地方需要注意："><a href="#上面的getViewport函数就可以返回浏览器窗口的高和宽。使用的时候，有三个地方需要注意：" class="headerlink" title="上面的getViewport函数就可以返回浏览器窗口的高和宽。使用的时候，有三个地方需要注意："></a>上面的getViewport函数就可以返回浏览器窗口的高和宽。使用的时候，有三个地方需要注意：</h3><p><code>1）这个函数必须在页面加载完成后才能运行，否则document对象还没生成，浏览器会报错。</code></p>
+<p><code>2）大多数情况下，都是document.documentElement.clientWidth返回正确值。但是，在IE6的quirks模式中，document.body.clientWidth返回正确的值，因此函数中加入了对文档模式的判断。</code></p>
+<p><code>3）clientWidth和clientHeight都是只读属性，不能对它们赋值。</code></p>
+<h1 id="三、获取网页大小的另一种方法"><a href="#三、获取网页大小的另一种方法" class="headerlink" title="三、获取网页大小的另一种方法"></a>三、获取网页大小的另一种方法</h1><h3 id="网页上的每个元素还有scrollHeight和scrollWidth属性，指包含滚动条在内的该元素的视觉面积。"><a href="#网页上的每个元素还有scrollHeight和scrollWidth属性，指包含滚动条在内的该元素的视觉面积。" class="headerlink" title="网页上的每个元素还有scrollHeight和scrollWidth属性，指包含滚动条在内的该元素的视觉面积。"></a>网页上的每个元素还有scrollHeight和scrollWidth属性，指包含滚动条在内的该元素的视觉面积。</h3><h3 id="那么，document对象的scrollHeight和scrollWidth属性就是网页的大小，意思就是滚动条滚过的所有长度和宽度。"><a href="#那么，document对象的scrollHeight和scrollWidth属性就是网页的大小，意思就是滚动条滚过的所有长度和宽度。" class="headerlink" title="那么，document对象的scrollHeight和scrollWidth属性就是网页的大小，意思就是滚动条滚过的所有长度和宽度。"></a>那么，document对象的scrollHeight和scrollWidth属性就是网页的大小，意思就是滚动条滚过的所有长度和宽度。</h3><h3 id="仿照getViewport-函数，可以写出getPagearea-函数。"><a href="#仿照getViewport-函数，可以写出getPagearea-函数。" class="headerlink" title="仿照getViewport()函数，可以写出getPagearea()函数。"></a>仿照getViewport()函数，可以写出getPagearea()函数。</h3><pre><code>function getPagearea(){
+    if (document.compatMode == &quot;BackCompat&quot;){
+        return {
+            width: document.body.scrollWidth,
+            height: document.body.scrollHeight
+        }
+    } else {
+        return {
+            width: document.documentElement.scrollWidth,
+            height: document.documentElement.scrollHeight
+        }
+    }
+}
+</code></pre><h3 id="但是，这个函数有一个问题。如果网页内容能够在浏览器窗口中全部显示，不出现滚动条，那么网页的clientWidth和scrollWidth应该相等。但是实际上，不同浏览器有不同的处理，这两个值未必相等。所以，我们需要取它们之中较大的那个值，因此要对getPagearea-函数进行改写。"><a href="#但是，这个函数有一个问题。如果网页内容能够在浏览器窗口中全部显示，不出现滚动条，那么网页的clientWidth和scrollWidth应该相等。但是实际上，不同浏览器有不同的处理，这两个值未必相等。所以，我们需要取它们之中较大的那个值，因此要对getPagearea-函数进行改写。" class="headerlink" title="但是，这个函数有一个问题。如果网页内容能够在浏览器窗口中全部显示，不出现滚动条，那么网页的clientWidth和scrollWidth应该相等。但是实际上，不同浏览器有不同的处理，这两个值未必相等。所以，我们需要取它们之中较大的那个值，因此要对getPagearea()函数进行改写。"></a>但是，这个函数有一个问题。如果网页内容能够在浏览器窗口中全部显示，不出现滚动条，那么网页的clientWidth和scrollWidth应该相等。但是实际上，不同浏览器有不同的处理，这两个值未必相等。所以，我们需要取它们之中较大的那个值，因此要对getPagearea()函数进行改写。</h3><pre><code>function getPagearea(){
+    if (document.compatMode == &quot;BackCompat&quot;){
+        return {
+            width: Math.max(document.body.scrollWidth,
+                            document.body.clientWidth),
+            height: Math.max(document.body.scrollHeight,
+                            document.body.clientHeight)
+        }
+    } else {
+        return {
+            width: Math.max(document.documentElement.scrollWidth,
+                            document.documentElement.clientWidth),
+            height: Math.max(document.documentElement.scrollHeight,
+                            document.documentElement.clientHeight)
+        }
+    }
+}
+</code></pre><h1 id="四、获取网页元素的绝对位置"><a href="#四、获取网页元素的绝对位置" class="headerlink" title="四、获取网页元素的绝对位置"></a>四、获取网页元素的绝对位置</h1><h3 id="网页元素的绝对位置，指该元素的左上角相对于整张网页左上角的坐标。这个绝对位置要通过计算才能得到。"><a href="#网页元素的绝对位置，指该元素的左上角相对于整张网页左上角的坐标。这个绝对位置要通过计算才能得到。" class="headerlink" title="网页元素的绝对位置，指该元素的左上角相对于整张网页左上角的坐标。这个绝对位置要通过计算才能得到。"></a>网页元素的绝对位置，指该元素的左上角相对于整张网页左上角的坐标。这个绝对位置要通过计算才能得到。</h3><h3 id="首先，每个元素都有offsetTop和offsetLeft属性，表示该元素的左上角与父容器（offsetParent对象）左上角的距离。所以，只需要将这两个值进行累加，就可以得到该元素的绝对坐标。"><a href="#首先，每个元素都有offsetTop和offsetLeft属性，表示该元素的左上角与父容器（offsetParent对象）左上角的距离。所以，只需要将这两个值进行累加，就可以得到该元素的绝对坐标。" class="headerlink" title="首先，每个元素都有offsetTop和offsetLeft属性，表示该元素的左上角与父容器（offsetParent对象）左上角的距离。所以，只需要将这两个值进行累加，就可以得到该元素的绝对坐标。"></a>首先，每个元素都有offsetTop和offsetLeft属性，表示该元素的左上角与父容器（offsetParent对象）左上角的距离。所以，只需要将这两个值进行累加，就可以得到该元素的绝对坐标。</h3><p><img src="http://ww2.sinaimg.cn/mw690/005WhkQKgw1f9sshtgwkgj30dg09qwew.jpg" alt=""></p>
+<p><code>下面两个函数可以用来获取绝对位置的横坐标和纵坐标。</code></p>
+<pre><code>function getElementLeft(element){
+    var actualLeft = element.offsetLeft;
+    var current = element.offsetParent;
+    while (current !== null){
+        actualLeft += current.offsetLeft;
+        current = current.offsetParent;
+    }
+    return actualLeft;
+}
+</code></pre><hr>
+<pre><code>function getElementTop(element){
+    var actualTop = element.offsetTop;
+    var current = element.offsetParent;
+    while (current !== null){
+        actualTop += current.offsetTop;
+        current = current.offsetParent;
+    }
+    return actualTop;
+}
+</code></pre><h3 id="由于在表格和iframe中，offsetParent对象未必等于父容器，所以上面的函数对于表格和iframe中的元素不适用。"><a href="#由于在表格和iframe中，offsetParent对象未必等于父容器，所以上面的函数对于表格和iframe中的元素不适用。" class="headerlink" title="由于在表格和iframe中，offsetParent对象未必等于父容器，所以上面的函数对于表格和iframe中的元素不适用。"></a>由于在表格和iframe中，offsetParent对象未必等于父容器，所以上面的函数对于表格和iframe中的元素不适用。</h3><h1 id="五、获取网页元素的相对位置"><a href="#五、获取网页元素的相对位置" class="headerlink" title="五、获取网页元素的相对位置"></a>五、获取网页元素的相对位置</h1><h3 id="网页元素的相对位置，指该元素左上角相对于浏览器窗口左上角的坐标。"><a href="#网页元素的相对位置，指该元素左上角相对于浏览器窗口左上角的坐标。" class="headerlink" title="网页元素的相对位置，指该元素左上角相对于浏览器窗口左上角的坐标。"></a>网页元素的相对位置，指该元素左上角相对于浏览器窗口左上角的坐标。</h3><h3 id="有了绝对位置以后，获得相对位置就很容易了，只要将绝对坐标减去页面的滚动条滚动的距离就可以了。滚动条滚动的垂直距离，是document对象的scrollTop属性；滚动条滚动的水平距离是document对象的scrollLeft属性。"><a href="#有了绝对位置以后，获得相对位置就很容易了，只要将绝对坐标减去页面的滚动条滚动的距离就可以了。滚动条滚动的垂直距离，是document对象的scrollTop属性；滚动条滚动的水平距离是document对象的scrollLeft属性。" class="headerlink" title="有了绝对位置以后，获得相对位置就很容易了，只要将绝对坐标减去页面的滚动条滚动的距离就可以了。滚动条滚动的垂直距离，是document对象的scrollTop属性；滚动条滚动的水平距离是document对象的scrollLeft属性。"></a>有了绝对位置以后，获得相对位置就很容易了，只要将绝对坐标减去页面的滚动条滚动的距离就可以了。滚动条滚动的垂直距离，是document对象的scrollTop属性；滚动条滚动的水平距离是document对象的scrollLeft属性。</h3><p><img src="http://ww1.sinaimg.cn/mw690/005WhkQKgw1f9sshth6i3j30f30a3gm6.jpg" alt=""></p>
+<h3 id="对上一节中的两个函数进行相应的改写："><a href="#对上一节中的两个函数进行相应的改写：" class="headerlink" title="对上一节中的两个函数进行相应的改写："></a>对上一节中的两个函数进行相应的改写：</h3><pre><code>function getElementViewLeft(element){
+    var actualLeft = element.offsetLeft;
+    var current = element.offsetParent;
+    while (current !== null){
+        actualLeft += current.offsetLeft;
+        current = current.offsetParent;
+    }
+    if (document.compatMode == &quot;BackCompat&quot;){
+        var elementScrollLeft=document.body.scrollLeft;
+    } else {
+        var elementScrollLeft=document.documentElement.scrollLeft; 
+    }
+        return actualLeft-elementScrollLeft;
+    }
+function getElementViewTop(element){
+    var actualTop = element.offsetTop;
+    var current = element.offsetParent;
+    while (current !== null){
+        actualTop += current. offsetTop;
+        current = current.offsetParent;
+    }
+    if (document.compatMode == &quot;BackCompat&quot;){
+        var elementScrollTop=document.body.scrollTop;
+    } else {
+        var elementScrollTop=document.documentElement.scrollTop; 
+    }
+    return actualTop-elementScrollTop;
+}
+</code></pre><h3 id="scrollTop和scrollLeft属性是可以赋值的，并且会立即自动滚动网页到相应位置，因此可以利用它们改变网页元素的相对位置。另外，element-scrollIntoView-方法也有类似作用，可以使网页元素出现在浏览器窗口的左上角。"><a href="#scrollTop和scrollLeft属性是可以赋值的，并且会立即自动滚动网页到相应位置，因此可以利用它们改变网页元素的相对位置。另外，element-scrollIntoView-方法也有类似作用，可以使网页元素出现在浏览器窗口的左上角。" class="headerlink" title="scrollTop和scrollLeft属性是可以赋值的，并且会立即自动滚动网页到相应位置，因此可以利用它们改变网页元素的相对位置。另外，element.scrollIntoView()方法也有类似作用，可以使网页元素出现在浏览器窗口的左上角。"></a>scrollTop和scrollLeft属性是可以赋值的，并且会立即自动滚动网页到相应位置，因此可以利用它们改变网页元素的相对位置。另外，element.scrollIntoView()方法也有类似作用，可以使网页元素出现在浏览器窗口的左上角。</h3><h1 id="六、获取元素位置的快速方法"><a href="#六、获取元素位置的快速方法" class="headerlink" title="六、获取元素位置的快速方法"></a>六、获取元素位置的快速方法</h1><h3 id="除了上面的函数以外，还有一种快速方法，可以立刻获得网页元素的位置。"><a href="#除了上面的函数以外，还有一种快速方法，可以立刻获得网页元素的位置。" class="headerlink" title="除了上面的函数以外，还有一种快速方法，可以立刻获得网页元素的位置。"></a>除了上面的函数以外，还有一种快速方法，可以立刻获得网页元素的位置。</h3><h3 id="那就是使用getBoundingClientRect-方法。它返回一个对象，其中包含了left、right、top、bottom四个属性，分别对应了该元素的左上角和右下角相对于浏览器窗口（viewport）左上角的距离。"><a href="#那就是使用getBoundingClientRect-方法。它返回一个对象，其中包含了left、right、top、bottom四个属性，分别对应了该元素的左上角和右下角相对于浏览器窗口（viewport）左上角的距离。" class="headerlink" title="那就是使用getBoundingClientRect()方法。它返回一个对象，其中包含了left、right、top、bottom四个属性，分别对应了该元素的左上角和右下角相对于浏览器窗口（viewport）左上角的距离。"></a>那就是使用getBoundingClientRect()方法。它返回一个对象，其中包含了left、right、top、bottom四个属性，分别对应了该元素的左上角和右下角相对于浏览器窗口（viewport）左上角的距离。</h3><h3 id="所以，网页元素的相对位置就是"><a href="#所以，网页元素的相对位置就是" class="headerlink" title="所以，网页元素的相对位置就是"></a>所以，网页元素的相对位置就是</h3><pre><code>var X= this.getBoundingClientRect().left;
+
+var Y =this.getBoundingClientRect().top;
+</code></pre><h3 id="再加上滚动距离，就可以得到绝对位置"><a href="#再加上滚动距离，就可以得到绝对位置" class="headerlink" title="再加上滚动距离，就可以得到绝对位置"></a>再加上滚动距离，就可以得到绝对位置</h3><pre><code>var X= this.getBoundingClientRect().left+document.documentElement.scrollLeft;
+
+var Y =this.getBoundingClientRect().top+document.documentElement.scrollTop;
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/08/05/用Javascript获取页面元素的位置/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/08/06/js字符串函数小结/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          js字符串函数
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2016/08/04/JavaScript插入节点小结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript插入节点小结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="用Javascript获取页面元素的位置" data-title="用Javascript获取页面元素的位置" data-url="http://yoursite.com/2016/08/05/用Javascript获取页面元素的位置/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -232,8 +459,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

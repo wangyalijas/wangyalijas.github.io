@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | 王二爷</title>
+  <title>你有必要知道的25个JavaScript面试题 | 王二爷</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端小菜鸟的进阶之路">
-<meta property="og:type" content="website">
-<meta property="og:title" content="王二爷">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="转载自1.使用 typeof bar === “object” 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？使用 typeof 的弊端是显而易见的(这种弊端同使用 instanceof)：var obj = {}; var arr = [];  console.log(typeof obj === &amp;apos;object&amp;apos;); //true console.log(">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="你有必要知道的25个JavaScript面试题">
+<meta property="og:url" content="http://yoursite.com/2016/11/16/你有必要知道的25个JavaScript面试题/index.html">
 <meta property="og:site_name" content="王二爷">
-<meta property="og:description" content="前端小菜鸟的进阶之路">
+<meta property="og:description" content="转载自1.使用 typeof bar === “object” 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？使用 typeof 的弊端是显而易见的(这种弊端同使用 instanceof)：var obj = {}; var arr = [];  console.log(typeof obj === &amp;apos;object&amp;apos;); //true console.log(">
+<meta property="og:updated_time" content="2016-12-07T07:14:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="王二爷">
-<meta name="twitter:description" content="前端小菜鸟的进阶之路">
+<meta name="twitter:title" content="你有必要知道的25个JavaScript面试题">
+<meta name="twitter:description" content="转载自1.使用 typeof bar === “object” 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？使用 typeof 的弊端是显而易见的(这种弊端同使用 instanceof)：var obj = {}; var arr = [];  console.log(typeof obj === &amp;apos;object&amp;apos;); //true console.log(">
   
     <link rel="alternative" href="/atom.xml" title="王二爷" type="application/atom+xml">
   
@@ -156,60 +158,247 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-你有必要知道的25个JavaScript面试题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/15/ES6的let和const与var的浅谈/" class="archive-article-date">
-  	<time datetime="2017-06-15T09:47:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/15/ES6的let和const与var的浅谈/">ES6的let和const与var的浅谈</a>
+    <h1 class="article-title" itemprop="name">
+      你有必要知道的25个JavaScript面试题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2016/11/16/你有必要知道的25个JavaScript面试题/" class="archive-article-date">
+  	<time datetime="2016-11-16T07:59:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="转载自"><a href="#转载自" class="headerlink" title="转载自"></a><a href="http://www.jb51.net/article/77140.htm" target="_blank" rel="external">转载自</a></h1><h1 id="1-使用-typeof-bar-“object”-判断-bar-是不是一个对象有神马潜在的弊端？如何避免这种弊端？"><a href="#1-使用-typeof-bar-“object”-判断-bar-是不是一个对象有神马潜在的弊端？如何避免这种弊端？" class="headerlink" title="1.使用 typeof bar === “object” 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？"></a>1.使用 typeof bar === “object” 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？</h1><h3 id="使用-typeof-的弊端是显而易见的-这种弊端同使用-instanceof-："><a href="#使用-typeof-的弊端是显而易见的-这种弊端同使用-instanceof-：" class="headerlink" title="使用 typeof 的弊端是显而易见的(这种弊端同使用 instanceof)："></a>使用 typeof 的弊端是显而易见的(这种弊端同使用 instanceof)：</h3><pre><code>var obj = {};
+var arr = [];
+
+console.log(typeof obj === &apos;object&apos;); //true
+console.log(typeof arr === &apos;object&apos;); //true
+console.log(typeof null === &apos;object&apos;); //true
+</code></pre><p><code>从上面的输出结果可知，typeof bar === &quot;object&quot; 并不能准确判断 bar 就是一个 Object。可以通过 Object.prototype.toString.call(bar) === &quot;[object Object]&quot; 来避免这种弊端：</code></p>
+<pre><code>let obj = {};
+let arr = [];
+
+console.log(Object.prototype.toString.call(obj)); //[object Object]
+console.log(Object.prototype.toString.call(arr)); //[object Array]
+console.log(Object.prototype.toString.call(null)); //[object Null]
+</code></pre><h3 id="关于Object-prototype-toString-call-与window-toString-call-的结合理解"><a href="#关于Object-prototype-toString-call-与window-toString-call-的结合理解" class="headerlink" title="关于Object.prototype.toString.call()与window.toString.call()的结合理解"></a><em>关于Object.prototype.toString.call()与window.toString.call()的结合理解</em></h3><hr>
+<h1 id="2-下面的代码会在-console-输出神马？为什么？"><a href="#2-下面的代码会在-console-输出神马？为什么？" class="headerlink" title="2. 下面的代码会在 console 输出神马？为什么？"></a>2. 下面的代码会在 console 输出神马？为什么？</h1><pre><code>(function(){
+    var a = b = 3;
+})();
+
+console.log(&quot;a defined? &quot; + (typeof a !== &apos;undefined&apos;)); 
+console.log(&quot;b defined? &quot; + (typeof b !== &apos;undefined&apos;));
+</code></pre><h4 id="这跟变量作用域有关，输出换成下面的："><a href="#这跟变量作用域有关，输出换成下面的：" class="headerlink" title="这跟变量作用域有关，输出换成下面的："></a>这跟变量作用域有关，输出换成下面的：</h4><pre><code>console.log(b); //3
+console,log(typeof a); //undefined
+</code></pre><h4 id="拆解一下自执行函数中的变量赋值："><a href="#拆解一下自执行函数中的变量赋值：" class="headerlink" title="拆解一下自执行函数中的变量赋值："></a>拆解一下自执行函数中的变量赋值：</h4><pre><code>b = 3;
+var a = b;
+</code></pre><h4 id="所以-b-成了全局变量，而-a-是自执行函数的一个局部变量。"><a href="#所以-b-成了全局变量，而-a-是自执行函数的一个局部变量。" class="headerlink" title="所以 b 成了全局变量，而 a 是自执行函数的一个局部变量。"></a>所以 b 成了全局变量，而 a 是自执行函数的一个局部变量。</h4><h1 id="3-下面的代码会在-console-输出神马？为什么？"><a href="#3-下面的代码会在-console-输出神马？为什么？" class="headerlink" title="3. 下面的代码会在 console 输出神马？为什么？"></a>3. 下面的代码会在 console 输出神马？为什么？</h1><pre><code>var myObject = {
+     foo: &quot;bar&quot;,
+     func: function() {
+
+    var self = this;
+    console.log(&quot;outer func: this.foo = &quot; + this.foo);
+    console.log(&quot;outer func: self.foo = &quot; + self.foo);
+
+        (function() {
+            console.log(&quot;inner func: this.foo = &quot; + this.foo);
+            console.log(&quot;inner func: self.foo = &quot; + self.foo);
+        }());
+    }
+};
+myObject.func();
+</code></pre><p><code>打印结果：</code></p>
+<pre><code>outer func: this.foo = bar
+outer func: self.foo = bar
+inner func: this.foo = undefined
+inner func: self.foo = bar
+</code></pre><h1 id="4-将-JavaScript-代码包含在一个函数块中有神马意思呢？为什么要这么做？"><a href="#4-将-JavaScript-代码包含在一个函数块中有神马意思呢？为什么要这么做？" class="headerlink" title="4.将 JavaScript 代码包含在一个函数块中有神马意思呢？为什么要这么做？"></a>4.将 JavaScript 代码包含在一个函数块中有神马意思呢？为什么要这么做？</h1><h4 id="换句话说，为什么要用立即执行函数表达式（Immediately-Invoked-Function-Expression）。"><a href="#换句话说，为什么要用立即执行函数表达式（Immediately-Invoked-Function-Expression）。" class="headerlink" title="换句话说，为什么要用立即执行函数表达式（Immediately-Invoked Function Expression）。"></a>换句话说，为什么要用立即执行函数表达式（Immediately-Invoked Function Expression）。</h4><h4 id="IIFE-有两个比较经典的使用场景，一是类似于在循环中定时输出数据项，二是类似于-JQuery-Node-的插件和模块开发。"><a href="#IIFE-有两个比较经典的使用场景，一是类似于在循环中定时输出数据项，二是类似于-JQuery-Node-的插件和模块开发。" class="headerlink" title="IIFE 有两个比较经典的使用场景，一是类似于在循环中定时输出数据项，二是类似于 JQuery/Node 的插件和模块开发。"></a>IIFE 有两个比较经典的使用场景，一是类似于在循环中定时输出数据项，二是类似于 JQuery/Node 的插件和模块开发。</h4><pre><code>for(var i = 0; i &lt; 5; i++) {
+    setTimeout(function() {console.log(i); }, 1000);
+}
+</code></pre><p><code>上面的输出并不是你以为的0，1，2，3，4，而输出的全部是5，这时 IIFE 就能有用了：</code></p>
+<pre><code>for(var i = 0; i &lt; 5; i++) {
+    (function(i) {
+        setTimeout(function() {console.log(i);}, 1000);
+    })(i)
+}
+</code></pre><p><code>而在 JQuery/Node 的插件和模块开发中，为避免变量污染，也是一个大大的 IIFE：</code></p>
+<pre><code>(function($) { 
+    //代码
+} )(jQuery);
+</code></pre><h1 id="5-在严格模式-‘use-strict’-下进行-JavaScript-开发有神马好处？"><a href="#5-在严格模式-‘use-strict’-下进行-JavaScript-开发有神马好处？" class="headerlink" title="5. 在严格模式(‘use strict’)下进行 JavaScript 开发有神马好处？"></a>5. 在严格模式(‘use strict’)下进行 JavaScript 开发有神马好处？</h1><h4 id="1-消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为"><a href="#1-消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为" class="headerlink" title="1.消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;"></a>1.消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;</h4><h4 id="2-消除代码运行的一些不安全之处，保证代码运行的安全；"><a href="#2-消除代码运行的一些不安全之处，保证代码运行的安全；" class="headerlink" title="2.消除代码运行的一些不安全之处，保证代码运行的安全；"></a>2.消除代码运行的一些不安全之处，保证代码运行的安全；</h4><h4 id="3-提高编译器效率，增加运行速度；"><a href="#3-提高编译器效率，增加运行速度；" class="headerlink" title="3.提高编译器效率，增加运行速度；"></a>3.提高编译器效率，增加运行速度；</h4><h4 id="4-为未来新版本的Javascript做好铺垫。"><a href="#4-为未来新版本的Javascript做好铺垫。" class="headerlink" title="4.为未来新版本的Javascript做好铺垫。"></a>4.为未来新版本的Javascript做好铺垫。</h4><h1 id="6-下面两个函数的返回值是一样的吗？为什么？"><a href="#6-下面两个函数的返回值是一样的吗？为什么？" class="headerlink" title="6.下面两个函数的返回值是一样的吗？为什么？"></a>6.下面两个函数的返回值是一样的吗？为什么？</h1><pre><code>function foo1(){
+    return {
+    bar: &quot;hello&quot;
+    };
+}
+</code></pre><p> <code>下一个</code></p>
+<pre><code>function foo2(){
+    return
+{
+    bar: &quot;hello&quot;
+};
+}
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/11/16/你有必要知道的25个JavaScript面试题/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/11/17/网站常见的几种js特效/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          网站常见的几种js特效
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2016/11/16/node-js框架express/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">node.js框架express</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="你有必要知道的25个JavaScript面试题" data-title="你有必要知道的25个JavaScript面试题" data-url="http://yoursite.com/2016/11/16/你有必要知道的25个JavaScript面试题/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -232,8 +421,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
