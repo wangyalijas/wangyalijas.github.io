@@ -158,6 +158,143 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-数组常见函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/07/数组常见函数/">数组常见函数</a>
+    </h1>
+  
+
+        
+        <a href="/2016/08/07/数组常见函数/" class="archive-article-date">
+  	<time datetime="2016-08-07T11:24:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-shift"><a href="#1-shift" class="headerlink" title="(1) shift"></a>(1) shift</h1><blockquote>
+<p>删除数组第一个元素，并返回该元素，跟pop差不多</p>
+</blockquote>
+<pre><code>var arr=[1,2,1,3,2,3,5,6,5];
+arr.shift();
+console.log(arr);    //[2, 1, 3, 2, 3, 5, 6, 5]
+</code></pre><h1 id="2-unshift"><a href="#2-unshift" class="headerlink" title="(2) unshift"></a>(2) unshift</h1><blockquote>
+<p>跟shift相反，往数组最前面添加元素，并返回数组新长度</p>
+</blockquote>
+<pre><code>var arr=[1,2,1,3,2,3,5,6,5];
+arr.unshift(&apos;haha&apos;);
+console.log(arr);    //[&quot;haha&quot;, 1, 2, 1, 3, 2, 3, 5, 6, 5]
+</code></pre><h1 id="3-concat"><a href="#3-concat" class="headerlink" title="(3) concat"></a>(3) concat</h1><blockquote>
+<p>在现有数组后面追加数组，并返回新数组，不影响现有数组</p>
+</blockquote>
+<pre><code>var arr=[1,2,1,3,2,3,5,6,5];
+var arr1=[&apos;hahha&apos;];
+console.log(arr.concat(arr1));//[1, 2, 1, 3, 2, 3, 5, 6, 5, &quot;hahha&quot;]
+</code></pre><h1 id="4-join"><a href="#4-join" class="headerlink" title="(4) join"></a>(4) join</h1><blockquote>
+<p>用指定间隔符连起来，把数组转为字符串</p>
+</blockquote>
+<pre><code>var arr=[1,2,1,3,2,3,5,6,5];
+
+console.log(arr.join());   //1,2,1,3,2,3,5,6,5
+console.log(arr.toString())//1,2,1,3,2,3,5,6,5toString()也可以
+
+console.log(arr.join(&apos;*&apos;))//1*2*1*3*2*3*5*6*5
+</code></pre><h1 id="5-pop"><a href="#5-pop" class="headerlink" title="(5) pop"></a>(5) pop</h1><blockquote>
+<p>删除数组最后一个元素，并返回该元素</p>
+</blockquote>
+<pre><code>var a =    [&quot;aa&quot;,&quot;bb&quot;,&quot;cc&quot;];
+console.log(a.pop())    //cc
+console.log(a)            //[&quot;aa&quot;, &quot;bb&quot;]
+</code></pre><h1 id="6-reverse"><a href="#6-reverse" class="headerlink" title="(6) reverse"></a>(6) reverse</h1><blockquote>
+<p>对数组进行反排序跟，sort()一样，取第一字符ASCII值进行比较</p>
+</blockquote>
+<pre><code>var a =    [&quot;aa&quot;,&quot;bb&quot;,&quot;cc&quot;];
+console.log(a.reverse());    //[&quot;cc&quot;, &quot;bb&quot;, &quot;aa&quot;]
+console.log(a)                    //[&quot;cc&quot;, &quot;bb&quot;, &quot;aa&quot;]
+</code></pre><h1 id="7-slice"><a href="#7-slice" class="headerlink" title="(7) slice"></a>(7) slice</h1><blockquote>
+<p>返回数组片段</p>
+</blockquote>
+<pre><code>var a =    [&quot;aa&quot;,&quot;bb&quot;,&quot;cc&quot;];
+console.log(a.slice(1,2))   //[&quot;bb&quot;]从第一个开始到第二个，但不包含第二个
+console.log(a.slice(1))        //[&quot;bb&quot;, &quot;cc&quot;]
+</code></pre><h1 id="数组方法小试牛刀"><a href="#数组方法小试牛刀" class="headerlink" title="数组方法小试牛刀"></a>数组方法小试牛刀</h1><ol>
+<li>翻转字符串</li>
+</ol>
+<hr>
+<pre><code>console.log(&quot;asd&quot;.split(&quot;&quot;))            //[&quot;a&quot;, &quot;s&quot;, &quot;d&quot;]
+console.log(&quot;asd&quot;.split(&quot;&quot;).reverse().join())   //d,s,a        
+</code></pre><ol>
+<li>[1,2,1,3,2,3,5,6,5] 去除重复元素</li>
+</ol>
+<hr>
+<pre><code>var arr=[1,2,1,3,2,3,5,6,5];
+var newarr=[];
+for(var i=0;i&lt;arr.length;i++){
+    if(newarr.indexOf(arr[i])==-1){
+        newarr.push(arr[i]);
+    }
+}
+console.log(newarr)//[1, 2, 3, 5, 6]    
+</code></pre><p>3.获取里面字面最多的字母</p>
+<hr>
+<pre><code>var str = &quot;asdfjksdjfljsdflkjsdjf&quot; //定义需要判断的字符串
+var maxlength = 0; //用来存最大数量的变量，并初始化为0
+var result; //用来接收结果
+
+while(str != &quot;&quot;){
+      var oldstr = str; 
+      var getstr = str.substr(0,1);
+    str = str.replace(new RegExp(getstr,&quot;g&quot;),&quot;&quot;);
+  if(oldstr.length - str.length &gt;maxlength){
+      maxlength = oldstr.length - str.length;
+      result = getstr + &apos;=&apos;+ maxlength;
+  }
+}
+console.log(result);
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/08/07/数组常见函数/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-js字符串函数小结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1013,19 +1150,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">16个正则表达式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">node.js</a>
+                <a href="javascript:void(0)" class="js-tag color4">16个正则表达式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1033,7 +1162,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">node.js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1050,6 +1183,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">mysqli</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
             
             <div class="clearfix"></div>
