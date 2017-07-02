@@ -205,53 +205,6 @@
 
 
   
-    <article id="post-vue路由-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/20/vue路由-1/">vue路由</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/20/vue路由-1/" class="archive-article-date">
-  	<time datetime="2017-06-20T11:49:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/20/vue路由-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
     <article id="post-vue路由" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1143,6 +1096,126 @@ SELECT * FROM users JOIN product ON users.id=product.id;
 
 
   
+    <article id="post-php入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/22/php入门/">php入门</a>
+    </h1>
+  
+
+        
+        <a href="/2016/11/22/php入门/" class="archive-article-date">
+  	<time datetime="2016-11-22T11:01:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="本地服务器"><a href="#本地服务器" class="headerlink" title="本地服务器"></a>本地服务器</h1><p><code>1.打开本地服务器</code></p>
+<pre><code>sudo apachectl start
+</code></pre><p><code>2.进入服务器</code></p>
+<pre><code>/jas/资源库/webserver/Documents/    可以改权限
+</code></pre><p><img src="http://ww3.sinaimg.cn/mw690/005WhkQKgw1fa13dg1visj30wa0c3q6k.jpg" alt=""></p>
+<h4 id="里面放文件访问-打开127-0-0-1"><a href="#里面放文件访问-打开127-0-0-1" class="headerlink" title="里面放文件访问,打开127.0.0.1"></a>里面放文件访问,打开127.0.0.1</h4><p><code>3.结束</code></p>
+<pre><code>sudo apachectl stop
+</code></pre><h1 id="XAMPP服务"><a href="#XAMPP服务" class="headerlink" title="XAMPP服务"></a>XAMPP服务</h1><p><code>1.打开阿帕奇</code><br><img src="http://ww2.sinaimg.cn/mw690/005WhkQKgw1fa13df8379j30ip0d5dh5.jpg" alt=""></p>
+<p><code>2.测试版本,在服务器里放入一个test.php文件</code></p>
+<p><img src="http://ww1.sinaimg.cn/mw690/005WhkQKgw1fa13os08h5j30tu0by77v.jpg" alt=""></p>
+<p><code>3.在test.php文件里写上</code></p>
+<p><img src="http://ww4.sinaimg.cn/mw690/005WhkQKgw1fa13orv94yj30de0ammxp.jpg" alt=""></p>
+<h3 id="出现版本号"><a href="#出现版本号" class="headerlink" title="出现版本号"></a>出现版本号</h3><p><img src="http://ww4.sinaimg.cn/mw690/005WhkQKgw1fa13dfnm1hj30tc08p0x7.jpg" alt=""></p>
+<p><code>4.访问http://localhost/class/test/test.php</code></p>
+<h1 id="php语法入门"><a href="#php语法入门" class="headerlink" title="php语法入门"></a>php语法入门</h1><p><code>1.echo只能打印字符串和数字</code></p>
+<pre><code>echo &quot;hello world!&quot;;
+echo &quot;&lt;br&gt;&quot;;
+echo (111);//数字不加引号可以
+</code></pre><p><code>2.变量声明</code></p>
+<pre><code>$a = &quot;你好&quot;;
+echo $a;
+
+$b=&quot;hello&quot;;
+$hello=&quot;hello jas&quot;;
+echo $$b;                //hello jas
+</code></pre><p><code>3.变量解析，字符串连接使用“.”</code></p>
+<pre><code>$c=&quot;你好&quot;;
+$res1=&quot;张三&quot;;
+echo $c.$res1;  //你好张三
+
+$res2=&quot;张三$c&quot;;//必须双引号才会解析
+$res2=&quot;张三&apos;$c&apos;&quot;;//张三&apos;你好&apos;
+echo $res2;
+</code></pre><p><code>4.自动转换</code></p>
+<pre><code>$d=1;
+$e=&quot;2&quot;;
+echo gettype($d+$e);//整型integer
+echo ($d+$e);//3
+</code></pre><p><code>5.强制转换</code></p>
+<pre><code>echo gettype($e);  //string
+echo gettype((int)$e);//integer
+</code></pre><p><code>6.字符串定义方式二：</code></p>
+<pre><code>// 定界符,一般定义长字符串；注意，结尾顶头写，前后不许有空格
+$str=&lt;&lt;&lt;AAA
+fdffdfdfdfdfdff
+AAA;
+echo $str;//fdffdfdfdfdfdff
+</code></pre><p><code>7.php不会传值</code></p>
+<pre><code>$arr1=[1,2,3];
+$arr2=$arr1;//想传值加&amp;符号
+$arr2[0]=5;
+print_r($arr1);//Array ( [0] =&gt; 1 [1] =&gt; 2 [2] =&gt; 3 )
+
+
+$arr1=[1,2,3];
+$arr3=&amp;$arr1;//想传值加&amp;符号
+$arr3[0]=5;
+print_r($arr1);//Array ( [0] =&gt; 5 [1] =&gt; 2 [2] =&gt; 3 )
+</code></pre><p><code>8.数组定义方式</code></p>
+<pre><code>$arr=array(&quot;张三&quot;,&quot;李四&quot;,&quot;王二&quot;);//索引数组
+print_r($arr);    //Array ( [0] =&gt; 张三 [1] =&gt; 李四 [2] =&gt; 王二 )
+var_dump();    // array(3) { [0]=&gt; string(6) &quot;张三&quot; [1]=&gt; string(6) &quot;李四&quot; [2]=&gt; string(6) &quot;王二&quot; }
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/11/22/php入门/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1251,7 +1324,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">node.js</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1259,7 +1332,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">node.js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1267,11 +1340,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">项目实战</a>
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1279,7 +1352,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
+                <a href="javascript:void(0)" class="js-tag color5">项目实战</a>
               </li>
             
             <div class="clearfix"></div>
