@@ -6,17 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 王二爷</title>
+  <title>Mac开发环境搭建 | 王二爷</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端小菜鸟的进阶之路">
-<meta property="og:type" content="website">
-<meta property="og:title" content="王二爷">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="安装环境首先我们需要安装开发必备环境，如git svn nodejs等 XCode命令行工具XCode命令行工具包含很多常用软件，如git svn gcc等。使用终端运行 xcode-select --install 运行后会进行相关软件等下载。 Node.jsNode.js是一个能够在服务器端运行JavaScript的开放源代码、跨平台JavaScript运行环境。现代化前端依赖扩展都通过npm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac开发环境搭建">
+<meta property="og:url" content="http://yoursite.com/2017/07/01/Mac开发环境搭建/index.html">
 <meta property="og:site_name" content="王二爷">
-<meta property="og:description" content="前端小菜鸟的进阶之路">
+<meta property="og:description" content="安装环境首先我们需要安装开发必备环境，如git svn nodejs等 XCode命令行工具XCode命令行工具包含很多常用软件，如git svn gcc等。使用终端运行 xcode-select --install 运行后会进行相关软件等下载。 Node.jsNode.js是一个能够在服务器端运行JavaScript的开放源代码、跨平台JavaScript运行环境。现代化前端依赖扩展都通过npm">
+<meta property="og:updated_time" content="2017-07-02T03:13:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="王二爷">
-<meta name="twitter:description" content="前端小菜鸟的进阶之路">
+<meta name="twitter:title" content="Mac开发环境搭建">
+<meta name="twitter:description" content="安装环境首先我们需要安装开发必备环境，如git svn nodejs等 XCode命令行工具XCode命令行工具包含很多常用软件，如git svn gcc等。使用终端运行 xcode-select --install 运行后会进行相关软件等下载。 Node.jsNode.js是一个能够在服务器端运行JavaScript的开放源代码、跨平台JavaScript运行环境。现代化前端依赖扩展都通过npm">
   
     <link rel="alternative" href="/atom.xml" title="王二爷" type="application/atom+xml">
   
@@ -156,394 +157,181 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Mac开发环境搭建" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Mac开发环境搭建
+    </h1>
+  
+
+        
+        <a href="/2017/07/01/Mac开发环境搭建/" class="archive-article-date">
+  	<time datetime="2017-07-01T01:22:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-01</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h1><p>首先我们需要安装开发必备环境，如git svn nodejs等</p>
+<h2 id="XCode命令行工具"><a href="#XCode命令行工具" class="headerlink" title="XCode命令行工具"></a>XCode命令行工具</h2><p>XCode命令行工具包含很多常用软件，如git svn gcc等。<br>使用终端运行</p>
+<pre><code>xcode-select --install
+</code></pre><p>运行后会进行相关软件等下载。</p>
+<h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><p><a href="https://nodejs.org" target="_blank" rel="external">Node.js</a>是一个能够在服务器端运行JavaScript的开放源代码、跨平台JavaScript运行环境。现代化前端依赖扩展都通过npm安装，而npm是nodejs的一个模块。</p>
+<p>前往<a href="https://nodejs.org/en/download/" target="_blank" rel="external">node.js官方网站下载</a>，选择对应的系统进行下载和安装。</p>
+<p>⚠️注意：Node.js v8.1.0环境下的Vue-cli有Bug，尽量<code>不要下载</code>安装v8.1.0版本。</p>
+<hr>
+<h1 id="安装开发软件"><a href="#安装开发软件" class="headerlink" title="安装开发软件"></a>安装开发软件</h1><p>人类与动物的区别就是会使用工具，软件开发也是同理。</p>
+<h2 id="WebStorm"><a href="#WebStorm" class="headerlink" title="WebStorm"></a>WebStorm</h2><p>前端开发神器，官方介绍是<code>最智能的 JavaScript IDE</code>，支持最新的ES6语法，在线调试等，让你的前端开发无往不利。<br><a href="https://www.jetbrains.com/webstorm/?fromMenu" target="_blank" rel="external">WebStorm下载</a>,点击Download按钮，网站会自动识别系统，自动下载相对应的版本。</p>
+<hr>
+<h1 id="辅助软件"><a href="#辅助软件" class="headerlink" title="辅助软件"></a>辅助软件</h1><h2 id="AnyConnect"><a href="#AnyConnect" class="headerlink" title="AnyConnect"></a>AnyConnect</h2><p>AnyConnect为思科推出的VPN客户端，目前已有Windows、Android、iOS、OS X、Ubuntu、WebOS等操作系统的客户端。</p>
+<p>在软件开发中，我不推荐各位有问题使用百毒搜索，尽量使用google，以及搜索尽量使用英文搜索，中文搜索资料不多。因此我们就需要进行翻墙访问了，AnyConnect是我用过最好的一款vpn软件，vpn服务器可自行搭建或购买别人提供的服务，费用大约10元一个月左右，一顿饭钱就能让你超越大部分开发者，你值得拥有。</p>
+<p>下载地址<a href="https://dl.xxshe.com/cisco_anyconnect/?C=M;O=D" target="_blank" rel="external">https://dl.xxshe.com/cisco_anyconnect/?C=M;O=D</a></p>
+<h2 id="Google-Chrome"><a href="#Google-Chrome" class="headerlink" title="Google Chrome"></a>Google Chrome</h2><p>Google Chrome是由Google开发的免费网页浏览器，尽量前往官方网站下载，但是由于不可描述的原因，大陆无法直接访问官方网站，这就是为什么我要把Chrome放在anyconnect下面了，你可以先翻墙再进行下载。<br>官方网站<a href="https://www.google.com/chrome" target="_blank" rel="external">https://www.google.com/chrome</a></p>
+<h2 id="Sublime-Text"><a href="#Sublime-Text" class="headerlink" title="Sublime Text"></a>Sublime Text</h2><p>Sublime Text 是一套跨平台的文本编辑器。主要有以下特点</p>
+<ol>
+<li>Sublime Text 支持众多编程语言，并支持语法上色。</li>
+<li>可通过包（Package）扩充本身的功能。</li>
+<li>支持多行编辑，自动完成，自动存储、自定义快捷键、拼写检查与修正、宏、重复编辑动作等。</li>
+</ol>
+<p>下载地址<a href="https://www.sublimetext.com/" target="_blank" rel="external">https://www.sublimetext.com/</a></p>
+<hr>
+<p>此文章还会持续更新</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/21/mongodb与nodejs与Express搭建项目/" class="archive-article-date">
-  	<time datetime="2016-11-21T09:40:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/21/mongodb与nodejs与Express搭建项目/">mongodb与nodejs与Express搭建项目</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
-          
-
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/01/Mac开发环境搭建/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/17/网站常见的几种js特效/" class="archive-article-date">
-  	<time datetime="2016-11-17T07:03:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-17</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/17/网站常见的几种js特效/">网站常见的几种js特效</a>
-    </h1>
+  
+    <a href="/2017/06/20/vue路由/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue路由</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Mac开发环境搭建" data-title="Mac开发环境搭建" data-url="http://yoursite.com/2017/07/01/Mac开发环境搭建/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/16/你有必要知道的25个JavaScript面试题/" class="archive-article-date">
-  	<time datetime="2016-11-16T07:59:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/16/你有必要知道的25个JavaScript面试题/">你有必要知道的25个JavaScript面试题</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/16/node-js框架express/" class="archive-article-date">
-  	<time datetime="2016-11-16T03:12:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/16/node-js框架express/">node.js框架express</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/14/node-js搭建http服务器/" class="archive-article-date">
-  	<time datetime="2016-11-14T01:46:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/14/node-js搭建http服务器/">node.js搭建http服务器</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/09/vue-resource插件使用/" class="archive-article-date">
-  	<time datetime="2016-11-09T08:05:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/09/vue-resource插件使用/">vue-resource插件使用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/08/前端框架vue/" class="archive-article-date">
-  	<time datetime="2016-11-08T03:05:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/08/前端框架vue/">前端框架vue</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/10/21/16个正则表达式/" class="archive-article-date">
-  	<time datetime="2016-10-21T08:59:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/21/16个正则表达式/">16个正则表达式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">16个正则表达式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/09/21/ES6新语法/" class="archive-article-date">
-  	<time datetime="2016-09-21T03:11:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-09-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/09/21/ES6新语法/">ES6新特性</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/09/14/MarkDown语法/" class="archive-article-date">
-  	<time datetime="2016-09-14T08:54:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-09-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/09/14/MarkDown语法/">MarkDown 语法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -567,8 +355,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
