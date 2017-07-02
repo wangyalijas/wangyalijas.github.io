@@ -158,6 +158,100 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-基于github和hexo创建个人博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/03/基于github和hexo创建个人博客/">基于github和hexo创建个人博客</a>
+    </h1>
+  
+
+        
+        <a href="/2016/09/03/基于github和hexo创建个人博客/" class="archive-article-date">
+  	<time datetime="2016-09-03T01:09:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-09-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p><strong>1. github账号</strong>, 这是我的github账号主页，在这个网站注册一个账户 <em>欢迎star</em>  <a href="https://github.com/wangyalijas" target="_blank" rel="external">https://github.com/wangyalijas</a>.<br><br><strong>2. node</strong>, 用来生成静态页面的 到Node.js官网下载相应平台的最新版本，一路安装即可。 <em>node.js</em>  <a href="http://nodejs.org/en/" target="_blank" rel="external">http://nodejs.org/en/</a>.<br><br><strong>3. 安装hexo</strong>,本人是Mac系统，其他系统的朋友这部分可以看官网教程。 <em>hexo官网</em>  <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/index.html</a>.</p>
+<hr>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p><strong>安装</strong></p>
+<pre><code>$ sudo npm install -g hexo
+</code></pre><p><strong>测试</strong></p>
+<pre><code>$ hexo
+</code></pre><hr>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p><strong> 在你的以github.io结尾的仓库中创建blog文件夹并进入</strong></p>
+<p><strong>初始化</strong></p>
+<pre><code>$ hexo init
+</code></pre><p><strong>修改_config.xml 修改相关信息</strong></p>
+<pre><code>title: 王二爷
+subtitle: 前端小菜鸟的进阶之路
+description: 前端小菜鸟的进阶之路
+author: Jasmine
+language: zh-CN
+timezone:
+</code></pre><p><strong>底部也要修改</strong></p>
+<pre><code>deploy: 
+  type: git
+  repo: https://github.com/wangyalijas/wangyalijas.github.io.git
+</code></pre><p><strong>启动本地服务</strong></p>
+<pre><code>$ hexo server
+</code></pre><p><em>此时在本地打开</em><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></p>
+<p><strong>本地就会看到</strong></p>
+<p><img src="http://images2015.cnblogs.com/blog/958489/201610/958489-20161002114102484-765820472.png" alt="本地"></p>
+<hr>
+<h2 id="github账号"><a href="#github账号" class="headerlink" title="github账号"></a>github账号</h2><p><strong>git</strong></p>
+<pre><code>$ npm install hexo-deployer-git --save
+</code></pre><p><strong>编译html</strong></p>
+<pre><code>$ hexo g
+</code></pre><p><strong>上传github</strong></p>
+<pre><code>$ hexo d
+</code></pre><hr>
+<h2 id="新建目录"><a href="#新建目录" class="headerlink" title="新建目录"></a>新建目录</h2><pre><code>$ hexo 测试目录
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/09/03/基于github和hexo创建个人博客/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-数组常见函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
