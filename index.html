@@ -464,7 +464,58 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="路由基本介绍"><a href="#路由基本介绍" class="headerlink" title="路由基本介绍"></a>路由基本介绍</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>什么是前端路由？</p>
+</blockquote>
+<pre><code>路由是根据不同的url地址展示不同的内容或界面
+`前端路由`就是把不同路由对应不同的内容或页面的任务交给前端来做，之前是通过服务端根据url的不同返回不同的页面实现的
+</code></pre><blockquote>
+<p>什么时候使用前端路由？</p>
+</blockquote>
+<pre><code>在单页面应用，大部分页面结构不变，只改变页面内容的使用
+</code></pre><blockquote>
+<p>前端路由的优点和缺点？</p>
+</blockquote>
+<pre><code>优点：用户体验好，不需要每次都从服务器全部抓取，快速展现给用户。
+缺点：不利于SEO
+     使用浏览器的前进，后退键的时候会重新发送请求，没有合理的利用缓存
+     单页面无法记住之前滚动的位置，无法在你前进，后退的时候记住滚动的位置
+</code></pre><h3 id="基础路由介绍"><a href="#基础路由介绍" class="headerlink" title="基础路由介绍"></a>基础路由介绍</h3><ol>
+<li>vue-router用来构建SPA</li>
+<li><router-link></router-link>或者this.$router.push({path:””})</li>
+<li><router-view></router-view></li>
+</ol>
+<h3 id="基础路由学习"><a href="#基础路由学习" class="headerlink" title="基础路由学习"></a>基础路由学习</h3><ol>
+<li>动态路由匹配</li>
+<li>嵌套路由</li>
+<li>编程式路由</li>
+<li>命名路由和命名视图</li>
+</ol>
+<h3 id="动态路由匹配"><a href="#动态路由匹配" class="headerlink" title="动态路由匹配"></a>动态路由匹配</h3><blockquote>
+<p>什么是动态路由匹配?</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">模式</th>
+<th style="text-align:center">匹配路径</th>
+<th style="text-align:right">$route.params</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">/user/:username</td>
+<td style="text-align:center">/user/evan</td>
+<td style="text-align:right">{username:’evan’}</td>
+</tr>
+<tr>
+<td style="text-align:center">/user/:username/post/:post_id</td>
+<td style="text-align:center">/user/evan/post/123</td>
+<td style="text-align:right">{username:’evan’,post_id:123}</td>
+</tr>
+</tbody>
+</table>
+
       
 
       
@@ -472,6 +523,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -1344,11 +1406,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
