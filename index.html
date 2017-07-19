@@ -483,7 +483,7 @@
 </code></pre><h3 id="基础路由介绍"><a href="#基础路由介绍" class="headerlink" title="基础路由介绍"></a>基础路由介绍</h3><ol>
 <li>vue-router用来构建SPA</li>
 <li><router-link></router-link>或者this.$router.push({path:””})</li>
-<li><router-view></router-view></li>
+<li><code>&lt;router-view&gt;&lt;/router-view&gt;</code></li>
 </ol>
 <h3 id="基础路由学习"><a href="#基础路由学习" class="headerlink" title="基础路由学习"></a>基础路由学习</h3><ol>
 <li>动态路由匹配</li>
@@ -515,7 +515,97 @@
 </tr>
 </tbody>
 </table>
+<p><code>在router的index.js里</code></p>
+<pre><code>import Vue from &apos;vue&apos;
+import Router from &apos;vue-router&apos;
+import GoodsList from &apos;../views/GoodsList.vue&apos;
 
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+    {
+      path: &apos;/goods/:goodsId&apos;,
+      name: &apos;GoodsList&apos;,
+      component: GoodsList
+    }
+  ]
+})
+</code></pre><p><code>在GoodList.vue组件里</code></p>
+<pre><code>&lt;template&gt;
+      &lt;div&gt;
+    &lt;div&gt;商品列表页面&lt;/div&gt;
+    &lt;span&gt;{{$route.params.goodsId}}&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+  export default {
+    name: &quot;GoodsList&quot;,
+    data() {
+      return {};
+    },
+    computed: {},
+    watch: {},
+    methods: {},
+    components: {},
+    created() {},
+    mounted() {}
+  }
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+
+&lt;/style&gt;
+</code></pre><p>打开本地的<code>http://localhost:8080/#/goods/25</code>端口</p>
+<h3 id="嵌套路由"><a href="#嵌套路由" class="headerlink" title="嵌套路由"></a>嵌套路由</h3><blockquote>
+<p>什么是嵌套路由？</p>
+</blockquote>
+<pre><code>就是路由嵌套路由
+</code></pre><p><code>在router的index.js里</code>    </p>
+<pre><code>import Vue from &apos;vue&apos;
+import Router from &apos;vue-router&apos;
+import GoodsList from &apos;../views/GoodsList.vue&apos;
+import Title from &apos;../views/title.vue&apos;
+import Image from &apos;../views/image.vue&apos;
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+    {
+      path: &apos;/goods&apos;,
+      name: &apos;GoodsList&apos;,
+      component: GoodsList,
+      children: [{
+        path: &apos;title&apos;,
+        name: &apos;title&apos;,
+        component: Title
+      },{
+        path: &apos;image&apos;,
+        name: &apos;image&apos;,
+        component: Image
+      }]
+    }
+  ]
+})
+</code></pre><p><code>在GoodList.vue组件里</code></p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;div&gt;商品列表页面&lt;/div&gt;
+    &lt;router-link to=&quot;/goods/title&quot;&gt;标题&lt;/router-link&gt;
+    &lt;router-link to=&quot;/goods/image&quot;&gt;图片&lt;/router-link&gt;
+    &lt;router-view&gt;&lt;/router-view&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre><h3 id="编程式路由"><a href="#编程式路由" class="headerlink" title="编程式路由"></a>编程式路由</h3><blockquote>
+<p>什么是编程式路由</p>
+</blockquote>
+<pre><code>1.通过js来实现页面的跳转
+2.$router.push(&quot;name&quot;)
+3.$router.push({path:&quot;name&quot;})
+4.$router.push({path:&quot;name?a=123&quot;})或者$router.push({path:&quot;name&quot;,query:{a:123}})
+5.$router.go(1)
+</code></pre>
       
 
       
@@ -1382,11 +1472,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+                <a href="javascript:void(0)" class="js-tag color4">16个正则表达式</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">16个正则表达式</a>
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
               </li>
              
               <li class="article-tag-list-item">
