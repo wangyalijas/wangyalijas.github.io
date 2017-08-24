@@ -158,6 +158,224 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-变量，作用域问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/24/变量，作用域问题/">变量，作用域问题</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/24/变量，作用域问题/" class="archive-article-date">
+  	<time datetime="2017-08-24T15:57:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一，基本类型值和引用类型值"><a href="#一，基本类型值和引用类型值" class="headerlink" title="一，基本类型值和引用类型值"></a>一，基本类型值和引用类型值</h3><h5 id="基本类型值：Undefined-Null-Number-Boolean-string"><a href="#基本类型值：Undefined-Null-Number-Boolean-string" class="headerlink" title="基本类型值：Undefined,Null,Number,Boolean,string"></a>基本类型值：Undefined,Null,Number,Boolean,string</h5><h5 id="引用类型值：对象，数组"><a href="#引用类型值：对象，数组" class="headerlink" title="引用类型值：对象，数组"></a>引用类型值：对象，数组</h5><h3 id="二，复制变量值"><a href="#二，复制变量值" class="headerlink" title="二，复制变量值"></a>二，复制变量值</h3><h5 id="基本类型复制"><a href="#基本类型复制" class="headerlink" title="基本类型复制"></a>基本类型复制</h5><pre><code>var num1 = 1;
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center">num1</th>
+<th style="text-align:center">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+</tr>
+<tr>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+</tr>
+</tbody>
+</table>
+<pre><code>var num1 = 1;
+var num2 = num1;
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center">num1</th>
+<th style="text-align:center">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">num2</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+</tr>
+</tbody>
+</table>
+<h5 id="引用类型值"><a href="#引用类型值" class="headerlink" title="引用类型值"></a>引用类型值</h5><pre><code>var obj1 = {};
+var obj2 = obj1;
+obj1.name= &apos;jasmine&apos;;
+console.log(obj2);
+</code></pre><p><img src="http://wx3.sinaimg.cn/mw690/005WhkQKgy1fiv80iqz2qj30k405aaa3.jpg" alt=""></p>
+<h3 id="三，传递参数"><a href="#三，传递参数" class="headerlink" title="三，传递参数"></a>三，传递参数</h3><h5 id="所有函数的值都是按值传递的。也就是说，把函数外部的值复制给函数内部的参数，就和把值从一个变量复制到另一个变量一样。"><a href="#所有函数的值都是按值传递的。也就是说，把函数外部的值复制给函数内部的参数，就和把值从一个变量复制到另一个变量一样。" class="headerlink" title="所有函数的值都是按值传递的。也就是说，把函数外部的值复制给函数内部的参数，就和把值从一个变量复制到另一个变量一样。"></a>所有函数的值都是按值传递的。也就是说，把函数外部的值复制给函数内部的参数，就和把值从一个变量复制到另一个变量一样。</h5><h5 id="一，基本类型传参"><a href="#一，基本类型传参" class="headerlink" title="一，基本类型传参"></a>一，基本类型传参</h5><pre><code>var account = 10;
+
+function addTen(num) {
+    num += 10;
+    return num;                 //important
+}
+
+account = addTen(account)    //important
+console.log(account)
+</code></pre><p>这里的addTen()有一个参数num,而参数实际上是函数的局部变量。在调用这个函数的时候，变量account作为参数被传递给函数，于是20被复制给了参数num以便在函数中使用。参数num在函数中被加了10.但不影响account的值，参数num和变量account互不相识</p>
+<h5 id="一，引用类型传参"><a href="#一，引用类型传参" class="headerlink" title="一，引用类型传参"></a>一，引用类型传参</h5><pre><code>var obj = {
+    a: &apos;1&apos;,
+    b: {
+        c: &apos;1&apos;
+    }
+};
+
+function changeObject(object) {
+    if (object.hasOwnProperty(&apos;b&apos;)) {
+        object.b.c = 3;
+    }
+    return object;            // not important
+}
+
+changeObject(obj);
+console.log(obj);
+</code></pre><p>按值传递</p>
+<pre><code>var obj = {
+    amount: 1
+}
+
+function add(objN) {
+    objN.amount = 2;
+    objN={};
+    objN.amount = 3;
+    return objN
+}
+
+add(obj)
+console.log(obj);//2
+</code></pre><h4 id="四，深clone"><a href="#四，深clone" class="headerlink" title="四，深clone"></a>四，深clone</h4><pre><code>function deepClone(object) {
+    var new_object = {};
+    for (var item in object) {
+        if (object.hasOwnProperty(item)) {
+            if (typeof object[item] === &apos;object&apos;) {
+                new_object[item] = deepClone(object[item]);
+            } else {
+                new_object[item] = object[item];
+            }
+        }
+    }
+    return new_object;
+}
+
+var object1 = {
+    name: 1,
+    car: {
+        color: &apos;red&apos;,
+        age: {}
+    }
+};
+
+var object2 = deepClone(object1);
+console.log(object2);
+</code></pre><h4 id="五，引用类型小方法"><a href="#五，引用类型小方法" class="headerlink" title="五，引用类型小方法"></a>五，引用类型小方法</h4><p> 1，删除数组对象中的某一属性</p>
+<pre><code>var array = [
+    {a: 1, b: 2},
+    {a: 11, b: 22},
+    {a: 111, b: 2222},
+    {a: 1111, b: 22222},
+    {a: 11111, b: 222222}
+    ];
+
+var remove = function (key, array) {
+    var length = array.length;
+    while (length--) {
+        var objects = array[length];
+        for (var item in objects) {
+            if (objects.hasOwnProperty(item) &amp;&amp; item === key) {
+                delete objects[item];
+            }
+        }
+    }
+    return array;
+};
+
+console.log(remove(&apos;b&apos;, array));
+</code></pre><p> 2，给某一地方添加某一元素的某一属性</p>
+<pre><code>var importElements = (...Elements) =&gt; {
+    console.log(Elements)
+    for (var i = 0; i &lt; Elements.length; i++) {
+        var element = document.createElement(Elements[i].EleName);
+        var attributes = Elements[i].attributes;
+        for (var item in attributes){
+            if (attributes.hasOwnProperty(item)) {
+                element.setAttribute(item, attributes[item])
+            }
+        }
+        document.body.appendChild(element)
+    }
+
+};
+importElements({
+    EleName: &apos;div&apos;,
+    attributes: {
+        href: &apos;1&apos;,
+        id: &apos;2&apos;,
+        &apos;data-name&apos;: 1
+    }
+}, {
+    EleName: &apos;div&apos;,
+    attributes: {
+        href: &apos;3&apos;,
+        id: &apos;4&apos;,
+    }
+});
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">变量，作用域问题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/24/变量，作用域问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-vue框架对比" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1318,67 +1536,9 @@ if(!empty($_GET[&apos;out&apos;])){
 
 
   
-    <article id="php-连接数据库mysql" class="article article-type-php  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/28/连接数据库mysql/">连接数据库mysql</a>
-    </h1>
-  
-
-        
-        <a href="/2016/11/28/连接数据库mysql/" class="archive-article-date">
-  	<time datetime="2016-11-28T01:55:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">mysqli</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/28/连接数据库mysql/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -1501,6 +1661,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">变量，作用域问题</a>
               </li>
              
               <li class="article-tag-list-item">

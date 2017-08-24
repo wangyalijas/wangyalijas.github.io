@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>连接数据库mysql | 王二爷</title>
+  <title>变量，作用域问题 | 王二爷</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端小菜鸟的进阶之路">
-<meta name="keywords" content="mysqli">
+  <meta name="description" content="一，基本类型值和引用类型值基本类型值：Undefined,Null,Number,Boolean,string引用类型值：对象，数组二，复制变量值基本类型复制var num1 = 1;    num1 1     … …   … …    var num1 = 1; var num2 = num1;    num1 1     num2 1   … …    引用类型值var obj1 = {};">
+<meta name="keywords" content="变量，作用域问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="连接数据库mysql">
-<meta property="og:url" content="http://yoursite.com/2016/11/28/连接数据库mysql/index.html">
+<meta property="og:title" content="变量，作用域问题">
+<meta property="og:url" content="http://yoursite.com/2017/08/24/变量，作用域问题/index.html">
 <meta property="og:site_name" content="王二爷">
-<meta property="og:description" content="前端小菜鸟的进阶之路">
-<meta property="og:updated_time" content="2016-12-07T07:13:40.000Z">
+<meta property="og:description" content="一，基本类型值和引用类型值基本类型值：Undefined,Null,Number,Boolean,string引用类型值：对象，数组二，复制变量值基本类型复制var num1 = 1;    num1 1     … …   … …    var num1 = 1; var num2 = num1;    num1 1     num2 1   … …    引用类型值var obj1 = {};">
+<meta property="og:image" content="http://wx3.sinaimg.cn/mw690/005WhkQKgy1fiv80iqz2qj30k405aaa3.jpg">
+<meta property="og:updated_time" content="2017-08-24T15:58:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="连接数据库mysql">
-<meta name="twitter:description" content="前端小菜鸟的进阶之路">
+<meta name="twitter:title" content="变量，作用域问题">
+<meta name="twitter:description" content="一，基本类型值和引用类型值基本类型值：Undefined,Null,Number,Boolean,string引用类型值：对象，数组二，复制变量值基本类型复制var num1 = 1;    num1 1     … …   … …    var num1 = 1; var num2 = num1;    num1 1     num2 1   … …    引用类型值var obj1 = {};">
+<meta name="twitter:image" content="http://wx3.sinaimg.cn/mw690/005WhkQKgy1fiv80iqz2qj30k405aaa3.jpg">
   
     <link rel="alternative" href="/atom.xml" title="王二爷" type="application/atom+xml">
   
@@ -158,27 +160,187 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="php-连接数据库mysql" class="article article-type-php " itemscope itemprop="blogPost">
+            <article id="post-变量，作用域问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      连接数据库mysql
+      变量，作用域问题
     </h1>
   
 
         
-        <a href="/2016/11/28/连接数据库mysql/" class="archive-article-date">
-  	<time datetime="2016-11-28T01:55:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-28</time>
+        <a href="/2017/08/24/变量，作用域问题/" class="archive-article-date">
+  	<time datetime="2017-08-24T15:57:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="一，基本类型值和引用类型值"><a href="#一，基本类型值和引用类型值" class="headerlink" title="一，基本类型值和引用类型值"></a>一，基本类型值和引用类型值</h3><h5 id="基本类型值：Undefined-Null-Number-Boolean-string"><a href="#基本类型值：Undefined-Null-Number-Boolean-string" class="headerlink" title="基本类型值：Undefined,Null,Number,Boolean,string"></a>基本类型值：Undefined,Null,Number,Boolean,string</h5><h5 id="引用类型值：对象，数组"><a href="#引用类型值：对象，数组" class="headerlink" title="引用类型值：对象，数组"></a>引用类型值：对象，数组</h5><h3 id="二，复制变量值"><a href="#二，复制变量值" class="headerlink" title="二，复制变量值"></a>二，复制变量值</h3><h5 id="基本类型复制"><a href="#基本类型复制" class="headerlink" title="基本类型复制"></a>基本类型复制</h5><pre><code>var num1 = 1;
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center">num1</th>
+<th style="text-align:center">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+</tr>
+<tr>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+</tr>
+</tbody>
+</table>
+<pre><code>var num1 = 1;
+var num2 = num1;
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center">num1</th>
+<th style="text-align:center">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">num2</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+</tr>
+</tbody>
+</table>
+<h5 id="引用类型值"><a href="#引用类型值" class="headerlink" title="引用类型值"></a>引用类型值</h5><pre><code>var obj1 = {};
+var obj2 = obj1;
+obj1.name= &apos;jasmine&apos;;
+console.log(obj2);
+</code></pre><p><img src="http://wx3.sinaimg.cn/mw690/005WhkQKgy1fiv80iqz2qj30k405aaa3.jpg" alt=""></p>
+<h3 id="三，传递参数"><a href="#三，传递参数" class="headerlink" title="三，传递参数"></a>三，传递参数</h3><h5 id="所有函数的值都是按值传递的。也就是说，把函数外部的值复制给函数内部的参数，就和把值从一个变量复制到另一个变量一样。"><a href="#所有函数的值都是按值传递的。也就是说，把函数外部的值复制给函数内部的参数，就和把值从一个变量复制到另一个变量一样。" class="headerlink" title="所有函数的值都是按值传递的。也就是说，把函数外部的值复制给函数内部的参数，就和把值从一个变量复制到另一个变量一样。"></a>所有函数的值都是按值传递的。也就是说，把函数外部的值复制给函数内部的参数，就和把值从一个变量复制到另一个变量一样。</h5><h5 id="一，基本类型传参"><a href="#一，基本类型传参" class="headerlink" title="一，基本类型传参"></a>一，基本类型传参</h5><pre><code>var account = 10;
+
+function addTen(num) {
+    num += 10;
+    return num;                 //important
+}
+
+account = addTen(account)    //important
+console.log(account)
+</code></pre><p>这里的addTen()有一个参数num,而参数实际上是函数的局部变量。在调用这个函数的时候，变量account作为参数被传递给函数，于是20被复制给了参数num以便在函数中使用。参数num在函数中被加了10.但不影响account的值，参数num和变量account互不相识</p>
+<h5 id="一，引用类型传参"><a href="#一，引用类型传参" class="headerlink" title="一，引用类型传参"></a>一，引用类型传参</h5><pre><code>var obj = {
+    a: &apos;1&apos;,
+    b: {
+        c: &apos;1&apos;
+    }
+};
+
+function changeObject(object) {
+    if (object.hasOwnProperty(&apos;b&apos;)) {
+        object.b.c = 3;
+    }
+    return object;            // not important
+}
+
+changeObject(obj);
+console.log(obj);
+</code></pre><p>按值传递</p>
+<pre><code>var obj = {
+    amount: 1
+}
+
+function add(objN) {
+    objN.amount = 2;
+    objN={};
+    objN.amount = 3;
+    return objN
+}
+
+add(obj)
+console.log(obj);//2
+</code></pre><h4 id="四，深clone"><a href="#四，深clone" class="headerlink" title="四，深clone"></a>四，深clone</h4><pre><code>function deepClone(object) {
+    var new_object = {};
+    for (var item in object) {
+        if (object.hasOwnProperty(item)) {
+            if (typeof object[item] === &apos;object&apos;) {
+                new_object[item] = deepClone(object[item]);
+            } else {
+                new_object[item] = object[item];
+            }
+        }
+    }
+    return new_object;
+}
+
+var object1 = {
+    name: 1,
+    car: {
+        color: &apos;red&apos;,
+        age: {}
+    }
+};
+
+var object2 = deepClone(object1);
+console.log(object2);
+</code></pre><h4 id="五，引用类型小方法"><a href="#五，引用类型小方法" class="headerlink" title="五，引用类型小方法"></a>五，引用类型小方法</h4><p> 1，删除数组对象中的某一属性</p>
+<pre><code>var array = [
+    {a: 1, b: 2},
+    {a: 11, b: 22},
+    {a: 111, b: 2222},
+    {a: 1111, b: 22222},
+    {a: 11111, b: 222222}
+    ];
+
+var remove = function (key, array) {
+    var length = array.length;
+    while (length--) {
+        var objects = array[length];
+        for (var item in objects) {
+            if (objects.hasOwnProperty(item) &amp;&amp; item === key) {
+                delete objects[item];
+            }
+        }
+    }
+    return array;
+};
+
+console.log(remove(&apos;b&apos;, array));
+</code></pre><p> 2，给某一地方添加某一元素的某一属性</p>
+<pre><code>var importElements = (...Elements) =&gt; {
+    console.log(Elements)
+    for (var i = 0; i &lt; Elements.length; i++) {
+        var element = document.createElement(Elements[i].EleName);
+        var attributes = Elements[i].attributes;
+        for (var item in attributes){
+            if (attributes.hasOwnProperty(item)) {
+                element.setAttribute(item, attributes[item])
+            }
+        }
+        document.body.appendChild(element)
+    }
+
+};
+importElements({
+    EleName: &apos;div&apos;,
+    attributes: {
+        href: &apos;1&apos;,
+        id: &apos;2&apos;,
+        &apos;data-name&apos;: 1
+    }
+}, {
+    EleName: &apos;div&apos;,
+    attributes: {
+        href: &apos;3&apos;,
+        id: &apos;4&apos;,
+    }
+});
+</code></pre>
       
 
       
@@ -212,7 +374,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">mysqli</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">变量，作用域问题</a>
         		</li>
       		
 		</ul>
@@ -268,7 +430,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/11/28/连接数据库mysql/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/24/变量，作用域问题/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -282,18 +444,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/12/02/基于php和mysqli写的网上书城/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          基于php和mysqli写的网上书城
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/11/26/数据库操作/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">数据库操作</div>
+    <a href="/2017/07/19/vue框架对比/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue框架对比</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -306,7 +459,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="连接数据库mysql" data-title="连接数据库mysql" data-url="http://yoursite.com/2016/11/28/连接数据库mysql/"></div>
+	<div class="ds-thread" data-thread-key="变量，作用域问题" data-title="变量，作用域问题" data-url="http://yoursite.com/2017/08/24/变量，作用域问题/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
