@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>变量，作用域问题 | 王二爷</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一，基本类型值和引用类型值基本类型值：Undefined,Null,Number,Boolean,string引用类型值：对象，数组二，复制变量值基本类型复制var num1 = 1;    num1 1     … …   … …    var num1 = 1; var num2 = num1;    num1 1     num2 1   … …    引用类型值var obj1 = {};">
+  <meta name="description" content="变量，作用域问题一，基本类型值和引用类型值基本类型值：Undefined,Null,Number,Boolean,string引用类型值：对象，数组二，复制变量值基本类型复制var num1 = 1;    num1 1     … …   … …    var num1 = 1; var num2 = num1;    num1 1     num2 1   … …    引用类型值var ob">
 <meta name="keywords" content="变量，作用域问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="变量，作用域问题">
 <meta property="og:url" content="http://yoursite.com/2017/08/24/变量，作用域问题/index.html">
 <meta property="og:site_name" content="王二爷">
-<meta property="og:description" content="一，基本类型值和引用类型值基本类型值：Undefined,Null,Number,Boolean,string引用类型值：对象，数组二，复制变量值基本类型复制var num1 = 1;    num1 1     … …   … …    var num1 = 1; var num2 = num1;    num1 1     num2 1   … …    引用类型值var obj1 = {};">
+<meta property="og:description" content="变量，作用域问题一，基本类型值和引用类型值基本类型值：Undefined,Null,Number,Boolean,string引用类型值：对象，数组二，复制变量值基本类型复制var num1 = 1;    num1 1     … …   … …    var num1 = 1; var num2 = num1;    num1 1     num2 1   … …    引用类型值var ob">
 <meta property="og:image" content="http://wx3.sinaimg.cn/mw690/005WhkQKgy1fiv80iqz2qj30k405aaa3.jpg">
-<meta property="og:updated_time" content="2017-08-24T15:58:18.000Z">
+<meta property="og:updated_time" content="2017-08-24T16:15:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="变量，作用域问题">
-<meta name="twitter:description" content="一，基本类型值和引用类型值基本类型值：Undefined,Null,Number,Boolean,string引用类型值：对象，数组二，复制变量值基本类型复制var num1 = 1;    num1 1     … …   … …    var num1 = 1; var num2 = num1;    num1 1     num2 1   … …    引用类型值var obj1 = {};">
+<meta name="twitter:description" content="变量，作用域问题一，基本类型值和引用类型值基本类型值：Undefined,Null,Number,Boolean,string引用类型值：对象，数组二，复制变量值基本类型复制var num1 = 1;    num1 1     … …   … …    var num1 = 1; var num2 = num1;    num1 1     num2 1   … …    引用类型值var ob">
 <meta name="twitter:image" content="http://wx3.sinaimg.cn/mw690/005WhkQKgy1fiv80iqz2qj30k405aaa3.jpg">
   
     <link rel="alternative" href="/atom.xml" title="王二爷" type="application/atom+xml">
@@ -180,7 +180,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="一，基本类型值和引用类型值"><a href="#一，基本类型值和引用类型值" class="headerlink" title="一，基本类型值和引用类型值"></a>一，基本类型值和引用类型值</h3><h5 id="基本类型值：Undefined-Null-Number-Boolean-string"><a href="#基本类型值：Undefined-Null-Number-Boolean-string" class="headerlink" title="基本类型值：Undefined,Null,Number,Boolean,string"></a>基本类型值：Undefined,Null,Number,Boolean,string</h5><h5 id="引用类型值：对象，数组"><a href="#引用类型值：对象，数组" class="headerlink" title="引用类型值：对象，数组"></a>引用类型值：对象，数组</h5><h3 id="二，复制变量值"><a href="#二，复制变量值" class="headerlink" title="二，复制变量值"></a>二，复制变量值</h3><h5 id="基本类型复制"><a href="#基本类型复制" class="headerlink" title="基本类型复制"></a>基本类型复制</h5><pre><code>var num1 = 1;
+        <h2 id="变量，作用域问题"><a href="#变量，作用域问题" class="headerlink" title="变量，作用域问题"></a>变量，作用域问题</h2><h3 id="一，基本类型值和引用类型值"><a href="#一，基本类型值和引用类型值" class="headerlink" title="一，基本类型值和引用类型值"></a>一，基本类型值和引用类型值</h3><h5 id="基本类型值：Undefined-Null-Number-Boolean-string"><a href="#基本类型值：Undefined-Null-Number-Boolean-string" class="headerlink" title="基本类型值：Undefined,Null,Number,Boolean,string"></a>基本类型值：Undefined,Null,Number,Boolean,string</h5><h5 id="引用类型值：对象，数组"><a href="#引用类型值：对象，数组" class="headerlink" title="引用类型值：对象，数组"></a>引用类型值：对象，数组</h5><h3 id="二，复制变量值"><a href="#二，复制变量值" class="headerlink" title="二，复制变量值"></a>二，复制变量值</h3><h5 id="基本类型复制"><a href="#基本类型复制" class="headerlink" title="基本类型复制"></a>基本类型复制</h5><pre><code>var num1 = 1;
 </code></pre><table>
 <thead>
 <tr>
@@ -257,7 +257,7 @@ console.log(obj);
 
 function add(objN) {
     objN.amount = 2;
-    objN={};
+    objN= {};
     objN.amount = 3;
     return objN
 }
@@ -266,23 +266,27 @@ add(obj)
 console.log(obj);//2
 </code></pre><h4 id="四，深clone"><a href="#四，深clone" class="headerlink" title="四，深clone"></a>四，深clone</h4><pre><code>function deepClone(object) {
     var new_object = {};
+
     for (var item in object) {
+
         if (object.hasOwnProperty(item)) {
+
             if (typeof object[item] === &apos;object&apos;) {
                 new_object[item] = deepClone(object[item]);
             } else {
                 new_object[item] = object[item];
             }
         }
+
     }
+
     return new_object;
 }
 
 var object1 = {
     name: 1,
     car: {
-        color: &apos;red&apos;,
-        age: {}
+        color: &apos;red&apos;
     }
 };
 
@@ -313,20 +317,30 @@ var remove = function (key, array) {
 console.log(remove(&apos;b&apos;, array));
 </code></pre><p> 2，给某一地方添加某一元素的某一属性</p>
 <pre><code>var importElements = (...Elements) =&gt; {
-    console.log(Elements)
     for (var i = 0; i &lt; Elements.length; i++) {
-        var element = document.createElement(Elements[i].EleName);
-        var attributes = Elements[i].attributes;
+        var Element = Elements[i];
+
+        var parentElement = document.querySelector(Element.parentSelector);
+
+        if (parentElement === null) {
+            throw new Error(&apos;Parent element not found.&apos;);
+        }
+
+        var element = document.createElement(Element.EleName);
+        var attributes = Element.attributes;
         for (var item in attributes){
             if (attributes.hasOwnProperty(item)) {
                 element.setAttribute(item, attributes[item])
             }
         }
-        document.body.appendChild(element)
+
+        parentElement.appendChild(element)
     }
 
 };
+
 importElements({
+    parentSelector: &apos;body&apos;,
     EleName: &apos;div&apos;,
     attributes: {
         href: &apos;1&apos;,
@@ -334,6 +348,7 @@ importElements({
         &apos;data-name&apos;: 1
     }
 }, {
+    parentSelector: &apos;body&apos;,
     EleName: &apos;div&apos;,
     attributes: {
         href: &apos;3&apos;,
